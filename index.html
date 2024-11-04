@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+      }
+      .bg-gradient-to-r {
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
+      }
+      .bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-white overflow-x-hidden">
+    <nav class="fixed top-0 w-full bg-white/80 backdrop-blur-lg z-40">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <span
+          class="text-2xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text"
+          >F.</span
+        >
+        <div class="flex gap-6">
+          <a href="#projects" class="hover:text-purple-600 transition-colors"
+            >Projects</a
+          >
+          <a href="#skills" class="hover:text-purple-600 transition-colors"
+            >Skills</a
+          >
+          <a href="#contact" class="hover:text-purple-600 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- first section -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div class="container mx-auto px-6">
+        <div class="relative z-10">
+          <h1
+            class="text-8xl font-bold mb-6 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-500 bg-clip-text"
+          >
+            FAISAL
+          </h1>
+          <div
+            class="inline-flex items-center gap-4 px-6 py-3 rounded-full bg-gradient-to-r from-purple-600/10 to-pink-500/10 backdrop-blur-sm"
+          >
+            <span class="text-sm">Ranked 14th Worldwide on SATR</span>
+            <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="absolute inset-0 -z-10">
+        <div
+          class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-purple-500/20 blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-pink-500/20 blur-3xl"
+        ></div>
+      </div>
+    </section>
+
+    <!-- skills section -->
+    <section id="skills" class="py-24 bg-gradient-to-b from-white to-purple-50">
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-4xl font-bold mb-16 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text"
+        >
+          Skills & Expertise
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="p-6 rounded-xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <h3 class="text-xl font-semibold mb-4 capitalize">development</h3>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >Python</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >C++</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >JavaScript</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >Dart</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >WordPress</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <h3 class="text-xl font-semibold mb-4 capitalize">frameworks</h3>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >Flutter</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >Flask</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >Node.js</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >Bootstrap</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="p-6 rounded-xl bg-white/80 backdrop-blur-sm shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <h3 class="text-xl font-semibold mb-4 capitalize">
+              infrastructure
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >AWS</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >Docker</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >Cloudflare</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >MongoDB</span
+              >
+              <span
+                class="px-4 py-2 rounded-full text-sm bg-gradient-to-r from-purple-600/10 to-pink-500/10"
+                >MySQL</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  projects section -->
+    <section
+      id="projects"
+      class="py-24 bg-gradient-to-b from-purple-50 to-white"
+    >
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-4xl font-bold mb-16 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text"
+        >
+          Projects
+        </h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <div
+            class="group relative p-6 rounded-xl bg-white border border-purple-100 shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+          >
+            <!-- <div class="p-6"> -->
+            <img
+              src="https://placehold.co/600x600"
+              alt="Project 1"
+              class="w-full h-64 object-cover rounded-l mb-4"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <h3 class="text-xl font-semibold mb-4">Project 1</h3>
+            <p class="text-gray-600 mb-4">
+              A brief description of the project and its key features.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-purple-600"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+              <a href="#" class="text-gray-800"
+                ><i class="fab fa-github"></i
+              ></a>
+              <!-- </div> -->
+            </div>
+          </div>
+
+          <div
+            class="group relative p-6 rounded-xl bg-white border border-purple-100 shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x600"
+              alt="Project 1"
+              class="w-full h-64 object-cover rounded-l mb-4"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <h3 class="text-xl font-semibold mb-4">Project 2</h3>
+            <p class="text-gray-600 mb-4">
+              A brief description of the project and its key features.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-purple-600"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+              <a href="#" class="text-gray-800"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="group relative p-6 rounded-xl bg-white border border-purple-100 shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x600"
+              alt="Project 1"
+              class="w-full h-64 object-cover rounded-l mb-4"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <h3 class="text-xl font-semibold mb-4">Project 3</h3>
+            <p class="text-gray-600 mb-4">
+              A brief description of the project and its key features.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-purple-600"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+              <a href="#" class="text-gray-800"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+
+          <div
+            class="group relative p-6 rounded-xl bg-white border border-purple-100 shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
+          >
+            <img
+              src="https://placehold.co/600x600"
+              alt="Project 1"
+              class="w-full h-64 object-cover rounded-l mb-4"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
+            ></div>
+            <h3 class="text-xl font-semibold mb-4">Project 4</h3>
+            <p class="text-gray-600 mb-4">
+              A brief description of the project and its key features.
+            </p>
+            <div class="flex gap-4">
+              <a href="#" class="text-purple-600"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+              <a href="#" class="text-gray-800"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact section -->
+    <section
+      id="contact"
+      class="py-24 bg-gradient-to-b from-white to-purple-50"
+    >
+      <div class="container mx-auto px-6">
+        <h2
+          class="text-4xl font-bold mb-16 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text"
+        >
+          Get in Touch
+        </h2>
+        <div class="flex flex-wrap gap-8 justify-center">
+          <a
+            href="mailto:FaisalSaweed@gmail.com"
+            class="flex items-center gap-3 px-6 py-3 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <i class="fas fa-envelope text-purple-600"></i>
+            <span>Email Me</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/faisalalsaweed/"
+            class="flex items-center gap-3 px-6 py-3 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <i class="fab fa-linkedin text-purple-600"></i>
+            <span>LinkedIn</span>
+          </a>
+
+          <a
+            href="https://github.com/FS-17"
+            class="flex items-center gap-3 px-6 py-3 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow"
+          >
+            <i class="fab fa-github text-purple-600"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer section -->
+    <footer class="py-12 border-t border-purple-100">
+      <div class="container mx-auto px-6 text-center text-gray-600">
+        <p>© 2024 Faisal. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
