@@ -7,7 +7,15 @@
       content="Vmw4tRlC_16LzAOBiyGfAUtkf_GQDztEQMN2_1m-3Gk"
     />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <link rel="canonical" href="https://fs-17.github.io/" />
+    <meta name="theme-color" content="#1F2937" />
+
     <link
       rel="sitemap"
       type="application/xml"
@@ -19,7 +27,7 @@
     <!--  SEO meta tags -->
     <meta
       name="description"
-      content="Faisal Alsaweed software developer specializing in Python, C++, JavaScript, Dart, WordPress, and more. Explore his projects and skills."
+      content="Expert software developer (programmer) specializing in Python, WordPress, and mobile apps. Over 5 years of experience delivering custom solutions. Ranked 14th worldwide. Let's build your next project together."
     />
     <meta
       name="keywords"
@@ -75,6 +83,27 @@
           "https://www.linkedin.com/in/faisalalsaweed/",
           "https://github.com/FS-17"
         ]
+        "knowsAbout": [
+        "Python",
+        "C++",
+        "JavaScript",
+        "Dart",
+        "WordPress",
+        "Flutter",
+        "Flask",
+        "Node.js",
+        "AWS",
+        "Docker"
+      ],
+      "makesOffer": {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Software Development Services",
+          "description": "Custom software development, web development, and mobile app development services"
+        }
+      }
+
       }
     </script>
   </head>
@@ -268,32 +297,7 @@
         >
           Projects
         </h2>
-        <div id="projectContainer" class="grid md:grid-cols-2 gap-8">
-          <!-- <div
-            class="group relative p-6 rounded-xl bg-gray-800 border border-blue-900 shadow-lg hover:shadow-xl transition-shadow overflow-hidden"
-          >
-            <img
-              src="https://placehold.co/600x600"
-              alt="Project 1"
-              class="w-full h-64 object-cover rounded-l mb-4"
-            />
-            <div
-              class="absolute inset-0 bg-gradient-to-r from-blue-600/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity"
-            ></div>
-            <h3 class="text-xl font-semibold mb-4">Project 1</h3>
-            <p class="text-gray-400 mb-4">
-              A brief description of the project and its key features.
-            </p>
-            <div class="flex gap-4">
-              <a href="#" class="text-blue-500"
-                ><i class="fas fa-external-link-alt"></i
-              ></a>
-              <a href="#" class="text-gray-400"
-                ><i class="fab fa-github"></i
-              ></a>
-            </div>
-          </div> -->
-        </div>
+        <div id="projectContainer" class="grid md:grid-cols-2 gap-8"></div>
         <div class="flex justify-center mt-8" id="moreButtonContainer"></div>
       </div>
     </section>
@@ -404,13 +408,6 @@
       projectLink.target = "_blank"; // Add this line to open in new tab
       projectLink.rel = "noopener noreferrer"; // Add security best practice
       projectLink.appendChild(projectDiv);
-
-      // Using a placeholder image – you'll need to replace this.
-      // const img = document.createElement("img");
-      // img.src = "https://placehold.co/600x600";
-      // img.alt = repo.name;
-      // img.classList.add("w-full", "h-64", "object-cover", "rounded", "mb-4");
-      // projectDiv.appendChild(img);
 
       const overlayDiv = document.createElement("div");
       overlayDiv.classList.add(
