@@ -7,10 +7,7 @@
       content="Vmw4tRlC_16LzAOBiyGfAUtkf_GQDztEQMN2_1m-3Gk"
     />
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=5.0" />
     <meta name="robots" content="index, follow" />
 
     <!-- Google tag (gtag.js) -->
@@ -84,6 +81,17 @@
         background-color: rgba(31, 41, 55, 0.5);
         backdrop-filter: blur(10px);
         border: 1px solid rgba(75, 85, 99, 0.5);
+      }
+
+      @media (min-width: 768px) {
+        #logoSliderContainer {
+          justify-content: center;
+          overflow: visible;
+        }
+        #logoSlider {
+          transform: none !important; /* Prevent sliding animation on desktop */
+          justify-content: center;
+        }
       }
     </style>
 
@@ -196,6 +204,29 @@
         <div
           class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-cyan-500/20 blur-3xl"
         ></div>
+      </div>
+    </section>
+
+    <!-- logo section -->
+    <section id="logos">
+      <h2
+        class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text"
+        style="padding: 5px"
+      >
+        Trusted By
+      </h2>
+
+      <!-- logo slider -->
+      <div
+        id="logoSliderContainer"
+        class="flex justify-center mt-8 md:mt-12 w-full overflow-hidden"
+      >
+        <div
+          id="logoSlider"
+          class="flex transition-transform duration-500 ease-in-out"
+        >
+          <!-- Logos will be injected here -->
+        </div>
       </div>
     </section>
 
@@ -462,6 +493,81 @@
       container.appendChild(projectLink);
     }
 
+    async function loadAndSlideLogos() {
+      const logoSlider = document.getElementById("logoSlider");
+      const logoSliderContainer = document.getElementById(
+        "logoSliderContainer"
+      );
+      const logos = [
+        { name: "mo", src: "/logo/mo.png" },
+        { name: "ms", src: "/logo/ms.png" },
+        { name: "pds", src: "/logo/pbs.png" },
+        { name: "spl", src: "/logo/spl.png" },
+        { name: "yk", src: "/logo/yk.png" },
+      ];
+
+      function createLogoElement(logo) {
+        const imgDiv = document.createElement("div");
+        imgDiv.classList.add(
+          "min-w-[150px]",
+          "h-24",
+          "mx-6",
+          "flex",
+          "items-center",
+          "justify-center"
+        );
+        const img = document.createElement("img");
+        img.src = logo.src;
+        img.alt = logo.name + " Logo";
+        img.classList.add(
+          "w-24",
+          "h-16",
+          "object-contain",
+          "opacity-50",
+          "hover:opacity-100",
+          "transition-transform",
+          "duration-500",
+          "transform",
+          "hover:scale-110"
+        );
+        imgDiv.appendChild(img);
+        return imgDiv;
+      }
+
+      // Add initial logos
+      logos.forEach((logo) => {
+        logoSlider.appendChild(createLogoElement(logo));
+      });
+
+      // Only add duplicates and animate on mobile
+      if (window.innerWidth < 768) {
+        // Add duplicates for infinite scroll on mobile
+        logos.forEach((logo) => {
+          logoSlider.appendChild(createLogoElement(logo));
+        });
+
+        let currentPosition = 0;
+        const slideWidth = 1;
+        const speed = 50;
+
+        function slide() {
+          if (window.innerWidth < 768) {
+            // Only animate on mobile
+            currentPosition -= slideWidth;
+            if (Math.abs(currentPosition) >= logoSlider.scrollWidth / 2) {
+              currentPosition = 0;
+            }
+            logoSlider.style.transform = `translateX(${currentPosition}px)`;
+            requestAnimationFrame(slide);
+          }
+        }
+
+        // Start the animation only on mobile
+        requestAnimationFrame(slide);
+      }
+    }
+
     getPinnedRepos();
+    loadAndSlideLogos();
   </script>
 </html>
