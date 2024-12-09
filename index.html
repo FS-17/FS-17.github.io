@@ -7,7 +7,7 @@
       content="Vmw4tRlC_16LzAOBiyGfAUtkf_GQDztEQMN2_1m-3Gk"
     />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=5.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="index, follow" />
 
     <!-- Google tag (gtag.js) -->
@@ -68,6 +68,9 @@
       body {
         font-family: "Segoe UI", sans-serif;
       }
+      h2 {
+        padding: 5px 0;
+      }
       .bg-gradient-to-r {
         background-image: linear-gradient(to right, var(--tw-gradient-stops));
       }
@@ -83,7 +86,43 @@
         border: 1px solid rgba(75, 85, 99, 0.5);
       }
 
+      /* logo slider */
+      img {
+        max-width: 70px !important;
+        width: 100px;
+        height: 100px;
+        animation: scroll 60s linear infinite;
+        transition: transform 0.3s ease;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+
+      .slide-track {
+        width: calc(200px * 12);
+        display: flex;
+        gap: 3em;
+        overflow: hidden;
+        align-items: center;
+      }
+
+      .slider {
+        /* margin-top: 70px; */
+        /* padding: 8em 2em; */
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translatex(calc(-200px * 6));
+        }
+      }
+
       @media (min-width: 768px) {
+        /* for desktop */
         #logoSliderContainer {
           justify-content: center;
           overflow: visible;
@@ -91,6 +130,21 @@
         #logoSlider {
           transform: none !important; /* Prevent sliding animation on desktop */
           justify-content: center;
+        }
+        img {
+          max-width: 90px !important;
+          width: 100px;
+          height: 100px;
+          animation: none;
+          transition: transform 0.3s ease;
+          filter: opacity(0.7);
+        }
+        img:hover {
+          transform: scale(1.1);
+          filter: opacity(1);
+        }
+        .dup {
+          display: none;
         }
       }
     </style>
@@ -139,13 +193,13 @@
           >F.</span
         >
         <div class="flex gap-6">
-          <a href="#projects" class="hover:text-blue-500 transition-colors"
+          <a href="/#projects" class="hover:text-blue-500 transition-colors"
             >Projects</a
           >
           <a href="#skills" class="hover:text-blue-500 transition-colors"
             >Skills</a
           >
-          <a class="hover:text-blue-500 transition-colors" href="/contact.html"
+          <a href="/contact.html" class="hover:text-blue-500 transition-colors"
             >Contact</a
           >
         </div>
@@ -211,7 +265,6 @@
     <section id="logos">
       <h2
         class="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text"
-        style="padding: 5px"
       >
         Trusted By
       </h2>
@@ -219,13 +272,49 @@
       <!-- logo slider -->
       <div
         id="logoSliderContainer"
-        class="flex justify-center mt-8 md:mt-12 w-full overflow-hidden"
+        class="slider flex justify-center mt-8 md:mt-12 w-full overflow-hidden"
       >
-        <div
-          id="logoSlider"
-          class="flex transition-transform duration-500 ease-in-out"
-        >
-          <!-- Logos will be injected here -->
+        <div id="logoSlider" class="slide-track">
+          <!-- Original set -->
+          <div class="slide">
+            <img src="logo/ar.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="logo/mo.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="logo/spl.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="logo/ms.png" alt="" />
+          </div>
+          <div class="slide">
+            <img src="logo/pbs.png" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="logo/yk.png" alt="" />
+          </div>
+          <!-- Duplicate set for seamless loop -->
+          <div class="slide dup">
+            <img src="logo/ar.png" alt="" />
+          </div>
+          <div class="slide dup">
+            <img src="logo/mo.png" alt="" />
+          </div>
+          <div class="slide dup">
+            <img src="logo/spl.png" alt="" />
+          </div>
+          <div class="slide dup">
+            <img src="logo/ms.png" alt="" />
+          </div>
+          <div class="slide dup">
+            <img src="logo/pbs.png" alt="" />
+          </div>
+
+          <div class="slide dup">
+            <img src="logo/yk.png" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -493,81 +582,6 @@
       container.appendChild(projectLink);
     }
 
-    async function loadAndSlideLogos() {
-      const logoSlider = document.getElementById("logoSlider");
-      const logoSliderContainer = document.getElementById(
-        "logoSliderContainer"
-      );
-      const logos = [
-        { name: "spl", src: "/logo/spl.png" },
-        { name: "mo", src: "/logo/mo.png" },
-        { name: "ms", src: "/logo/ms.png" },
-        { name: "pds", src: "/logo/pbs.png" },
-        { name: "yk", src: "/logo/yk.png" },
-      ];
-
-      function createLogoElement(logo) {
-        const imgDiv = document.createElement("div");
-        imgDiv.classList.add(
-          "min-w-[150px]",
-          "h-24",
-          "mx-6",
-          "flex",
-          "items-center",
-          "justify-center"
-        );
-        const img = document.createElement("img");
-        img.src = logo.src;
-        img.alt = logo.name + " Logo";
-        img.classList.add(
-          "w-24",
-          "h-16",
-          "object-contain",
-          "opacity-50",
-          "hover:opacity-100",
-          "transition-transform",
-          "duration-500",
-          "transform",
-          "hover:scale-110"
-        );
-        imgDiv.appendChild(img);
-        return imgDiv;
-      }
-
-      // Add initial logos
-      logos.forEach((logo) => {
-        logoSlider.appendChild(createLogoElement(logo));
-      });
-
-      // Only add duplicates and animate on mobile
-      if (window.innerWidth < 768) {
-        // Add duplicates for infinite scroll on mobile
-        logos.forEach((logo) => {
-          logoSlider.appendChild(createLogoElement(logo));
-        });
-
-        let currentPosition = 0;
-        const slideWidth = 1;
-        const speed = 50;
-
-        function slide() {
-          if (window.innerWidth < 768) {
-            // Only animate on mobile
-            currentPosition -= slideWidth;
-            if (Math.abs(currentPosition) >= logoSlider.scrollWidth / 2) {
-              currentPosition = 0;
-            }
-            logoSlider.style.transform = `translateX(${currentPosition}px)`;
-            requestAnimationFrame(slide);
-          }
-        }
-
-        // Start the animation only on mobile
-        requestAnimationFrame(slide);
-      }
-    }
-
     getPinnedRepos();
-    loadAndSlideLogos();
   </script>
 </html>
