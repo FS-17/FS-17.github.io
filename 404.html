@@ -1,1 +1,111 @@
-tst
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+
+    <meta
+      name="description"
+      content="Page not found - Faisal Alsaweed's portfolio"
+    />
+    <meta name="author" content="Faisal Alsaweed" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+      }
+      .bg-gradient-to-r {
+        background-image: linear-gradient(to right, var(--tw-gradient-stops));
+      }
+      .bg-clip-text {
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      h1 {
+        animation: fadeIn 2s ease-in-out;
+      }
+      a {
+        transition: transform 0.3s, background-color 0.3s;
+      }
+      a:hover {
+        transform: scale(1.05);
+        background-color: #1d4ed8;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gray-900 text-gray-200 overflow-x-hidden">
+    <nav class="fixed top-0 w-full backdrop-blur-lg z-40">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a
+          href="/"
+          class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text"
+          >F.</a
+        >
+        <div class="flex gap-6">
+          <a href="/#projects" class="hover:text-blue-500 transition-colors"
+            >Projects</a
+          >
+          <a href="/#skills" class="hover:text-blue-500 transition-colors"
+            >Skills</a
+          >
+          <a href="/contact.html" class="hover:text-blue-500 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen flex items-center justify-center relative">
+      <div class="text-center px-6">
+        <h1
+          class="text-9xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text"
+        >
+          404
+        </h1>
+        <p class="text-2xl mb-8 text-gray-400">Oops! Page not found</p>
+        <a
+          href="/"
+          class="inline-block px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-[1.02]"
+        >
+          Back to Home
+        </a>
+      </div>
+
+      <!-- Background Effects -->
+      <div class="absolute inset-0 -z-10">
+        <div
+          class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-600/20 blur-3xl"
+        ></div>
+        <div
+          class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-cyan-500/20 blur-3xl"
+        ></div>
+      </div>
+    </main>
+
+    <footer class="py-12 border-t border-blue-900">
+      <div class="container mx-auto px-6 text-center text-gray-400">
+        <p>© 2024 Faisal. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
