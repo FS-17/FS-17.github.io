@@ -1,0 +1,574 @@
+[
+    {
+        "title": "Interactive Quiz for SPL's Internal Event",
+        "description": "Developed an interactive quiz experience for a Saudi Post Logistics (SPL) internal event. The quiz was centered around a physical \"vault\" with 200 locked boxes, each associated with a unique barcode that triggered a question when scanned.",
+        "shortDescription": "An interactive quiz for an SPL event, featuring barcode scanning and a physical vault with prizes.",
+        "client": "Saudi Post Logistics (SPL)",
+        "event": "Internal Event",
+        "date": "2024-10-07",
+        "categories": [
+            "Web Development",
+            "Interactive Experience"
+        ],
+        "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "JSON",
+            "GitHub"
+        ],
+        "objectives": [
+            "Create an engaging and interactive experience for SPL employees.",
+            "Incorporate gamification elements using a physical vault and barcodes.",
+            "Collect user responses and feedback.",
+            "Deliver the project within a tight deadline."
+        ],
+        "functionality": [
+            {
+                "featureName": "Barcode Scanning",
+                "description": "Users could scan a barcode on each box to trigger a unique question."
+            },
+            {
+                "featureName": "Question and Answer Logic",
+                "description": "The system displayed the question and provided multiple-choice options."
+            },
+            {
+                "featureName": "Answer Validation",
+                "description": "The user's selected answer was validated in real-time."
+            },
+            {
+                "featureName": "Feedback Mechanism",
+                "description": "If correct, the user received a congratulatory message and the three-digit code to unlock the corresponding box. If incorrect, the user received a \"try again\" message (later modified to one attempt per question)."
+            }
+        ],
+        "technicalDetails": {
+            "frontend": [],
+            "backend": [],
+            "database": [],
+            "libraries": [],
+            "frameworks": [],
+            "tools": [
+                "Git",
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "hosting": ""
+        },
+        "design": {
+            "aesthetic": "Clean, intuitive, and engaging, featuring SPL's branding.",
+            "colorPalette": [
+                "#1a2a3a",
+                "#0d1620",
+                "#00ccff",
+                "#ff1493"
+            ],
+            "typography": [
+                "SPLFont",
+                "Cairo",
+                "Arial"
+            ],
+            "responsiveness": "The application is responsive and functions seamlessly across various devices.",
+            "accessibility": "Considered, but not explicitly detailed."
+        },
+        "media": [
+            {
+                "type": "logo",
+                "url": "./logo/spl.png",
+                "alt": "SPL Logo",
+                "caption": "SPL Logo"
+            },
+            {
+                "type": "embedded",
+                "url": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7249827332100657153?compact=1\" height=\"399\" width=\"710\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+                "alt": "Embedded LinkedIn Post",
+                "caption": ""
+            }
+        ],
+        "outcomes": [
+            "Successfully engaged SPL employees at the internal event.",
+            "Provided a fun and interactive experience.",
+            "Demonstrated the ability to deliver a project under tight time constraints."
+        ],
+        "challenges": [
+            {
+                "challenge": "Tight deadline for project completion.",
+                "solution": "Employed efficient development practices and close communication with the client."
+            }
+        ],
+        "clientFeedback": [
+            {
+                "feedback": "The interactive quiz was a hit at our event! Employees loved the gamification elements and the engaging questions. Thank you for delivering such a fun experience within our tight deadline.",
+                "author": "SPL Event Coordinator"
+            }
+        ],
+        "projectPage": "/projects/spl-interactive-quiz.html",
+        "linkToProject": "",
+        "repository": "",
+        "notes": ""
+    },
+    {
+        "title": "Interactive Booth for PBS Hackathon at BIBAN Forum",
+        "description": "Created an interactive booth experience for the PBS Hackathon at the BIBAN forum. The installation featured a touch screen display designed to engage visitors and gather their innovative ideas related to specific sectors.",
+        "shortDescription": "An interactive touch screen booth for a hackathon, collecting user ideas and contact information.",
+        "client": "PBS ",
+        "event": "BIBAN Forum (Hackathon)",
+        "date": "2024-11-5",
+        "categories": [
+            "Web Development",
+            "Interactive Experience",
+            "Touch Screen Application"
+        ],
+        "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Firebase",
+            "Responsive Design"
+        ],
+        "objectives": [
+            "Engage visitors at the BIBAN forum.",
+            "Gather innovative ideas related to traffic, real estate, and tourism.",
+            "Collect user contact information.",
+            "Create a user-friendly and visually appealing touch screen experience."
+        ],
+        "functionality": [
+            {
+                "featureName": "Main Screen",
+                "description": "Displays the title \"PBS Hackathon\" and three interactive boxes representing different sectors (Traffic, Real Estate, Tourism)."
+            },
+            {
+                "featureName": "Question Screen",
+                "description": "Presents a sector-specific question to the user and allows them to input their answer in a text area."
+            },
+            {
+                "featureName": "User Info Screen",
+                "description": "Collects user's name, email, organization, and mobile number through a form."
+            },
+            {
+                "featureName": "Data Submission",
+                "description": "Stores user input (sector, answer, and contact details) in a Firebase Realtime Database."
+            }
+        ],
+        "technicalDetails": {
+            "frontend": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "backend": [
+                "Firebase Realtime Database"
+            ],
+            "database": [],
+            "libraries": [],
+            "frameworks": [],
+            "tools": [
+                "Git",
+                "excel"
+            ],
+            "hosting": ""
+        },
+        "design": {
+            "aesthetic": "Modern and visually engaging, with a gradient background, subtle animations, and a user-friendly interface.",
+            "colorPalette": [
+                "#000033",
+                "#000066",
+                "#0033cc",
+                "#0066ff"
+            ],
+            "typography": [
+                "Segoe UI",
+                "Tahoma",
+                "Geneva",
+                "Verdana",
+                "sans-serif"
+            ],
+            "responsiveness": "The application was designed to be responsive and adapt to different screen sizes.",
+            "accessibility": "The design followed accessibility best practices, with clear text, sufficient color contrast, and keyboard navigation support."
+        },
+        "media": [
+            {
+                "type": "logo",
+                "url": "./logo/pbs.png",
+                "alt": "PBS Logo",
+                "caption": "PBS Logo"
+            },
+            {
+                "type": "preview",
+                "url": "./assets/pbs/pre_pbs.png",
+                "alt": "Preview of the PBS",
+                "caption": "Preview"
+            },
+            {
+                "type": "image",
+                "url": "./assets/pbs/main_en.png",
+                "alt": "Main Screen of the PBS",
+                "caption": "Main Screen"
+            },
+            {
+                "type": "image",
+                "url": "./assets/pbs/main_ar.png",
+                "alt": "Main Screen of the PBS (Arabic)",
+                "caption": "Main Screen (Arabic)"
+            },
+            {
+                "type": "image",
+                "url": "./assets/pbs/data.png",
+                "alt": "User Info Screen of the PBS",
+                "caption": "User Info Screen"
+            }
+        ],
+        "outcomes": [
+            "Successfully engaged visitors at the BIBAN forum.",
+            "Gathered valuable ideas and contact information.",
+            "Demonstrated the ability to create an interactive and user-friendly touch screen experience for a public event."
+        ],
+        "challenges": [
+            {
+                "challenge": "Ensuring data persistence in a potentially offline environment.",
+                "solution": "Used localStorage as a fallback to store data locally if the Firebase connection failed."
+            }
+        ],
+        "clientFeedback": [],
+        "projectPage": "/projects/pbs-interactive-booth.html",
+        "linkToProject": "",
+        "repository": "",
+        "notes": ""
+    },
+    {
+        "title": "NEXT IPO",
+        "description": "NEXT IPO is a Flutter application designed to track and display information about upcoming Initial Public Offerings (IPOs). The app provides a user-friendly interface to view IPO details, customize settings, and stay updated on the latest offerings.",
+        "shortDescription": "A Flutter app to track and display information about upcoming IPOs with customizable settings and real-time data.",
+        "client": null,
+        "event": null,
+        "date": "2024-08-31",
+        "categories": [
+            "Mobile App Development",
+            "Finance"
+        ],
+        "tags": [
+            "Flutter",
+            "Dart",
+            "Web Scraping",
+            "IPO",
+            "State Management",
+            "Responsive Design",
+            "Multi-language Support"
+        ],
+        "objectives": [
+            "Provide a user-friendly interface to view upcoming IPO details.",
+            "Allow users to customize their view by selecting markets and date ranges.",
+            "Support multiple languages (English and Arabic).",
+            "Fetch real-time IPO data from the Saudi Exchange website.",
+            "Implement a responsive design for optimal viewing on various devices."
+        ],
+        "functionality": [
+            {
+                "featureName": "Dynamic IPO List",
+                "description": "View upcoming IPOs in an expandable card format."
+            },
+            {
+                "featureName": "Theme Support",
+                "description": "Choose between dark and light themes for comfortable viewing."
+            },
+            {
+                "featureName": "Customizable Settings",
+                "description": "Select specific markets (All, Main Market, Nomu - Parallel Market, Sukuk) and set custom date ranges for IPO listings."
+            },
+            {
+                "featureName": "Multi-language Support",
+                "description": "Available in English and Arabic. (coming soon)"
+            },
+            {
+                "featureName": "Responsive Design",
+                "description": "Utilizes a staggered grid layout for optimal viewing on various device sizes."
+            },
+            {
+                "featureName": "Real-time Data",
+                "description": "Fetches the latest IPO information and manages cookies for up-to-date listings."
+            }
+        ],
+        "technicalDetails": {
+            "frontend": [
+                "Flutter"
+            ],
+            "backend": [],
+            "database": [],
+            "libraries": [],
+            "frameworks": [
+                "Dart"
+            ],
+            "tools": [
+                "Git"
+            ],
+            "hosting": ""
+        },
+        "design": {
+            "aesthetic": "Dark mode mobile app with a modern and minimalist design, using a bright yellow accent to highlight important information.",
+            "colorPalette": [
+                "#0d1620",
+                "#172536",
+                "#1e2735",
+                "#ffd500",
+                "#EAEAEB",
+                "#FFFFFF"
+            ],
+            "typography": [
+                "Roboto"
+            ],
+            "responsiveness": "Designed for mobile devices, with a clear layout optimized for touch interaction.",
+            "accessibility": "The high contrast between the dark background and light text/icons suggests good readability."
+        },
+        "media": [
+            {
+                "type": "image",
+                "url": "assets/ipos/screen.png",
+                "alt": "Screenshot of the NEXT IPO app",
+                "caption": "Screenshot"
+            },
+            {
+                "type": "video",
+                "url": "assets/ipos/NEXTIPOsVideo.mp4",
+                "alt": "Video demonstration of the NEXT IPO app",
+                "caption": "Video Demonstration"
+            }
+        ],
+        "outcomes": [
+            "Developed a functional Flutter application that displays real-time IPO information.",
+            "Implemented user-customizable settings for market selection and date ranges.",
+            "Provided a responsive design that adapts to different screen sizes."
+        ],
+        "challenges": [
+            {
+                "challenge": "Web scraping IPO data from the Saudi Exchange website.",
+                "solution": "Utilized web scraping techniques, managed cookies, and sent HTTP requests to retrieve up-to-date information."
+            },
+            {
+                "challenge": "Parsing and formatting retrieved IPO data for display.",
+                "solution": "Handled various data fields such as company name, IPO ID, issue price, and offering dates."
+            }
+        ],
+        "clientFeedback": [],
+        "projectPage": "/projects/next-ipo.html",
+        "linkToProject": "",
+        "repository": "https://github.com/FS-17/NEXT_IPOs",
+        "notes": "This project is for educational purposes only. It is not intended for commercial use or as financial advice."
+    },
+    {
+        "title": "DroneHunter Systems",
+        "description": "DroneHunter Systems is a cutting-edge solution for monitoring and securing airspace from unauthorized drones. This is designed to detect, track, and neutralize potential threats from unmanned aerial vehicles (UAVs).",
+        "shortDescription": "A system for real-time drone detection, tracking, and neutralization using advanced sensors and machine learning.",
+        "client": null,
+        "event": null,
+        "date": "2022-05-22",
+        "categories": [
+            "Drone Detection",
+            "Security",
+            "Machine Learning",
+            "Web Development"
+        ],
+        "tags": [
+            "Python",
+            "YOLOv5",
+            "TensorFlow",
+            "Bootstrap",
+            "Real-time Tracking",
+            "Object Detection"
+        ],
+        "objectives": [
+            "Develop a system for real-time detection of unauthorized drones.",
+            "Implement automated tracking of detected drones.",
+            "Create a user-friendly interface for airspace monitoring.",
+            "Utilize machine learning for accurate drone identification."
+        ],
+        "functionality": [
+            {
+                "featureName": "Real-time Detection",
+                "description": "Utilizing advanced sensors and detection algorithms, DroneHunter Systems can identify drones in real-time."
+            },
+            {
+                "featureName": "Automated Tracking",
+                "description": "Once a drone is detected, our system automatically tracks its movement across the airspace."
+            },
+            {
+                "featureName": "User-friendly Interface",
+                "description": "The system provides an intuitive interface for users to monitor the airspace."
+            }
+        ],
+        "technicalDetails": {
+            "frontend": [
+                "Bootstrap"
+            ],
+            "backend": [
+                "Python"
+            ],
+            "database": [],
+            "libraries": [
+                "TensorFlow"
+            ],
+            "frameworks": [
+                "YOLOv5"
+            ],
+            "tools": [],
+            "hosting": [
+                "GitHub Pages"
+            ]
+        },
+        "design": {
+            "aesthetic": "Dark mode interface with a vibrant orange accent, designed for user engagement and clarity.",
+            "colorPalette": [
+                "#0f0e16",
+                "#a7a9be",
+                "#ff6f00",
+                "#eF5F00"
+            ],
+            "typography": [
+                "helvetica",
+                "arial",
+                "sans-serif"
+            ],
+            "responsiveness": "The design adapts to different screen sizes, particularly with a different layout for screens smaller than 768px wide.",
+            "accessibility": "Some considerations made, such as distinct color contrasts and using semantic HTML elements where possible."
+        },
+        "media": [
+            {
+                "type": "logo",
+                "url": "https://github.com/FS-17/droneshunter.systems/blob/main/images/logo.png?raw=true",
+                "alt": "DroneHunter Systems Logo",
+                "caption": "DroneHunter Systems Logo"
+            },
+            {
+                "type": "gif",
+                "url": "https://github.com/FS-17/droneshunter.systems/blob/main/Explanation.gif?raw=true",
+                "alt": "System Explanation",
+                "caption": "System Explanation"
+            },
+            {
+                "type": "image",
+                "url": "./assets/drones/home.png",
+                "alt": "DroneHunter Systems Interface",
+                "caption": "Interface"
+            }
+        ],
+        "outcomes": [
+            "Successfully developed a system capable of real-time drone detection and tracking.",
+            "Implemented a user-friendly interface for airspace monitoring.",
+            "Utilized YOLOv5 and TensorFlow for drone detection and model conversion."
+        ],
+        "challenges": [],
+        "clientFeedback": [],
+        "projectPage": "/projects/dronehunter-systems.html",
+        "linkToProject": "https://fs-17.github.io/droneshunter.systems/",
+        "repository": "https://github.com/FS-17/droneshunter.systems",
+        "notes": ""
+    },
+    {
+        "title": "AKTSER: Telegram Voice Message Summarizer",
+        "description": "AKTSER is a Telegram bot that summarizes long voice messages, converts voice to text, and trims silence from audio, saving users time and effort.",
+        "shortDescription": "A Telegram bot that uses AI to summarize voice messages, transcribe them, and remove silence.",
+        "client": null,
+        "event": null,
+        "date": "2024-06-11",
+        "categories": [
+            "Bot Development",
+            "AI",
+            "Natural Language Processing",
+            "Telegram"
+        ],
+        "tags": [
+            "Python",
+            "Docker",
+            "Telegram Bot API",
+            "Google Cloud Speech-to-Text",
+            "Audio Processing"
+        ],
+        "objectives": [
+            "Provide a convenient way to summarize long voice messages on Telegram.",
+            "Offer voice-to-text conversion for easier reading and accessibility.",
+            "Trim silence from audio messages to improve listening experience.",
+            "Support multiple languages for broader usability."
+        ],
+        "functionality": [
+            {
+                "featureName": "Voice Message Summarization",
+                "description": "Extracts key points from voice messages using AI."
+            },
+            {
+                "featureName": "Voice-to-Text Conversion",
+                "description": "Transcribes voice messages into readable text."
+            },
+            {
+                "featureName": "Audio Trimming",
+                "description": "Removes silent and low-volume parts from voice messages."
+            },
+            {
+                "featureName": "Multi-Language Support",
+                "description": "Processes voice messages in multiple languages."
+            }
+        ],
+        "technicalDetails": {
+            "frontend": [],
+            "backend": [
+                "Python"
+            ],
+            "database": [],
+            "libraries": [
+                "librosa",
+                "numpy",
+                "matplotlib"
+            ],
+            "frameworks": [],
+            "tools": [
+                "Docker",
+                "Git"
+            ],
+            "hosting": [
+                "Self-hosting with Docker/Python"
+            ]
+        },
+        "design": {
+            "aesthetic": "Telegram bot interface",
+            "colorPalette": [],
+            "typography": [],
+            "responsiveness": "Adapts to the Telegram app's interface.",
+            "accessibility": ""
+        },
+        "media": [
+            {
+                "type": "image",
+                "url": "assets/aktser/audio_analysis.png",
+                "alt": "Audio Analysis Visualization",
+                "caption": "Audio analysis conducted to optimize silence trimming."
+            },
+            {
+                "type": "audio",
+                "url": "assets/test2.ogg",
+                "alt": "test2 audio file",
+                "caption": ""
+            },
+            {
+                "type": "audio",
+                "url": "assets/test1.wav",
+                "alt": "test1 audio file",
+                "caption": ""
+            },
+            {
+                "type": "audio",
+                "url": "assets/test0.wav",
+                "alt": "test0 audio file",
+                "caption": ""
+            }
+        ],
+        "outcomes": [
+            "Created a functional Telegram bot for summarizing voice messages.",
+            "Implemented voice-to-text conversion and audio trimming features.",
+            "Conducted audio analysis for optimizing performance."
+        ],
+        "challenges": [],
+        "clientFeedback": [],
+        "projectPage": "/projects/aktser.html",
+        "linkToProject": "https://t.me/AktserBot",
+        "repository": "https://github.com/fs-17/aktser",
+        "notes": "This project utilizes the Google Cloud Speech-to-Text API for voice processing and is designed for self-hosting using Docker or Python."
+    }
+]

@@ -87,15 +87,15 @@
       }
 
       /* logo slider */
-      img {
+      .logoImg {
         max-width: 70px !important;
-        width: 100px;
-        height: 100px;
+        /* width: 100px; */
+        /* height: 100px; */
         animation: scroll 60s linear infinite;
         transition: transform 0.3s ease;
       }
 
-      img:hover {
+      .logoImg:hover {
         transform: scale(1.1);
       }
 
@@ -131,21 +131,68 @@
           transform: none !important; /* Prevent sliding animation on desktop */
           justify-content: center;
         }
-        img {
+        .logoImg {
           max-width: 90px !important;
-          width: 100px;
-          height: 100px;
+          /* width: 100px; */
+          height: auto;
           animation: none;
           transition: transform 0.3s ease;
           filter: opacity(0.7);
         }
-        img:hover {
+        .logoImg:hover {
           transform: scale(1.1);
           filter: opacity(1);
         }
         .dup {
           display: none;
         }
+      }
+
+      /* Add these new styles */
+      .project-card {
+        transition: all 0.3s ease;
+        transform: translateY(0);
+        position: relative; /* Add this */
+        cursor: pointer; /* Add this */
+      }
+
+      .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
+          0 8px 10px -6px rgba(0, 0, 0, 0.2);
+        background-color: rgba(31, 41, 55, 0.9);
+      }
+
+      .project-card .tags span {
+        transition: all 0.2s ease;
+      }
+
+      .project-card:hover .tags span {
+        background-color: rgba(75, 85, 99, 0.7);
+      }
+
+      .project-card .links a {
+        transition: all 0.2s ease;
+      }
+
+      .project-card:hover .links a:hover {
+        transform: translateY(-2px);
+      }
+
+      .project-card .card-overlay {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+      }
+
+      .project-card .links {
+        position: relative;
+        z-index: 2;
+      }
+
+      .project-card .links a {
+        position: relative;
+        z-index: 3;
       }
     </style>
 
@@ -277,43 +324,43 @@
         <div id="logoSlider" class="slide-track">
           <!-- Original set -->
           <div class="slide">
-            <img src="logo/ar.png" alt="" />
+            <img src="logo/ar.png" alt="" class="logoImg" />
           </div>
           <div class="slide">
-            <img src="logo/mo.png" alt="" />
+            <img src="logo/mo.png" alt="" class="logoImg" />
           </div>
           <div class="slide">
-            <img src="logo/spl.png" alt="" />
+            <img src="logo/spl.png" alt="" class="logoImg" />
           </div>
           <div class="slide">
-            <img src="logo/ms.png" alt="" />
+            <img src="logo/ms.png" alt="" class="logoImg" />
           </div>
           <div class="slide">
-            <img src="logo/pbs.png" alt="" />
+            <img src="logo/pbs.png" alt="" class="logoImg" />
           </div>
 
           <div class="slide">
-            <img src="logo/yk.png" alt="" />
+            <img src="logo/yk.png" alt="" class="logoImg" />
           </div>
           <!-- Duplicate set for seamless loop -->
           <div class="slide dup">
-            <img src="logo/ar.png" alt="" />
+            <img src="logo/ar.png" alt="" class="logoImg" />
           </div>
           <div class="slide dup">
-            <img src="logo/mo.png" alt="" />
+            <img src="logo/mo.png" alt="" class="logoImg" />
           </div>
           <div class="slide dup">
-            <img src="logo/spl.png" alt="" />
+            <img src="logo/spl.png" alt="" class="logoImg" />
           </div>
           <div class="slide dup">
-            <img src="logo/ms.png" alt="" />
+            <img src="logo/ms.png" alt="" class="logoImg" />
           </div>
           <div class="slide dup">
-            <img src="logo/pbs.png" alt="" />
+            <img src="logo/pbs.png" alt="" class="logoImg" />
           </div>
 
           <div class="slide dup">
-            <img src="logo/yk.png" alt="" />
+            <img src="logo/yk.png" alt="" class="logoImg" />
           </div>
         </div>
       </div>
@@ -481,107 +528,85 @@
         <p>© 2024 Faisal. All rights reserved.</p>
       </div>
     </footer>
-  </body>
+    <script>
+      // Load and display projects
+      async function loadProjects() {
+        try {
+          const response = await fetch("projects.json");
+          const projects = await response.json();
+          const projectContainer = document.getElementById("projectContainer");
 
-  <script>
-    const maxProjectsToDisplay = 3;
-    async function getPinnedRepos() {
-      try {
-        const response = await fetch("https://pinned.berrysauce.dev/get/FS-17");
-        const repos = await response.json();
+          projects.forEach((project) => {
+            const projectElement = document.createElement("div");
+            projectElement.className =
+              "project-card p-6 rounded-xl bg-gray-800/80 backdrop-blur-sm shadow-lg flex flex-col h-full";
 
-        const projectContainer = document.getElementById("projectContainer");
-        const moreButtonContainer = document.getElementById(
-          "moreButtonContainer"
-        );
+            let mediaHTML = "";
+            if (project.media && project.media.length > 0) {
+              const firstMedia = project.media[0];
+              if (firstMedia.type === "logo") {
+                mediaHTML = `
+                                <img src="${firstMedia.url}" 
+                                     alt="${firstMedia.alt}" 
+                                     class="w-24 h-24 object-contain mb-4 mx-auto"> 
+                            `;
+              }
+            }
 
-        for (let i = 0; i < Math.min(repos.length, maxProjectsToDisplay); i++) {
-          const repo = repos[i];
-          createProjectElement(repo, projectContainer);
+            const tagsHTML = project.tags
+              .map(
+                (tag) =>
+                  `<span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">${tag}</span>`
+              )
+              .join("");
+
+            let primaryLink = project.projectPage || "#";
+
+            projectElement.innerHTML = `
+                    <a href="${primaryLink}" class="card-overlay" aria-label="View details of ${
+              project.title
+            }"></a>
+                    <div class="flex-grow relative z-2">
+                        ${mediaHTML}
+                        <h3 class="text-xl font-semibold mb-2">${
+                          project.title
+                        }</h3>
+                        <p class="text-gray-400 mb-4">${
+                          project.shortDescription
+                        }</p>
+                        <div class="flex flex-wrap gap-2 mb-4 tags">
+                            ${tagsHTML}
+                        </div>
+                    </div>
+                    <div class="flex gap-4 mt-4 pt-4 border-t border-gray-700 links">
+                        ${
+                          project.repository
+                            ? `<a href="${project.repository}" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-700/50 hover:bg-gray-700 transition-all" onclick="event.stopPropagation()">
+                                    <i class="fab fa-github"></i>
+                                    <span>Repository</span>
+                                </a>`
+                            : ""
+                        }
+                        ${
+                          project.linkToProject
+                            ? `<a href="${project.linkToProject}" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-700/50 hover:bg-gray-700 transition-all" onclick="event.stopPropagation()">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>`
+                            : ""
+                        }
+                    </div>
+                `;
+
+            projectContainer.appendChild(projectElement);
+          });
+        } catch (error) {
+          console.error("Error loading projects:", error);
         }
-
-        if (repos.length > maxProjectsToDisplay) {
-          const moreButton = document.createElement("a");
-          moreButton.href = "https://github.com/FS-17";
-          moreButton.textContent = "View More on GitHub";
-          moreButton.classList.add(
-            "px-6",
-            "py-3",
-            "rounded-xl",
-            "bg-blue-600",
-            "text-white",
-            "font-semibold",
-            "hover:bg-blue-700",
-            "transition-colors"
-          );
-          moreButtonContainer.appendChild(moreButton);
-        }
-      } catch (error) {
-        console.error("Error fetching pinned repositories:", error);
       }
-    }
 
-    function createProjectElement(repo, container) {
-      const projectDiv = document.createElement("div");
-      projectDiv.classList.add(
-        "group",
-        "relative",
-        "p-6",
-        "rounded-xl",
-        "bg-gray-800",
-        "border",
-        "border-blue-900",
-        "shadow-lg",
-        "hover:shadow-xl",
-        "transition-shadow",
-        "overflow-hidden"
-      );
-      // make the project clickable href to the repo
-      const projectLink = document.createElement("a");
-      projectLink.href = "https://github.com/FS-17/" + repo.name;
-      projectLink.target = "_blank"; // Add this line to open in new tab
-      projectLink.rel = "noopener noreferrer"; // Add security best practice
-      projectLink.appendChild(projectDiv);
-
-      const overlayDiv = document.createElement("div");
-      overlayDiv.classList.add(
-        "absolute",
-        "inset-0",
-        "bg-gradient-to-r",
-        "from-blue-600/5",
-        "to-cyan-500/5",
-        "opacity-0",
-        "group-hover:opacity-100",
-        "transition-opacity"
-      );
-      projectDiv.appendChild(overlayDiv);
-
-      const title = document.createElement("h3");
-      title.textContent = repo.name;
-      title.classList.add("text-xl", "font-semibold", "mb-4");
-      projectDiv.appendChild(title);
-
-      const description = document.createElement("p");
-      description.textContent = repo.description;
-      description.classList.add("text-gray-400", "mb-4");
-      projectDiv.appendChild(description);
-
-      // add github and external link
-      const linksDiv = document.createElement("div");
-      linksDiv.classList.add("flex", "gap-4");
-      projectDiv.appendChild(linksDiv);
-
-      const githubLink = document.createElement("a");
-      githubLink.classList.add("text-gray-400");
-      linksDiv.appendChild(githubLink);
-
-      const githubIcon = document.createElement("i");
-      githubIcon.classList.add("fab", "fa-github", "text-2xl");
-      githubLink.appendChild(githubIcon);
-
-      container.appendChild(projectLink);
-    }
-
-    getPinnedRepos();
-  </script>
+      // Load projects when the page loads
+      document.addEventListener("DOMContentLoaded", loadProjects);
+    </script>
+  </body>
 </html>
