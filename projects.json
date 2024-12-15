@@ -80,7 +80,7 @@
             },
             {
                 "type": "embedded",
-                "url": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7249827332100657153?compact=1\" height=\"399\" width=\"710\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+                "url": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7249827332100657153?compact=1\" height=\"399\" width=\"90%\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
                 "alt": "Embedded LinkedIn Post",
                 "caption": ""
             }
