@@ -20,19 +20,6 @@
       <changefreq>monthly</changefreq>
       <priority>0.80</priority>
    </url>
-   <!-- Adding your projects section since it's dynamically loaded -->
-   <url>
-      <loc>https://fs-17.github.io/#projects</loc>
-<lastmod>2024-12-21T16:46:12+00:00</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>0.90</priority>
-   </url>
-   <url>
-      <loc>https://fs-17.github.io/#skills</loc>
-<lastmod>2024-12-21T16:46:12+00:00</lastmod>
-      <changefreq>monthly</changefreq>
-      <priority>0.80</priority>
-   </url>
    <url>
       <loc>https://fs-17.github.io/projects/spl-interactive-quiz</loc>
 <lastmod>2024-12-21T16:46:12+00:00</lastmod>
