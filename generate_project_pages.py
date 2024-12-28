@@ -1,15 +1,21 @@
 import json
 import os
+from urllib.parse import quote_plus
+
+mydomain = "https://fs-17.github.io"
 
 def load_projects():
     with open('projects.json', 'r', encoding='utf-8') as f:
         return json.load(f)
 
 def generate_project_page(project):
+    # Sanitize project title for use in meta title if metaTitle is not provided
+    meta_title = project.get('metaTitle', f"{project['title']} - Project Details")
+
     # Convert tags and categories to HTML
     tags_html = ''.join([f'<span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">{tag}</span>' for tag in project.get('tags', [])])
     categories_html = ''.join([f'<span class="px-2 py-1 text-sm rounded-full bg-blue-700/50">{category}</span>' for category in project.get('categories', [])])
-    
+
     # Generate media HTML
     media_html = ''
     for media in project.get('media', []):
@@ -65,9 +71,12 @@ def generate_project_page(project):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{project['title']} - Project Details</title>
+    <title>{meta_title}</title>
+    <meta name="description" content="{project.get('metaDescription', project.get('shortDescription', ''))}">
+    <meta name="keywords" content="{', '.join(project.get('keywords', []))}">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="canonical" href="{mydomain}/{project['projectPage']}">
 </head>
 <body class="min-h-screen bg-gray-900 text-gray-200">
     <nav class="fixed top-0 w-full backdrop-blur-lg z-40">
@@ -138,7 +147,7 @@ def generate_project_page(project):
                         <p class="text-gray-300">{project.get('design', {}).get('aesthetic', '')}</p>
                     </div>
                     ''' if project.get('design', {}).get('aesthetic') else ''}
-                    
+
                     {f'''
                     <div class="mb-4 pl-4">
                         <h3 class="text-lg font-semibold mb-3 text-blue-400">Color Palette</h3>
@@ -147,7 +156,7 @@ def generate_project_page(project):
                         </div>
                     </div>
                     ''' if project.get('design', {}).get('colorPalette') else ''}
-                    
+
                     {f'''
                     <div class="mb-4 pl-4">
                         <h3 class="text-lg font-semibold mb-3 text-blue-400">Typography</h3>
@@ -156,14 +165,14 @@ def generate_project_page(project):
                         </ul>
                     </div>
                     ''' if project.get('design', {}).get('typography') else ''}
-                    
+
                     {f'''
                     <div class="mb-4 pl-4">
                         <h3 class="text-lg font-semibold mb-3 text-blue-400">Responsiveness</h3>
                         <p class="text-gray-300">{project.get('design', {}).get('responsiveness', '')}</p>
                     </div>
                     ''' if project.get('design', {}).get('responsiveness') else ''}
-                    
+
                     {f'''
                     <div class="mb-4 pl-4">
                         <h3 class="text-lg font-semibold mb-3 text-blue-400">Accessibility</h3>
@@ -208,6 +217,8 @@ def generate_project_page(project):
         # Write the HTML file
         with open(f'{file_path}', 'w', encoding='utf-8') as f:
             f.write(html_content)
+    
+    print(f"{mydomain}/{project['projectPage']}\n")
 
 def main():
     projects = load_projects()

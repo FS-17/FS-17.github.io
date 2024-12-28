@@ -3,6 +3,15 @@
         "title": "Interactive Quiz for SPL's Internal Event",
         "description": "Developed an interactive quiz experience for a Saudi Post Logistics (SPL) internal event. The quiz was centered around a physical \"vault\" with 200 locked boxes, each associated with a unique barcode that triggered a question when scanned.",
         "shortDescription": "An interactive quiz for an SPL event, featuring barcode scanning and a physical vault with prizes.",
+        "metaDescription": "Discover how an interactive quiz with barcode scanning was developed for Saudi Post Logistics (SPL)'s internal event to engage employees and enhance the experience.",
+        "keywords": [
+            "interactive quiz",
+            "SPL",
+            "Saudi Post Logistics",
+            "internal event",
+            "barcode scanning",
+            "web development freelancer"
+        ],
         "client": "Saudi Post Logistics (SPL)",
         "event": "Internal Event",
         "date": "2024-10-07",
@@ -69,7 +78,7 @@
                 "Arial"
             ],
             "responsiveness": "The application is responsive and functions seamlessly across various devices.",
-            "accessibility": "Considered, but not explicitly detailed."
+            "accessibility": ""
         },
         "media": [
             {
@@ -81,7 +90,7 @@
             {
                 "type": "embedded",
                 "url": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7249827332100657153?compact=1\" height=\"399\" width=\"90%\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
-                "alt": "Embedded LinkedIn Post",
+                "alt": "Embedded LinkedIn Post showcasing the SPL interactive quiz",
                 "caption": ""
             }
         ],
@@ -92,8 +101,8 @@
         ],
         "challenges": [
             {
-                "challenge": "Tight deadline for project completion.",
-                "solution": "Employed efficient development practices and close communication with the client."
+                "challenge": "Rapid Development Timeline: The project required completion within a tight deadline to align with the scheduled SPL event.",
+                "solution": "Agile Development Methodology: I utilized efficient development practices, including rapid prototyping and iterative development, along with close communication with the client to ensure timely delivery and meet project requirements."
             }
         ],
         "clientFeedback": [
@@ -111,6 +120,14 @@
         "title": "Interactive Booth for PBS Hackathon at BIBAN Forum",
         "description": "Created an interactive booth experience for the PBS Hackathon at the BIBAN forum. The installation featured a touch screen display designed to engage visitors and gather their innovative ideas related to specific sectors.",
         "shortDescription": "An interactive touch screen booth for a hackathon, collecting user ideas and contact information.",
+        "metaDescription": "Learn about the interactive touch screen booth developed for the PBS Hackathon at BIBAN Forum, designed to gather innovative ideas in traffic, real estate, and tourism.",
+        "keywords": [
+            "interactive booth",
+            "PBS Hackathon",
+            "BIBAN Forum",
+            "touch screen application",
+            "web development freelancer"
+        ],
         "client": "PBS ",
         "event": "BIBAN Forum (Hackathon)",
         "date": "2024-11-5",
@@ -164,7 +181,7 @@
             "frameworks": [],
             "tools": [
                 "Git",
-                "excel"
+                "Excel"
             ],
             "hosting": ""
         },
@@ -179,7 +196,6 @@
             "typography": [
                 "Segoe UI",
                 "Tahoma",
-                "Geneva",
                 "Verdana",
                 "sans-serif"
             ],
@@ -208,7 +224,7 @@
             {
                 "type": "image",
                 "url": "./assets/pbs/main_ar.png",
-                "alt": "Main Screen of the PBS (Arabic)",
+                "alt": "Main Screen of the PBS interactive booth (Arabic)",
                 "caption": "Main Screen (Arabic)"
             },
             {
@@ -236,9 +252,17 @@
         "notes": ""
     },
     {
-        "title": "NEXT IPO",
+        "title": "NEXT IPO: Mobile App for Tracking Initial Public Offerings",
         "description": "NEXT IPO is a Flutter application designed to track and display information about upcoming Initial Public Offerings (IPOs). The app provides a user-friendly interface to view IPO details, customize settings, and stay updated on the latest offerings.",
         "shortDescription": "A Flutter app to track and display information about upcoming IPOs with customizable settings and real-time data.",
+        "metaDescription": "Explore NEXT IPO, a Flutter mobile app for tracking upcoming IPOs. Features customizable settings, real-time data from the Saudi Exchange, and a user-friendly interface.",
+        "keywords": [
+            "IPO tracker app",
+            "Flutter app development",
+            "Saudi Exchange IPOs",
+            "mobile finance app",
+            "real-time IPO data"
+        ],
         "client": null,
         "event": null,
         "date": "2024-08-31",
@@ -323,13 +347,13 @@
             {
                 "type": "image",
                 "url": "assets/ipos/screen.png",
-                "alt": "Screenshot of the NEXT IPO app",
+                "alt": "Screenshot of the NEXT IPO app showcasing the main screen",
                 "caption": "Screenshot"
             },
             {
                 "type": "video",
                 "url": "assets/ipos/NEXTIPOsVideo.mp4",
-                "alt": "Video demonstration of the NEXT IPO app",
+                "alt": "Video demonstration of the NEXT IPO app's features and functionality",
                 "caption": "Video Demonstration"
             }
         ],
@@ -355,9 +379,17 @@
         "notes": "This project is for educational purposes only. It is not intended for commercial use or as financial advice."
     },
     {
-        "title": "DroneHunter Systems",
+        "title": "DroneHunter Systems: Real-time Drone Detection and Tracking",
         "description": "DroneHunter Systems is a cutting-edge solution for monitoring and securing airspace from unauthorized drones. This is designed to detect, track, and neutralize potential threats from unmanned aerial vehicles (UAVs).",
         "shortDescription": "A system for real-time drone detection, tracking, and neutralization using advanced sensors and machine learning.",
+        "metaDescription": "Learn about DroneHunter Systems, a project utilizing Python, YOLOv5, and TensorFlow for real-time detection and tracking of unauthorized drones, enhancing airspace security.",
+        "keywords": [
+            "drone detection system",
+            "real-time drone tracking",
+            "Python security project",
+            "YOLOv5 drone detection",
+            "machine learning for drone security"
+        ],
         "client": null,
         "event": null,
         "date": "2022-05-22",
@@ -433,7 +465,7 @@
         "media": [
             {
                 "type": "logo",
-                "url": "https://github.com/FS-17/droneshunter.systems/blob/main/images/logo.png?raw=true",
+                "url": "./assets/drones/logo.png",
                 "alt": "DroneHunter Systems Logo",
                 "caption": "DroneHunter Systems Logo"
             },
@@ -463,9 +495,17 @@
         "notes": ""
     },
     {
-        "title": "AKTSER: Telegram Voice Message Summarizer",
+        "title": "AKTSER: AI-Powered Telegram Voice Message Summarizer and Transcriber",
         "description": "AKTSER is a Telegram bot that summarizes long voice messages, converts voice to text, and trims silence from audio, saving users time and effort.",
         "shortDescription": "A Telegram bot that uses AI to summarize voice messages, transcribe them, and remove silence.",
+        "metaDescription": "Discover AKTSER, a Telegram bot utilizing AI for voice message summarization, transcription, and silence removal. Built with Python and Google Cloud Speech-to-Text.",
+        "keywords": [
+            "Telegram bot",
+            "voice message summarizer",
+            "AI audio processing",
+            "Python Telegram bot",
+            "voice to text Telegram"
+        ],
         "client": null,
         "event": null,
         "date": "2024-06-11",
