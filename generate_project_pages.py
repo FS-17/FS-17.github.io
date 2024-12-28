@@ -74,9 +74,11 @@ def generate_project_page(project):
     <title>{meta_title}</title>
     <meta name="description" content="{project.get('metaDescription', project.get('shortDescription', ''))}">
     <meta name="keywords" content="{', '.join(project.get('keywords', []))}">
-    <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+<link rel="stylesheet" href="./styles.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <link rel="canonical" href="{mydomain}/{project['projectPage']}">
+    <link rel="canonical" href="{mydomain}{project['projectPage']}">
 </head>
 <body class="min-h-screen bg-gray-900 text-gray-200">
     <nav class="fixed top-0 w-full backdrop-blur-lg z-40">
@@ -218,7 +220,7 @@ def generate_project_page(project):
         with open(f'{file_path}', 'w', encoding='utf-8') as f:
             f.write(html_content)
     
-    print(f"{mydomain}/{project['projectPage']}\n")
+    print(f"{mydomain}{project['projectPage']}\n")
 
 def main():
     projects = load_projects()
