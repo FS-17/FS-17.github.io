@@ -74,9 +74,7 @@ def generate_project_page(project):
     <title>{meta_title}</title>
     <meta name="description" content="{project.get('metaDescription', project.get('shortDescription', ''))}">
     <meta name="keywords" content="{', '.join(project.get('keywords', []))}">
-        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-<link rel="stylesheet" href="./styles.css">
-
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="canonical" href="{mydomain}{project['projectPage']}">
 </head>
