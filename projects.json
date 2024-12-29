@@ -610,5 +610,172 @@
         "linkToProject": "https://t.me/AktserBot",
         "repository": "https://github.com/fs-17/aktser",
         "notes": "This project utilizes the Google Cloud Speech-to-Text API for voice processing and is designed for self-hosting using Docker or Python."
+    },
+    {
+        "title": "SPL's Internal Event: Values Challenge",
+        "description": "Developed an interactive experience for SPL's internal event, featuring seven challenges aligned with the company's core values. Employees engaged in various activities, including puzzle-solving, drawing, scenario-based problem-solving, and a collaborative game, to reinforce their understanding and commitment to SPL's principles.",
+        "shortDescription": "An interactive experience for SPL's internal event with seven challenges designed to reinforce the company's core values.",
+        "metaDescription": "Discover the interactive experience created for SPL's internal event, featuring seven challenges that reinforce company values through engaging activities like puzzles, drawing, and collaborative games.",
+        "keywords": [
+            "interactive experience",
+            "SPL",
+            "Saudi Post Logistics",
+            "internal event",
+            "values challenge",
+            "web development freelancer",
+            "team building",
+            "employee engagement"
+        ],
+        "client": "Saudi Post Logistics (SPL)",
+        "event": "Internal Event",
+        "date": "2024-12-25",
+        "categories": [
+            "Web Development",
+            "Interactive Experience",
+            "Event Technology"
+        ],
+        "tags": [
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "Firebase",
+            "Responsive Design",
+            "AI",
+            "Gemini API"
+        ],
+        "objectives": [
+            "Reinforce SPL's seven core values among employees.",
+            "Create an engaging and interactive experience for the internal event.",
+            "Promote teamwork and collaboration through interactive challenges.",
+            "Gather employee feedback and insights.",
+            "Deliver a high-quality experience within a tight deadline."
+        ],
+        "functionality": [
+            {
+                "featureName": "Puzzle Challenge",
+                "description": "A timed puzzle game where employees assemble a picture representing \"We move fast.\""
+            },
+            {
+                "featureName": "Drawing Challenge",
+                "description": "Employees draw an image representing \"We commit to doing more\" in three rounds, with the option to improve their drawing in each round."
+            },
+            {
+                "featureName": "Scenario-Based Challenge",
+                "description": "Employees respond to scenarios related to \"We exceed our customers' expectations,\" with AI evaluating their solutions."
+            },
+            {
+                "featureName": "Collaborative Game",
+                "description": "Two players work together, one with instructions and the other interacting with the screen, to complete a task representing \"We cooperate and share together.\""
+            },
+            {
+                "featureName": "Confession Booth",
+                "description": "A platform for employees to anonymously share their thoughts and experiences, representing \"We are characterized by trust and transparency.\""
+            },
+            {
+                "featureName": "Idea Submission",
+                "description": "Employees combine elements related to SPL services and innovative technologies to create and submit new ideas, representing \"We innovate solutions for the future.\""
+            },
+            {
+                "featureName": "Interactive Challenges",
+                "description": "Employees solve various challenges related to SPL's services and values, representing \"We always overcome challenges.\""
+            }
+        ],
+        "technicalDetails": {
+            "frontend": [
+                "HTML",
+                "CSS",
+                "JavaScript"
+            ],
+            "backend": [
+                "Firebase Realtime Database"
+            ],
+            "database": [],
+            "libraries": [],
+            "frameworks": [],
+            "tools": [
+                "Git",
+                "Gemini API"
+            ],
+            "hosting": []
+        },
+        "design": {
+            "aesthetic": "Modern, engaging, and aligned with SPL's branding, featuring a dark mode interface with vibrant accents.",
+            "colorPalette": [
+                "#0d1620",
+                "#172536",
+                "#00c8e1",
+                "#EAEAEB"
+            ],
+            "typography": [
+                "SPLFont",
+                "Cairo",
+                "Arial"
+            ],
+            "responsiveness": "All applications are responsive and function seamlessly across various devices, including touch screens and mobile devices.",
+            "accessibility": "Designed with accessibility in mind, featuring clear text, sufficient color contrast, and keyboard navigation support."
+        },
+        "media": [
+            {
+                "type": "logo",
+                "url": "./logo/spl.png",
+                "alt": "SPL Logo",
+                "caption": "SPL Logo"
+            },
+            {
+                "type": "embedded",
+                "url": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7277715352195584002?compact=1\"height=\"499\" width=\"90%\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+                "alt": "Embedded LinkedIn Post showcasing the SPL interactive challenges",
+                "caption": ""
+            },
+            {
+                "type": "image",
+                "url": "./assets/spl/bom.jpg",
+                "alt": "Teamwork at the SPL event",
+                "caption": "\"We cooperate and share together\" collaborative game"
+            },
+            {
+                "type": "image",
+                "url": "./assets/spl/llm.jpg",
+                "alt": "User interface for a question that the AI will evaluate",
+                "caption": "\"We exceed our customers expectations\" scenario-based challenge"
+            },
+            {
+                "type": "image",
+                "url": "./assets/spl/ins.jpg",
+                "alt": "User interface for submitting ideas",
+                "caption": "\"We innovate solutions for the future\" idea submission"
+            }
+        ],
+        "outcomes": [
+            "Successfully engaged SPL employees at the internal event.",
+            "Reinforced understanding and commitment to SPL's core values.",
+            "Provided a fun, interactive, and memorable experience.",
+            "Gathered valuable employee feedback and innovative ideas.",
+            "Demonstrated the ability to deliver a complex project under tight time constraints."
+        ],
+        "challenges": [
+            {
+                "challenge": "Tight Development Timeline: The project required rapid development and testing to meet the event deadline.",
+                "solution": "Utilized agile development methodologies, including rapid prototyping, iterative development, and close communication with the client, to ensure timely delivery."
+            },
+            {
+                "challenge": "Ensuring Seamless Integration of Diverse Challenges: The project involved creating seven different interactive experiences, each with unique technical requirements.",
+                "solution": "Employed a modular design approach and leveraged JavaScript libraries and frameworks to streamline development and ensure seamless integration between the different challenges."
+            },
+            {
+                "challenge": "Optimizing for Touch Screen Interaction: The event primarily utilized touch screen displays, requiring careful consideration of user interface and user experience design.",
+                "solution": "Conducted thorough testing on touch screen devices and implemented responsive design principles to ensure optimal usability and a smooth interactive experience."
+            }
+        ],
+        "clientFeedback": [
+            {
+                "feedback": "The interactive challenges were a huge success at our event! Employees loved the engaging activities and how they related to our company values. Thank you for delivering such a fantastic experience within our tight deadline.",
+                "author": "SPL Event Coordinator"
+            }
+        ],
+        "projectPage": "/projects/spl-values-challenge.html",
+        "linkToProject": "",
+        "repository": "",
+        "notes": "This project demonstrated the successful integration of various web technologies to create a dynamic and engaging experience for a large-scale internal event. The use of AI, specifically Gemini API, for evaluating scenario-based solutions added an innovative element to the project."
     }
 ]
