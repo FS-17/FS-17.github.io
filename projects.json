@@ -1,7 +1,7 @@
 [
     {
         "title": "Interactive Quiz for SPL's Internal Event",
-        "description": "Developed an interactive quiz experience for a Saudi Post Logistics (SPL) internal event. The quiz was centered around a physical \"vault\" with 200 locked boxes, each associated with a unique barcode that triggered a question when scanned.",
+        "description": "Developed an interactive quiz experience for a Saudi Post Logistics (SPL) internal event. The quiz was centered around a physical \"vault\" with *200 locked boxes*, each associated with a unique barcode that triggered a question when scanned.",
         "shortDescription": "An interactive quiz for an SPL event, featuring barcode scanning and a physical vault with prizes.",
         "metaDescription": "Discover how an interactive quiz with barcode scanning was developed for Saudi Post Logistics (SPL)'s internal event to engage employees and enhance the experience.",
         "keywords": [
@@ -89,7 +89,7 @@
             },
             {
                 "type": "embedded",
-                "url": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7249827332100657153?compact=1\" height=\"399\" width=\"90%\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+                "url": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7249827332100657153?compact=1\" height=\"499\" width=\"90%\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
                 "alt": "Embedded LinkedIn Post showcasing the SPL interactive quiz",
                 "caption": ""
             }
@@ -253,7 +253,7 @@
     },
     {
         "title": "NEXT IPO: Mobile App for Tracking Initial Public Offerings",
-        "description": "NEXT IPO is a Flutter application designed to track and display information about upcoming Initial Public Offerings (IPOs). The app provides a user-friendly interface to view IPO details, customize settings, and stay updated on the latest offerings.",
+        "description": "NEXT IPO is a Flutter application designed to *track and display information about upcoming Initial Public Offerings* (IPOs). The app provides a user-friendly interface to view IPO details, customize settings, and stay updated on the latest offerings.",
         "shortDescription": "A Flutter app to track and display information about upcoming IPOs with customizable settings and real-time data.",
         "metaDescription": "Explore NEXT IPO, a Flutter mobile app for tracking upcoming IPOs. Features customizable settings, real-time data from the Saudi Exchange, and a user-friendly interface.",
         "keywords": [
@@ -380,7 +380,7 @@
     },
     {
         "title": "DroneHunter Systems: Real-time Drone Detection and Tracking",
-        "description": "DroneHunter Systems is a cutting-edge solution for monitoring and securing airspace from unauthorized drones. This is designed to detect, track, and neutralize potential threats from unmanned aerial vehicles (UAVs).",
+        "description": "DroneHunter Systems is a cutting-edge solution for *monitoring and securing airspace* from *unauthorized drones*. This is designed to detect, track, and neutralize potential threats from unmanned aerial vehicles (UAVs).",
         "shortDescription": "A system for real-time drone detection, tracking, and neutralization using advanced sensors and machine learning.",
         "metaDescription": "Learn about DroneHunter Systems, a project utilizing Python, YOLOv5, and TensorFlow for real-time detection and tracking of unauthorized drones, enhancing airspace security.",
         "keywords": [
@@ -496,7 +496,7 @@
     },
     {
         "title": "AKTSER: AI-Powered Telegram Voice Message Summarizer and Transcriber",
-        "description": "AKTSER is a Telegram bot that summarizes long voice messages, converts voice to text, and trims silence from audio, saving users time and effort.",
+        "description": "AKTSER is a Telegram bot that *summarizes long voice messages*, *converts voice to text*, and *trims silence* from audio, saving users time and effort.",
         "shortDescription": "A Telegram bot that uses AI to summarize voice messages, transcribe them, and remove silence.",
         "metaDescription": "Discover AKTSER, a Telegram bot utilizing AI for voice message summarization, transcription, and silence removal. Built with Python and Google Cloud Speech-to-Text.",
         "keywords": [
@@ -613,9 +613,9 @@
     },
     {
         "title": "SPL's Internal Event: Values Challenge",
-        "description": "Developed an interactive experience for SPL's internal event, featuring seven challenges aligned with the company's core values. Employees engaged in various activities, including puzzle-solving, drawing, scenario-based problem-solving, and a collaborative game, to reinforce their understanding and commitment to SPL's principles.",
-        "shortDescription": "An interactive experience for SPL's internal event with seven challenges designed to reinforce the company's core values.",
-        "metaDescription": "Discover the interactive experience created for SPL's internal event, featuring seven challenges that reinforce company values through engaging activities like puzzles, drawing, and collaborative games.",
+        "description": "Helped SPL transform their internal event into an *unforgettable, value-driven experience* that deeply engaged employees. By developing *seven interactive web-based challenges* aligned with the company's core values, I created a fun and memorable way for SPL to reinforce their principles, promote teamwork, and gather valuable employee feedback. The project resulted in a *significant increase in employee engagement* and a wealth of innovative ideas for future initiatives.",
+        "shortDescription": "Developed a dynamic web-based experience for SPL's internal event, featuring seven interactive challenges designed to reinforce the company's core values and significantly boost employee engagement.",
+        "metaDescription": "Discover how I helped Saudi Post Logistics (SPL) transform their internal event with a dynamic web-based experience. Seven interactive challenges, aligned with core values, engaged employees, fostered teamwork, and generated innovative ideas. Learn how I can bring similar results to your organization.",
         "keywords": [
             "interactive experience",
             "SPL",
@@ -624,7 +624,16 @@
             "values challenge",
             "web development freelancer",
             "team building",
-            "employee engagement"
+            "employee engagement",
+            "gamification",
+            "user experience",
+            "UX",
+            "UI",
+            "web design",
+            "front-end development",
+            "Firebase",
+            "real-time data",
+            "responsive design"
         ],
         "client": "Saudi Post Logistics (SPL)",
         "event": "Internal Event",
@@ -656,6 +665,10 @@
                 "description": "A timed puzzle game where employees assemble a picture representing \"We move fast.\""
             },
             {
+                "featureName": "Collaborative Game",
+                "description": "Two players work together, one with instructions (mobile) and the other interacting with the screen, to complete a task representing \"We cooperate and share together.\" This challenge was the *most popular* at the event, promoting communication and teamwork among participants."
+            },
+            {
                 "featureName": "Drawing Challenge",
                 "description": "Employees draw an image representing \"We commit to doing more\" in three rounds, with the option to improve their drawing in each round."
             },
@@ -664,16 +677,12 @@
                 "description": "Employees respond to scenarios related to \"We exceed our customers' expectations,\" with AI evaluating their solutions."
             },
             {
-                "featureName": "Collaborative Game",
-                "description": "Two players work together, one with instructions and the other interacting with the screen, to complete a task representing \"We cooperate and share together.\""
-            },
-            {
                 "featureName": "Confession Booth",
-                "description": "A platform for employees to anonymously share their thoughts and experiences, representing \"We are characterized by trust and transparency.\""
+                "description": "A platform for employees to anonymously share their thoughts and experiences, representing \"We are characterized by trust and transparency.\" This encouraged open communication, receiving *over 200 anonymous submissions* and providing SPL with valuable insights into employee sentiment."
             },
             {
                 "featureName": "Idea Submission",
-                "description": "Employees combine elements related to SPL services and innovative technologies to create and submit new ideas, representing \"We innovate solutions for the future.\""
+                "description": "Employees combine elements related to SPL services and innovative technologies (AI, Robotics, etc.) to create and submit new ideas, representing \"We innovate solutions for the future.\" This challenge generated *over 150 innovative ideas* for potential future projects at SPL."
             },
             {
                 "featureName": "Interactive Challenges",
@@ -690,7 +699,9 @@
                 "Firebase Realtime Database"
             ],
             "database": [],
-            "libraries": [],
+            "libraries": [
+                "Font Awesome (for icons)"
+            ],
             "frameworks": [],
             "tools": [
                 "Git",

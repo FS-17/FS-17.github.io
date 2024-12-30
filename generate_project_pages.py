@@ -8,6 +8,17 @@ def load_projects():
     with open('projects.json', 'r', encoding='utf-8') as f:
         return json.load(f)
 
+def convert_bold_text(text):
+    # Replace text between asterisks with bold tags
+    parts = text.split('*')
+    result = ''
+    for i in range(len(parts)):
+        if i % 2 == 0:
+            result += parts[i]
+        else:
+            result += f'<strong class="font-bold text-blue-400">{parts[i]}</strong>'
+    return result
+
 def generate_project_page(project):
     # Sanitize project title for use in meta title if metaTitle is not provided
     meta_title = project.get('metaTitle', f"{project['title']} - Project Details")
@@ -46,13 +57,13 @@ def generate_project_page(project):
             </div>
             '''
 
-    # Generate functionality HTML
+    # Generate functionality HTML with bold text support
     functionality_html = ''
     for func in project.get('functionality', []):
         functionality_html += f'''
         <div class="mb-4 pl-4">
             <h4 class="text-lg font-semibold text-blue-400">{func['featureName']}</h4>
-            <p class="text-gray-300">{func['description']}</p>
+            <p class="text-gray-300">{convert_bold_text(func['description'])}</p>
         </div>
         '''
 
@@ -103,7 +114,7 @@ def generate_project_page(project):
                 <div class="flex flex-wrap gap-2 mb-4">
                     {categories_html}
                 </div>
-                <p class="text-xl text-gray-300 mb-4">{project['description']}</p>
+                <p class="text-xl text-gray-300 mb-4">{convert_bold_text(project['description'])}</p>
                 <div class="flex flex-wrap gap-2">
                     {tags_html}
                 </div>
@@ -192,6 +203,21 @@ def generate_project_page(project):
             <section class="flex gap-4">
                 {f'<a href="{project["repository"]}" class="flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all"><i class="fab fa-github"></i><span>Repository</span></a>' if project.get('repository') else ''}
                 {f'<a href="{project["linkToProject"]}" class="flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all"><i class="fas fa-external-link-alt"></i><span>Live Demo</span></a>' if project.get('linkToProject') else ''}
+            </section>
+
+            <section class="flex flex-col items-center gap-6 mt-16 mb-12">
+                <div class="text-center">
+                    <p class="text-3xl font-bold mb-6 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+                        Ready to start your own project?
+                    </p>
+                    <a href="/contact.html" 
+                       class="group relative inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600/10 to-cyan-500/10 backdrop-blur-sm border border-blue-500/20 text-white font-semibold transition-all duration-300 hover:border-blue-500/40 hover:from-blue-600/20 hover:to-cyan-500/20 shadow-lg hover:shadow-xl hover:shadow-blue-500/10 hover:scale-105">
+                        <span class="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                            Start Your Project Now
+                        </span>
+                        <i class="fas fa-arrow-right group-hover:translate-x-1 transition-transform text-blue-500"></i>
+                    </a>
+                </div>
             </section>
         </div>
     </main>
