@@ -27,19 +27,22 @@ def generate_project_page(project):
     tags_html = ''.join([f'<span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">{tag}</span>' for tag in project.get('tags', [])])
     categories_html = ''.join([f'<span class="px-2 py-1 text-sm rounded-full bg-blue-700/50">{category}</span>' for category in project.get('categories', [])])
 
-    # Generate media HTML
-    media_html = ''
+    # Generate media HTML with grid for portrait images
+    media_html = '<div class="grid grid-cols-1 md:grid-cols-2 gap-6">'
+    current_row = []
+    
     for media in project.get('media', []):
         if media['type'] == 'image':
-            media_html += f'''
+            media_item = f'''
             <div class="mb-6">
-                <img src="/{media['url']}" alt="{media['alt']}" class="rounded-lg shadow-lg  max-h-[800px] object-contain mx-auto">
+                <img src="/{media['url']}" alt="{media['alt']}" class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto" onload="checkImageRatio(this)">
                 <p class="text-gray-400 mt-2 text-center">{media['caption']}</p>
             </div>
             '''
+            media_html += media_item
         elif media['type'] == 'video':
             media_html += f'''
-            <div class="mb-6">
+            <div class="mb-6 col-span-2">
                 <video controls class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto">
                     <source src="/{media['url']}" type="video/mp4">
                     Your browser does not support the video tag.
@@ -49,13 +52,15 @@ def generate_project_page(project):
             '''
         elif media['type'] == 'embedded':
             media_html += f'''
-            <div class="mb-6">
+            <div class="mb-6 col-span-2">
                 <div class="rounded-lg overflow-hidden">
                     {media['url']}
                 </div>
                 <p class="text-gray-400 mt-2 text-center">{media['caption']}</p>
             </div>
             '''
+    
+    media_html += '</div>'
 
     # Generate functionality HTML with bold text support
     functionality_html = ''
@@ -77,6 +82,7 @@ def generate_project_page(project):
         </div>
         '''
 
+    # Add JavaScript for checking image ratios
     html_content = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,6 +94,13 @@ def generate_project_page(project):
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="canonical" href="{mydomain}{project['projectPage']}">
+    <script>
+        function checkImageRatio(img) {{
+            if (img.naturalHeight / img.naturalWidth <= 0.75) {{  // If image is landscape or square
+                img.closest('.mb-6').classList.add('col-span-2');
+            }}
+        }}
+    </script>
 </head>
 <body class="min-h-screen bg-gray-900 text-gray-200">
     <nav class="fixed top-0 w-full backdrop-blur-lg z-40">

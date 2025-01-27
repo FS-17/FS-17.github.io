@@ -9,6 +9,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="canonical" href="https://fs-17.github.io/projects/dronehunter-systems.html">
+    <script>
+        function checkImageRatio(img) {
+            if (img.naturalHeight / img.naturalWidth <= 0.75) {  // If image is landscape or square
+                img.closest('.mb-6').classList.add('col-span-2');
+            }
+        }
+    </script>
 </head>
 <body class="min-h-screen bg-gray-900 text-gray-200">
     <nav class="fixed top-0 w-full backdrop-blur-lg z-40">
@@ -42,12 +49,12 @@
             </header>
 
             <section class="mb-12">
-                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="mb-6">
-                <img src="/./assets/drones/home.png" alt="DroneHunter Systems Interface" class="rounded-lg shadow-lg  max-h-[800px] object-contain mx-auto">
+                <img src="/./assets/drones/home.png" alt="DroneHunter Systems Interface" class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto" onload="checkImageRatio(this)">
                 <p class="text-gray-400 mt-2 text-center">Interface</p>
             </div>
-            
+            </div>
             </section>
 
             <section class="mb-12">

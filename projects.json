@@ -788,5 +788,285 @@
         "linkToProject": "",
         "repository": "",
         "notes": "This project demonstrated the successful integration of various web technologies to create a dynamic and engaging experience for a large-scale internal event. The use of AI, specifically Gemini API, for evaluating scenario-based solutions added an innovative element to the project."
+    },
+    {
+        "title": "tstyle: Telegram Bot for Twitter-Style Media Creation",
+        "description": "TStyle is a Telegram bot that enables users to effortlessly create engaging, Twitter-style media directly within Telegram. By sending the bot an image or video along with tweet text, users receive a processed media file with the text overlaid in a recognizable Twitter post format. This bot is designed for ease of use and efficiency, offering both free access and premium subscription tiers for enhanced features and unlimited usage. Built using Python, it integrates with the Telegram Bot API, leverages FFMpeg for media processing, and utilizes AWS Lambda for scalable video rendering. A key feature is its automated subscription system, managed through a payment gateway and webhook, ensuring seamless access to premium features. *TStyle has over 500,000 unique users and boasts 40,000 monthly active users*, showcasing its popularity and effectiveness.",
+        "shortDescription": "Telegram bot for creating Twitter-style media with tweet overlays, with over 500,000 unique users and 40,000 monthly active users.",
+        "metaDescription": "Explore TStyle, a popular Telegram bot with over 500,000 unique users and 40,000 monthly active users. Discover how TStyle simplifies Twitter-style content creation with features like image and video tweet overlays, subscription plans, and its Python-based development with AWS Lambda for scalability.",
+        "keywords": [
+            "Telegram bot",
+            "Twitter style bot",
+            "image and video creation",
+            "tweet overlay",
+            "Python bot development",
+            "AWS Lambda",
+            "subscription bot",
+            "pyrogram",
+            "social media content creation",
+            "payment gateway integration",
+            "webhook integration"
+        ],
+        "client": null,
+        "event": null,
+        "date": "2022-02-01",
+        "categories": [
+            "Bot Development",
+            "Social Media Tools",
+            "Content Creation"
+        ],
+        "tags": [
+            "Python",
+            "Telegram Bot API",
+            "FFMpeg",
+            "Pillow",
+            "Pyrogram",
+            "AWS Lambda",
+            "WebHook",
+            "Payment Gateway"
+        ],
+        "objectives": [
+            "Provide a user-friendly Telegram bot for creating Twitter-style media.",
+            "Enable users to easily overlay tweet text onto images and videos.",
+            "Offer both free and premium features to cater to a wide user base.",
+            "Implement a subscription model for monetization and feature access.",
+            "Ensure scalability and reliability using AWS Lambda for resource-intensive tasks.",
+            "Automate subscription management through payment gateway and webhook integration."
+        ],
+        "functionality": [
+            {
+                "featureName": "Media Upload and Processing",
+                "description": "Users can upload images or videos to the bot."
+            },
+            {
+                "featureName": "Tweet Text Overlay",
+                "description": "Allows users to input tweet text that is then overlaid onto the uploaded media in a Twitter-style format."
+            },
+            {
+                "featureName": "Customizable Templates",
+                "description": "(Premium Feature) Offers customizable templates for different Twitter post styles and layouts."
+            },
+            {
+                "featureName": "Subscription Management",
+                "description": "(Premium Feature) Implements a subscription system for accessing premium features and removing usage limits. Automated subscription handling via payment gateway and webhook."
+            },
+            {
+                "featureName": "Payment Integration",
+                "description": "(Premium Feature) Integrates with a payment gateway to process subscription payments, supporting methods like Visa, Mastercard, and PayPal."
+            },
+            {
+                "featureName": "Automated Subscription Renewal",
+                "description": "(Premium Feature) Automatically renews user subscriptions based on payment status and subscription terms."
+            }
+        ],
+        "technicalDetails": {
+            "frontend": [
+                "Telegram Bot Interface (Implicit)"
+            ],
+            "backend": [
+                "Python"
+            ],
+            "database": [
+                "SQLite (for user data and subscriptions)"
+            ],
+            "libraries": [
+                "FFMpeg-kit",
+                "Pillow (PIL)",
+                "Pyrogram",
+                "asyncio"
+            ],
+            "frameworks": [],
+            "tools": [
+                "Git",
+                "Docker (for deployment)",
+                "AWS CLI"
+            ],
+            "hosting": [
+                "AWS Lambda (for video processing)",
+                "AWS EC2 (for bot deployment)"
+            ]
+        },
+        "design": {
+            "aesthetic": "Telegram bot interface, focusing on simplicity and ease of use. Text-based interactions with clear instructions.",
+            "colorPalette": [],
+            "typography": [],
+            "responsiveness": "N/A (Telegram bot interface)",
+            "accessibility": "N/A (Telegram bot interface)"
+        },
+        "media": [
+            {
+                "type": "image",
+                "url": "assets/tstyle/bot.jpg",
+                "alt": "tstyle Preview",
+                "caption": ""
+            }
+        ],
+        "outcomes": [
+            "Developed a functional Telegram bot capable of creating Twitter-style images and videos.",
+            "Implemented a subscription model for premium feature access and monetization.",
+            "Automated subscription management using a payment gateway and webhooks.",
+            "Achieved scalable video processing using AWS Lambda."
+        ],
+        "challenges": [
+            {
+                "challenge": "Handling server load for video processing, especially with a growing user base.",
+                "solution": "Leveraged AWS Lambda for offloading resource-intensive video rendering tasks, ensuring bot responsiveness and scalability."
+            },
+            {
+                "challenge": "Implementing a robust and automated subscription and payment system.",
+                "solution": "Integrated a payment gateway with webhook support to automate subscription creation, renewal, and management, providing a seamless user experience."
+            },
+            {
+                "challenge": "Ensuring ease of use and intuitive interaction within the Telegram bot environment.",
+                "solution": "Focused on a clear, text-based interface with straightforward commands and instructions, guiding users through the media creation process."
+            }
+        ],
+        "clientFeedback": [],
+        "projectPage": "/projects/tstyle-telegram-bot.html",
+        "linkToProject": "",
+        "repository": "",
+        "notes": "",
+        "hidden": true
+    },
+    {
+        "title": "TStyle: Twitter Style Post Maker App (Android)",
+        "description": "TStyle is a *mobile application for Android* platforms that empowers users to create visually appealing images and videos in the style of Twitter posts. Designed for content creators and social media enthusiasts, TStyle simplifies the process of overlaying tweet-style text onto media, enabling users to produce engaging content quickly and efficiently. *Key features include offline functionality, customizable templates, and direct sharing options*. Developed using Flutter, TStyle aims to provide *a seamless, user-friendly experience* for generating Twitter-style content on mobile devices without requiring complex design skills or tools.",
+        "shortDescription": "Android app for creating Twitter-style images and videos offline.",
+        "metaDescription": "Explore TStyle, an Android app for creating Twitter-style posts offline. Learn about its features, Flutter development, and user-friendly design.",
+        "keywords": [
+            "Android app",
+            "Twitter style post maker",
+            "offline image editor",
+            "offline video editor",
+            "Flutter app development",
+            "mobile content creation",
+            "social media post creator"
+        ],
+        "client": null,
+        "event": null,
+        "date": "2024-08-28",
+        "categories": [
+            "Mobile App Development",
+            "Android Apps",
+            "Content Creation",
+            "Photo & Video Editing"
+        ],
+        "tags": [
+            "Flutter",
+            "Dart",
+            "Android",
+            "Image Editing",
+            "Video Editing",
+            "Offline Functionality",
+            "Mobile Design"
+        ],
+        "objectives": [
+            "Develop a user-friendly Android application for creating Twitter-style posts.",
+            "Enable offline image and video editing for on-the-go content creation.",
+            "Provide customizable templates for various Twitter post formats.",
+            "Offer seamless sharing options to social media platforms.",
+            "Ensure a smooth and efficient user experience on Android devices."
+        ],
+        "functionality": [
+            {
+                "featureName": "local Image and Video Editing",
+                "description": "Allows users to create Twitter-style posts offline by editing images and videos on their devices."
+            },
+            {
+                "featureName": "Tweet Text Overlay",
+                "description": "Enables users to input and overlay tweet text onto selected images or videos."
+            },
+            {
+                "featureName": "Font and Style Customization",
+                "description": "Provides options to customize fonts, colors, and styles of the tweet text overlay."
+            },
+            {
+                "featureName": "Direct Sharing",
+                "description": "Facilitates easy sharing of created posts directly to Twitter and other social media platforms."
+            },
+            {
+                "featureName": "User-Friendly Interface",
+                "description": "Features an intuitive and easy-to-navigate interface, optimized for mobile use."
+            }
+        ],
+        "technicalDetails": {
+            "frontend": [
+                "Flutter"
+            ],
+            "backend": [],
+            "database": [
+                "Local device storage (for offline functionality)",
+                "Firebase (for analytics and user insights)"
+            ],
+            "libraries": [
+                "Flutter SDK",
+                "Image Picker",
+                "Path Provider",
+                "Share Plus"
+            ],
+            "frameworks": [
+                "Dart (programming language)"
+            ],
+            "tools": [
+                "Android Studio / VS Code",
+                "Git"
+            ],
+            "hosting": [
+                "Google Play Store"
+            ]
+        },
+        "design": {
+            "aesthetic": "Modern, clean, and user-friendly mobile app design, focusing on ease of navigation and content creation.",
+            "colorPalette": [],
+            "typography": [],
+            "responsiveness": "Fully responsive design for various Android devices and screen sizes.",
+            "accessibility": "Adherence to accessibility guidelines for mobile applications (inferred)"
+        },
+        "media": [
+            {
+                "type": "logo",
+                "url": "assets/tstyle/logo.webp",
+                "alt": "TStyle App Logo",
+                "caption": "TStyle App Icon from Google Play Store"
+            },
+            {
+                "type": "image",
+                "url": "assets/tstyle/prev1.webp",
+                "alt": "TStyle App Screenshot",
+                "caption": "Screenshot of the TStyle App Interface"
+            },
+            {
+                "type": "image",
+                "url": "assets/tstyle/prev2.webp",
+                "alt": "TStyle App Screenshot",
+                "caption": "Screenshot of the TStyle App after Editing"
+            }
+        ],
+        "outcomes": [
+            "Developed and launched a functional Android application for Twitter-style post creation.",
+            "Implemented offline capabilities for image and video editing.",
+            "Created a user-friendly interface for mobile content creation.",
+            "Successfully deployed the application on the Google Play Store."
+        ],
+        "challenges": [
+            {
+                "challenge": "Ensuring consistent performance and user experience across a wide range of Android devices.",
+                "solution": "Focused on optimizing the Flutter application for performance and responsiveness on various Android versions and hardware configurations."
+            },
+            {
+                "challenge": "Implementing robust offline functionality for image and video editing.",
+                "solution": "Utilized local device storage effectively and designed the app architecture to support offline operations seamlessly."
+            },
+            {
+                "challenge": "Designing an intuitive and user-friendly mobile interface for complex image and text manipulation.",
+                "solution": "Emphasized simplicity and ease of use in UI/UX design, conducting user testing to refine the interface and workflow."
+            }
+        ],
+        "clientFeedback": [],
+        "projectPage": "/projects/tstyle-android-app.html",
+        "linkToProject": "https://play.google.com/store/apps/details?id=me.tstyle.tstyle",
+        "repository": "",
+        "notes": "TStyle Android App is available for download on the Google Play Store.",
+        "hidden": true
     }
 ]
