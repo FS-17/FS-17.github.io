@@ -118,7 +118,6 @@
         "hidden": true
 
     },
-
     {
         "title": "The Bean Spot: Premium Coffee Shop Website",
         "description": "The Bean Spot is a meticulously designed website for a fictional premium coffee shop, showcasing artisanal coffee, expertly roasted beans, and a cozy café ambiance. This website serves as a digital storefront and portfolio piece, highlighting a commitment to quality and a passion for coffee culture. It features an engaging homepage with parallax scrolling, a detailed menu page, an informative about us section, and a contact & location page. Developed using HTML, CSS, and JavaScript, with Tailwind CSS for styling, the website is fully responsive and SEO-optimized to attract and engage coffee enthusiasts.",
@@ -229,7 +228,7 @@
             
                 {
                     "type": "logo",
-                    "url": "https://raw.githubusercontent.com/FS-17/TheBeanSpot/refs/heads/main/assets/logo.png",
+                    "url": "https://raw.githubusercontent.com/FS-17/TheBeanSpot/refs/heads/main/assets/blogo.png",
                     "alt": "TheBeanSpot Logo",
                     "caption": "TheBeanSpot Logo"
                 },
@@ -272,7 +271,6 @@
         "repository": "https://github.com/FS-17/TheBeanSpot",
         "notes": "A portfolio project showcasing web development and design skills. The website is hosted on GitHub Pages and demonstrates proficiency in HTML, CSS, JavaScript, and Tailwind CSS."
     },
-
     {
         "title": "Interactive Booth for PBS Hackathon at BIBAN Forum",
         "description": "Created an interactive booth experience for the PBS Hackathon at the BIBAN forum. The installation featured a touch screen display designed to engage visitors and gather their innovative ideas related to specific sectors.",
