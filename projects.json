@@ -267,8 +267,8 @@
         ],
         "clientFeedback": [],
         "projectPage": "/projects/the-bean-spot.html",
-        "linkToProject": "",
-        "repository": "https://github.com/FS-17/TheBeanSpot",
+        "linkToProject": "https://fs-17.github.io/TheBeanSpot/index.html",
+        "repository": "",
         "notes": "A portfolio project showcasing web development and design skills. The website is hosted on GitHub Pages and demonstrates proficiency in HTML, CSS, JavaScript, and Tailwind CSS."
     },
     {
