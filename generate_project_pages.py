@@ -44,7 +44,7 @@ def generate_project_page(project):
             media_html += f'''
             <div class="mb-6 col-span-2">
                 <video controls class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto">
-                    <source src="/{media['url']}" type="video/mp4">
+                    <source src="{media['url']}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p class="text-gray-400 mt-2 text-center">{media['caption']}</p>
