@@ -43,7 +43,7 @@ def generate_project_page(project):
         elif media['type'] == 'video':
             media_html += f'''
             <div class="mb-6 col-span-2">
-                <video controls class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto">
+                <video controls autoplay class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto">
                     <source src="{media['url']}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
