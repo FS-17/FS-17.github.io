@@ -366,25 +366,25 @@
             },
             {
                 "type": "preview",
-                "url": "./assets/pbs/pre_pbs.png",
+                "url": "/assets/pbs/pre_pbs.png",
                 "alt": "Preview of the PBS",
                 "caption": "Preview"
             },
             {
                 "type": "image",
-                "url": "./assets/pbs/main_en.png",
+                "url": "/assets/pbs/main_en.png",
                 "alt": "Main Screen of the PBS",
                 "caption": "Main Screen"
             },
             {
                 "type": "image",
-                "url": "./assets/pbs/main_ar.png",
+                "url": "/assets/pbs/main_ar.png",
                 "alt": "Main Screen of the PBS interactive booth (Arabic)",
                 "caption": "Main Screen (Arabic)"
             },
             {
                 "type": "image",
-                "url": "./assets/pbs/data.png",
+                "url": "/assets/pbs/data.png",
                 "alt": "User Info Screen of the PBS",
                 "caption": "User Info Screen"
             }
@@ -501,13 +501,13 @@
         "media": [
             {
                 "type": "image",
-                "url": "assets/ipos/screen.png",
+                "url": "/assets/ipos/screen.png",
                 "alt": "Screenshot of the NEXT IPO app showcasing the main screen",
                 "caption": "Screenshot"
             },
             {
                 "type": "video",
-                "url": "assets/ipos/NEXTIPOsVideo.mp4",
+                "url": "/assets/ipos/NEXTIPOsVideo.mp4",
                 "alt": "Video demonstration of the NEXT IPO app's features and functionality",
                 "caption": "Video Demonstration"
             }
@@ -620,7 +620,7 @@
         "media": [
             {
                 "type": "logo",
-                "url": "./assets/drones/logo.png",
+                "url": "/assets/drones/logo.png",
                 "alt": "DroneHunter Systems Logo",
                 "caption": "DroneHunter Systems Logo"
             },
@@ -632,7 +632,7 @@
             },
             {
                 "type": "image",
-                "url": "./assets/drones/home.png",
+                "url": "/assets/drones/home.png",
                 "alt": "DroneHunter Systems Interface",
                 "caption": "Interface"
             }
@@ -731,25 +731,25 @@
         "media": [
             {
                 "type": "image",
-                "url": "assets/aktser/audio_analysis.png",
+                "url": "/assets/aktser/audio_analysis.png",
                 "alt": "Audio Analysis Visualization",
                 "caption": "Audio analysis conducted to optimize silence trimming."
             },
             {
                 "type": "audio",
-                "url": "assets/test2.ogg",
+                "url": "/assets/test2.ogg",
                 "alt": "test2 audio file",
                 "caption": ""
             },
             {
                 "type": "audio",
-                "url": "assets/test1.wav",
+                "url": "/assets/test1.wav",
                 "alt": "test1 audio file",
                 "caption": ""
             },
             {
                 "type": "audio",
-                "url": "assets/test0.wav",
+                "url": "/assets/test0.wav",
                 "alt": "test0 audio file",
                 "caption": ""
             }
@@ -895,19 +895,19 @@
             },
             {
                 "type": "image",
-                "url": "./assets/spl/bom.jpg",
+                "url": "/assets/spl/bom.jpg",
                 "alt": "Teamwork at the SPL event",
                 "caption": "\"We cooperate and share together\" collaborative game"
             },
             {
                 "type": "image",
-                "url": "./assets/spl/llm.jpg",
+                "url": "/assets/spl/llm.jpg",
                 "alt": "User interface for a question that the AI will evaluate",
                 "caption": "\"We exceed our customers expectations\" scenario-based challenge"
             },
             {
                 "type": "image",
-                "url": "./assets/spl/ins.jpg",
+                "url": "/assets/spl/ins.jpg",
                 "alt": "User interface for submitting ideas",
                 "caption": "\"We innovate solutions for the future\" idea submission"
             }
@@ -1051,7 +1051,7 @@
         "media": [
             {
                 "type": "image",
-                "url": "assets/tstyle/bot.jpg",
+                "url": "/assets/tstyle/bot.jpg",
                 "alt": "tstyle Preview",
                 "caption": ""
             }
@@ -1180,19 +1180,19 @@
         "media": [
             {
                 "type": "logo",
-                "url": "assets/tstyle/logo.webp",
+                "url": "/assets/tstyle/logo.webp",
                 "alt": "TStyle App Logo",
                 "caption": "TStyle App Icon from Google Play Store"
             },
             {
                 "type": "image",
-                "url": "assets/tstyle/prev1.webp",
+                "url": "/assets/tstyle/prev1.webp",
                 "alt": "TStyle App Screenshot",
                 "caption": "Screenshot of the TStyle App Interface"
             },
             {
                 "type": "image",
-                "url": "assets/tstyle/prev2.webp",
+                "url": "/assets/tstyle/prev2.webp",
                 "alt": "TStyle App Screenshot",
                 "caption": "Screenshot of the TStyle App after Editing"
             }

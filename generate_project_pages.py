@@ -35,7 +35,7 @@ def generate_project_page(project):
         if media['type'] == 'image':
             media_item = f'''
             <div class="mb-6">
-                <img src="/{media['url']}" alt="{media['alt']}" class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto" onload="checkImageRatio(this)">
+                <img src="{media['url']}" alt="{media['alt']}" class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto" onload="checkImageRatio(this)">
                 <p class="text-gray-400 mt-2 text-center">{media['caption']}</p>
             </div>
             '''
