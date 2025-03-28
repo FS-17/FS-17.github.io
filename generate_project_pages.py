@@ -35,7 +35,7 @@ def generate_project_page(project):
         if media['type'] == 'image':
             media_item = f'''
             <div class="mb-6">
-                <img src="{media['url']}" alt="{media['alt']}" class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto" onload="checkImageRatio(this)">
+                <img src="/{media['url']}" alt="{media['alt']}" class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto" onload="checkImageRatio(this)">
                 <p class="text-gray-400 mt-2 text-center">{media['caption']}</p>
             </div>
             '''
@@ -43,8 +43,8 @@ def generate_project_page(project):
         elif media['type'] == 'video':
             media_html += f'''
             <div class="mb-6 col-span-2">
-                <video controls autoplay loop class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto">
-                    <source src="{media['url']}" type="video/mp4">
+                <video controls class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto">
+                    <source src="/{media['url']}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
                 <p class="text-gray-400 mt-2 text-center">{media['caption']}</p>
@@ -89,6 +89,21 @@ def generate_project_page(project):
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{meta_title}</title>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-89PH1LB9RX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {{
+        dataLayer.push(arguments);
+      }}
+      gtag("js", new Date());
+
+      gtag("config", "G-89PH1LB9RX");
+    </script>
+
     <meta name="description" content="{project.get('metaDescription', project.get('shortDescription', ''))}">
     <meta name="keywords" content="{', '.join(project.get('keywords', []))}">
     <script src="https://cdn.tailwindcss.com"></script>
