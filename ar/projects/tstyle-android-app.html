@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TStyle: تطبيق إنشاء منشورات بأسلوب تويتر (أندرويد) - Project Details</title>
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-89PH1LB9RX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-89PH1LB9RX");
+    </script>
+
+    <meta name="description" content="استكشف TStyle، تطبيق أندرويد لإنشاء منشورات بأسلوب تويتر دون اتصال بالإنترنت. تعرّف على ميزاته، تطويره باستخدام Flutter، وتصميمه سهل الاستخدام.">
+    <meta name="keywords" content="تطبيق أندرويد, صانع منشورات بأسلوب تويتر, محرر صور دون اتصال, محرر فيديوهات دون اتصال, تطوير تطبيقات Flutter, إنشاء محتوى جوال, صانع منشورات وسائل التواصل الاجتماعي">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="canonical" href="https://fs-17.github.io/ar/projects/tstyle-android-app.html">
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              fontFamily: {
+                'tajawal': ['Tajawal', 'sans-serif'],
+              },
+            }
+          }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Tajawal', sans-serif;
+            letter-spacing: 0;
+            line-height: 1.6;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 700;
+        }
+    </style>
+    <script>
+        function checkImageRatio(img) {
+            if (img.naturalHeight / img.naturalWidth <= 0.75) {  // If image is landscape or square
+                img.closest('.mb-6').classList.add('col-span-2');
+            }
+        }
+    </script>
+</head>
+<body class="min-h-screen bg-gray-900 text-gray-200 font-tajawal">
+    <nav class="fixed top-0 w-full backdrop-blur-lg z-40">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="/ar" class="text-2xl font-bold bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent">ف.</a>
+            <div class="flex gap-6">
+                <a href="/ar/#projects" class="hover:text-blue-500 transition-colors text-lg">المشاريع</a>
+                <a href="/ar/#skills" class="hover:text-blue-500 transition-colors text-lg">المهارات</a>
+                <a href="/ar/contact.html" class="hover:text-blue-500 transition-colors text-lg">تواصل معي</a>
+                <a href="/projects/tstyle-android-app.html" class="hover:text-blue-500 transition-colors text-lg">EN</a>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-6 pt-24 pb-12">
+        <div class="max-w-4xl mx-auto">
+            <header class="mb-12">
+                <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent pb-2">
+                    TStyle: تطبيق إنشاء منشورات بأسلوب تويتر (أندرويد)
+                </h1>
+                <div class="text-gray-400 mb-4">
+                    <i class="far fa-calendar-alt mr-2"></i>
+                    2025-08-28
+                </div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-2 py-1 text-sm rounded-full bg-blue-700/50">تطوير تطبيقات الجوال</span><span class="px-2 py-1 text-sm rounded-full bg-blue-700/50">تطبيقات أندرويد</span><span class="px-2 py-1 text-sm rounded-full bg-blue-700/50">إنشاء محتوى</span><span class="px-2 py-1 text-sm rounded-full bg-blue-700/50">تحرير الصور والفيديوهات</span>
+                </div>
+                <p class="text-xl text-gray-300 mb-4">TStyle هو <strong class="font-bold text-blue-400">تطبيق جوال لمنصات أندرويد</strong> يمكّن المستخدمين من إنشاء صور وفيديوهات جذابة بصريًا بأسلوب منشورات تويتر. مصمم خصيصًا لمنشئي المحتوى وعشاق وسائل التواصل الاجتماعي، يبسط TStyle عملية إضافة نصوص بأسلوب التغريدات على الوسائط، مما يتيح للمستخدمين إنتاج محتوى جذاب بسرعة وكفاءة. <strong class="font-bold text-blue-400">تشمل الميزات الرئيسية وظيفة العمل دون اتصال بالإنترنت، قوالب قابلة للتخصيص، وخيارات مشاركة مباشرة</strong>. تم تطويره باستخدام Flutter، يهدف TStyle إلى توفير <strong class="font-bold text-blue-400">تجربة سلسة وسهلة الاستخدام</strong> لإنشاء محتوى بأسلوب تويتر على أجهزة الجوال دون الحاجة إلى مهارات تصميم معقدة أو أدوات.</p>
+                <div class="flex flex-wrap gap-2">
+                    <span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">Flutter</span><span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">Dart</span><span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">Android</span><span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">Image Editing</span><span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">Video Editing</span><span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">Offline Functionality</span><span class="px-2 py-1 text-sm rounded-full bg-gray-700/50">Mobile Design</span>
+                </div>
+            </header>
+
+            <section class="mb-12">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="mb-6">
+                <img src="/assets/tstyle/prev1.webp" alt="لقطة شاشة لتطبيق TStyle" class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto" onload="checkImageRatio(this)">
+                <p class="text-gray-400 mt-2 text-center">لقطة شاشة لواجهة تطبيق TStyle</p>
+            </div>
+            
+            <div class="mb-6">
+                <img src="/assets/tstyle/prev2.webp" alt="لقطة شاشة لتطبيق TStyle" class="rounded-lg shadow-lg max-h-[800px] object-contain mx-auto" onload="checkImageRatio(this)">
+                <p class="text-gray-400 mt-2 text-center">لقطة شاشة لتطبيق TStyle بعد التعديل</p>
+            </div>
+            </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent">
+                    الميزات والوظائف
+                </h2>
+                
+        <div class="mb-4 pl-4">
+            <h4 class="text-lg font-semibold text-blue-400">تحرير الصور والفيديوهات محليًا</h4>
+            <p class="text-gray-300">يسمح للمستخدمين بإنشاء منشورات بأسلوب تويتر دون اتصال بالإنترنت عن طريق تحرير الصور والفيديوهات على أجهزتهم.</p>
+        </div>
+        
+        <div class="mb-4 pl-4">
+            <h4 class="text-lg font-semibold text-blue-400">إضافة نص التغريدة على الوسائط</h4>
+            <p class="text-gray-300">يمكّن المستخدمين من إدخال وإضافة نص التغريدة على الصور أو الفيديوهات المحددة.</p>
+        </div>
+        
+        <div class="mb-4 pl-4">
+            <h4 class="text-lg font-semibold text-blue-400">تخصيص الخط والنمط</h4>
+            <p class="text-gray-300">يوفر خيارات لتخصيص الخطوط، الألوان، والأنماط لنص التغريدة المضاف.</p>
+        </div>
+        
+        <div class="mb-4 pl-4">
+            <h4 class="text-lg font-semibold text-blue-400">مشاركة مباشرة</h4>
+            <p class="text-gray-300">يسهل مشاركة المنشورات التي تم إنشاؤها مباشرة على تويتر ومنصات وسائل التواصل الاجتماعي الأخرى.</p>
+        </div>
+        
+        <div class="mb-4 pl-4">
+            <h4 class="text-lg font-semibold text-blue-400">واجهة سهلة الاستخدام</h4>
+            <p class="text-gray-300">يتميز بواجهة بديهية وسهلة التصفح، محسنة للاستخدام على الجوال.</p>
+        </div>
+        
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl
+    font-bold mb-6 bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent">
+                        التفاصيل الفنية
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    
+                    <div class="pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Frontend</h3>
+                        <ul class="list-disc list-inside text-gray-300">
+                            <li>Flutter</li>
+                        </ul>
+                    </div>
+                     
+                    <div class="pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Database</h3>
+                        <ul class="list-disc list-inside text-gray-300">
+                            <li>تخزين الجهاز المحلي (لوظيفة العمل دون اتصال)</li> <li>Firebase (للتحليلات ورؤى المستخدمين)</li>
+                        </ul>
+                    </div>
+                     
+                    <div class="pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Libraries</h3>
+                        <ul class="list-disc list-inside text-gray-300">
+                            <li>Flutter SDK</li> <li>Image Picker</li> <li>Path Provider</li> <li>Share Plus</li>
+                        </ul>
+                    </div>
+                     
+                    <div class="pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Frameworks</h3>
+                        <ul class="list-disc list-inside text-gray-300">
+                            <li>Dart (لغة البرمجة)</li>
+                        </ul>
+                    </div>
+                     
+                    <div class="pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Tools</h3>
+                        <ul class="list-disc list-inside text-gray-300">
+                            <li>Android Studio / VS Code</li> <li>Git</li>
+                        </ul>
+                    </div>
+                     
+                    <div class="pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">Hosting</h3>
+                        <ul class="list-disc list-inside text-gray-300">
+                            <li>Google Play Store</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent">
+                    التصميم
+                </h2>
+                <div class="grid gap-6">
+                    
+                    <div class="mb-4 pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">الجمالية</h3>
+                        <p class="text-gray-300">تصميم تطبيق جوال حديث، نظيف، وسهل الاستخدام، يركز على سهولة التنقل وإنشاء المحتوى.</p>
+                    </div>
+                    
+
+                    
+
+                    
+
+                    
+                    <div class="mb-4 pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">الاستجابة</h3>
+                        <p class="text-gray-300">تصميم متجاوب بالكامل لمختلف أجهزة أندرويد وأحجام الشاشات.</p>
+                    </div>
+                    
+
+                    
+                    <div class="mb-4 pl-4">
+                        <h3 class="text-lg font-semibold mb-3 text-blue-400">الوصولية</h3>
+                        <p class="text-gray-300">الالتزام بإرشادات الوصولية لتطبيقات الجوال (ضمنياً)</p>
+                    </div>
+                    
+                </div>
+            </section>
+
+            
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent">
+                    التحديات والحلول
+                </h2>
+                
+        <div class="mb-4 pl-4">
+            <p class="text-gray-300"><span class="font-semibold text-blue-400">تحدي:</span> ضمان أداء وتجربة مستخدم متسقة عبر مجموعة واسعة من أجهزة أندرويد.</p>
+            <p class="text-gray-300"><span class="font-semibold text-blue-400">حل:</span> التركيز على تحسين تطبيق Flutter للأداء والاستجابة على مختلف إصدارات أندرويد وتكوينات الأجهزة.</p>
+        </div>
+        
+        <div class="mb-4 pl-4">
+            <p class="text-gray-300"><span class="font-semibold text-blue-400">تحدي:</span> تطبيق وظيفة قوية للعمل دون اتصال بالإنترنت لتحرير الصور والفيديوهات.</p>
+            <p class="text-gray-300"><span class="font-semibold text-blue-400">حل:</span> استخدام تخزين الجهاز المحلي بفعالية وتصميم بنية التطبيق لدعم العمليات دون اتصال بسلاسة.</p>
+        </div>
+        
+        <div class="mb-4 pl-4">
+            <p class="text-gray-300"><span class="font-semibold text-blue-400">تحدي:</span> تصميم واجهة جوال بديهية وسهلة الاستخدام لمعالجة الصور والنصوص المعقدة.</p>
+            <p class="text-gray-300"><span class="font-semibold text-blue-400">حل:</span> التأكيد على البساطة وسهولة الاستخدام في تصميم واجهة المستخدم/تجربة المستخدم، وإجراء اختبارات المستخدم لتحسين الواجهة وسير العمل.</p>
+        </div>
+        
+            </section>
+            
+
+            <section class="flex gap-4">
+                
+                <a href="https://play.google.com/store/apps/details?id=me.tstyle.tstyle" class="flex items-center gap-2 px-6 py-3 rounded-lg bg-gray-800 hover:bg-gray-700 transition-all"><i class="fas fa-external-link-alt"></i><span>عرض مباشر</span></a>
+            </section>
+
+
+            <section class="flex flex-col items-center gap-6 mt-16 mb-12">
+                <div class="text-center">
+                    <p class="text-3xl font-bold mb-4 bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent pb-1">
+                        هل أنت مستعد لبدء مشروعك الخاص؟
+                    </p>
+                    <a href="/contact.html" 
+                       class="group relative inline-flex items-center gap-2 px-8 py-4 rounded-lg bg-gradient-to-r from-blue-600/10 to-cyan-500/10 backdrop-blur-sm border border-blue-500/20 text-white font-semibold transition-all duration-300 hover:border-blue-500/40 hover:from-blue-600/20 hover:to-cyan-500/20 shadow-lg hover:shadow-xl hover:shadow-blue-500/10 hover:scale-105">
+                        <span class="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                            ابدأ مشروعك الآن
+                        </span>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-blue-900">
+        <div class="container mx-auto px-6 text-center text-gray-400">
+            <p>© 2025 Faisal. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+</body>
+</html>
