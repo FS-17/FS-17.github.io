@@ -109,28 +109,80 @@ def generate_project_page(project):
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="canonical" href="{mydomain}{project['projectPage']}">
+    <style>
+      body {{ font-family: 'Segoe UI', sans-serif; }}
+      /* ...copy all navbar/menu CSS from index.html... */
+      .bg-gradient-to-r {{ background-image: linear-gradient(to right, var(--tw-gradient-stops)); }}
+      .bg-clip-text {{ -webkit-background-clip: text; background-clip: text; color: transparent; }}
+      nav {{ transition: all 0.3s ease; }}
+      nav.scrolled {{ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(59, 130, 246, 0.2); }}
+      nav.mobile-menu-open {{ box-shadow: none !important; border-bottom: none !important; }}
+      nav .nav-link {{ position: relative; padding: 0.5rem 0; transition: all 0.3s ease; }}
+      nav .nav-link::after {{ content: ""; position: absolute; width: 0; height: 2px; bottom: 0; left: 0; background: linear-gradient(to right, #3b82f6, #06b6d4); transition: width 0.3s ease; transform-origin: left; }}
+      nav .nav-link:hover::after, nav .nav-link.active::after {{ width: 100%; }}
+      nav .nav-link:hover {{ transform: translateY(-2px); }}
+      .nav-logo {{ position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; }}
+      .nav-logo > span {{ transition: transform 0.3s ease; }}
+      .nav-logo:hover > span {{ transform: scale(1.1); }}
+      #mobile-menu {{ background: rgba(31, 41, 55, 0); backdrop-filter: blur(16px) saturate(120%); border-bottom: 1px solid rgba(59, 130, 246, 0.08); opacity: 0; transform: translateY(-32px) scale(0.96); pointer-events: none; transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), filter 0.35s cubic-bezier(0.4, 0, 0.2, 1); filter: blur(8px); box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(59, 130, 246, 0.2); }}
+      #mobile-menu.open {{ opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; filter: blur(0); animation: menuFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1); }}
+      @media (min-width: 768px) {{ #mobile-menu {{ display: none !important; }} }}
+      #mobile-menu .container > a {{ opacity: 0; transform: translateY(20px); transition: opacity 0.3s, transform 0.3s; }}
+      #mobile-menu.open .container > a {{ opacity: 1; transform: translateY(0); }}
+      #mobile-menu.open .container > a:nth-child(1) {{ transition-delay: 0.1s; }}
+      #mobile-menu.open .container > a:nth-child(2) {{ transition-delay: 0.18s; }}
+      #mobile-menu.open .container > a:nth-child(3) {{ transition-delay: 0.26s; }}
+      #mobile-menu.open .container > a:nth-child(4) {{ transition-delay: 0.34s; }}
+      @keyframes menuFadeIn {{ from {{ opacity: 0; transform: translateY(-32px) scale(0.96); }} to {{ opacity: 1; transform: translateY(0) scale(1); }} }}
+      #mobile-menu-button {{ position: relative; width: 30px; height: 24px; border: none; background: transparent; cursor: pointer; padding: 0; }}
+      .hamburger-line {{ position: absolute; left: 0; width: 100%; height: 3px; background-color: currentColor; border-radius: 2px; transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, top 0.3s ease-in-out; }}
+      .hamburger-line-1 {{ top: 0; }}
+      .hamburger-line-2 {{ top: 50%; transform: translateY(-50%); }}
+      .hamburger-line-3 {{ top: 100%; transform: translateY(-100%); }}
+      #mobile-menu-button.is-active .hamburger-line-1 {{ top: 50%; transform: translateY(-50%) rotate(45deg); }}
+      #mobile-menu-button.is-active .hamburger-line-2 {{ opacity: 0; }}
+      #mobile-menu-button.is-active .hamburger-line-3 {{ top: 50%; transform: translateY(-50%) rotate(-45deg); }}
+    </style>
     <script>
-        function checkImageRatio(img) {{
-            if (img.naturalHeight / img.naturalWidth <= 0.75) {{  // If image is landscape or square
-                img.closest('.mb-6').classList.add('col-span-2');
-            }}
+      function checkImageRatio(img) {{
+        if (img.naturalHeight / img.naturalWidth <= 0.75) {{
+          img.closest('.mb-6').classList.add('col-span-2');
         }}
+      }}
     </script>
 </head>
-<body class="min-h-screen bg-gray-900 text-gray-200">
-    <nav class="fixed top-0 w-full backdrop-blur-lg z-40">
+<body class="min-h-screen bg-gray-900 text-gray-200 overflow-x-hidden">
+    <!-- Accessibility: Add skip link for screen readers -->
+    <a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
+    <header role="banner">
+      <nav class="fixed top-0 w-full backdrop-blur-lg z-40" role="navigation" aria-label="Main navigation">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/" class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">F.</a>
-            <div class="flex gap-6">
-                <a href="/#projects" class="hover:text-blue-500 transition-colors">Projects</a>
-                <a href="/#skills" class="hover:text-blue-500 transition-colors">Skills</a>
-                <a href="/contact.html" class="hover:text-blue-500 transition-colors">Contact</a>
-                <a href="/ar{project['projectPage']}" class="hover:text-blue-500 transition-colors">عربي</a>
-            </div>
+          <a href="/" class="nav-logo" aria-label="Go to homepage">
+            <span class="text-2xl font-bold bg-gradient-to-r from-blue-500 to-cyan-600 bg-clip-text">F.</span>
+          </a>
+          <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none" aria-label="Toggle menu" aria-expanded="false">
+            <span class="hamburger-line hamburger-line-1"></span>
+            <span class="hamburger-line hamburger-line-2"></span>
+            <span class="hamburger-line hamburger-line-3"></span>
+          </button>
+          <div class="hidden md:flex gap-6">
+            <a href="/#projects" class="hover:text-blue-500 transition-colors nav-link">Projects</a>
+            <a href="/#skills" class="hover:text-blue-500 transition-colors nav-link">Skills</a>
+            <a href="/contact.html" class="hover:text-blue-500 transition-colors nav-link">Contact</a>
+            <a href="/ar{project['projectPage']}" class="hover:text-blue-500 transition-colors nav-link">عربي</a>
+          </div>
         </div>
-    </nav>
-
-    <main class="container mx-auto px-6 pt-24 pb-12">
+        <div id="mobile-menu" class="hidden bg-gray-800/95 backdrop-blur-lg w-full py-4 md:hidden">
+          <div class="container mx-auto px-6 flex flex-col gap-4 items-center">
+            <a href="/#projects" class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2">Projects</a>
+            <a href="/#skills" class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2">Skills</a>
+            <a href="/contact.html" class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2">Contact</a>
+            <a href="/ar{project['projectPage']}" class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2">عربي</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content" class="container mx-auto px-6 pt-24 pb-12">
         <div class="max-w-4xl mx-auto">
             <header class="mb-12">
                 <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
@@ -258,6 +310,48 @@ def generate_project_page(project):
             <p>© 2025 Faisal. All rights reserved.</p>
         </div>
     </footer>
+    <script>
+      // --- Begin: Navbar Mobile Menu Script from index.html ---
+      function setupNavbar() {{
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const nav = document.querySelector("nav");
+        const navInnerDiv = nav.querySelector(".container");
+        // Add scrolled effect
+        window.addEventListener("scroll", () => {{
+          nav.classList.toggle("scrolled", window.scrollY > 50);
+        }});
+        // ...existing code for mobile menu...
+        if (mobileMenuButton && mobileMenu) {{
+          mobileMenuButton.addEventListener("click", () => {{
+            const isOpen = mobileMenu.classList.toggle("open");
+            mobileMenuButton.classList.toggle("is-active", isOpen);
+            nav.classList.toggle("mobile-menu-open", isOpen);
+            mobileMenuButton.setAttribute("aria-expanded", isOpen);
+            if (isOpen) {{
+              mobileMenu.classList.remove("hidden");
+              if (navInnerDiv) navInnerDiv.classList.remove("backdrop-blur-lg");
+           }} else {{
+              setTimeout(() => mobileMenu.classList.add("hidden"), 350);
+              if (navInnerDiv) navInnerDiv.classList.add("backdrop-blur-lg");
+            }}
+          }});
+          const mobileLinks = mobileMenu.querySelectorAll("a");
+          mobileLinks.forEach((link) => {{
+            link.addEventListener("click", () => {{
+              mobileMenu.classList.remove("open");
+              mobileMenuButton.classList.remove("is-active");
+              nav.classList.remove("mobile-menu-open");
+              mobileMenuButton.setAttribute("aria-expanded", "false");
+              setTimeout(() => mobileMenu.classList.add("hidden"), 350);
+              if (navInnerDiv) navInnerDiv.classList.add("backdrop-blur-lg");
+            }});
+          }});
+        }}
+      }}
+      document.addEventListener("DOMContentLoaded", setupNavbar);
+      // --- End: Navbar Mobile Menu Script from index.html ---
+    </script>
 </body>
 </html>
 '''
@@ -384,39 +478,80 @@ def generate_project_page_arabic(project):
         }}
     </script>
     <style>
-        body {{
-            font-family: 'Tajawal', sans-serif;
-            letter-spacing: 0;
-            line-height: 1.6;
-        }}
-        h1, h2, h3, h4, h5, h6 {{
-            font-family: 'Tajawal', sans-serif;
-            font-weight: 700;
-        }}
+      body {{ font-family: 'Tajawal', sans-serif; letter-spacing: 0; line-height: 1.6; }}
+      h2 {{ padding: 5px 0; }}
+      .bg-gradient-to-r {{ background-image: linear-gradient(to right, var(--tw-gradient-stops)); }}
+      .bg-clip-text {{ -webkit-background-clip: text; background-clip: text; color: transparent; }}
+      #skills .bg-gray-800\/80 {{ background-color: rgba(31, 41, 55, 0.5); backdrop-filter: blur(10px); border: 1px solid rgba(75, 85, 99, 0.5); }}
+      nav {{ transition: all 0.3s ease; }}
+      nav.scrolled {{ box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(59, 130, 246, 0.2); }}
+      nav.mobile-menu-open {{ box-shadow: none !important; border-bottom: none !important; }}
+      nav .nav-link {{ position: relative; padding: 0.5rem 0; transition: all 0.3s ease; }}
+      nav .nav-link::after {{ content: ""; position: absolute; width: 0; height: 2px; bottom: 0; right: 0; background: linear-gradient(to left, #3b82f6, #06b6d4); transition: width 0.3s ease; transform-origin: right; }}
+      nav .nav-link:hover::after, nav .nav-link.active::after {{ width: 100%; }}
+      nav .nav-link:hover {{ transform: translateY(-2px); }}
+      .nav-logo {{ position: relative; overflow: hidden; display: inline-flex; align-items: center; justify-content: center; }}
+      .nav-logo > span {{ transition: transform 0.3s ease; }}
+      .nav-logo:hover > span {{ transform: scale(1.1); }}
+      #mobile-menu {{ background: rgba(31, 41, 55, 0); backdrop-filter: blur(16px) saturate(120%); border-bottom: 1px solid rgba(59, 130, 246, 0.08); opacity: 0; transform: translateY(-32px) scale(0.96); pointer-events: none; transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), filter 0.35s cubic-bezier(0.4, 0, 0.2, 1); filter: blur(8px); box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.1); border-bottom: 1px solid rgba(59, 130, 246, 0.2); }}
+      #mobile-menu.open {{ opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; filter: blur(0); animation: menuFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1); }}
+      @media (min-width: 768px) {{ #mobile-menu {{ display: none !important; }} }}
+      #mobile-menu .container > a {{ opacity: 0; transform: translateY(20px); transition: opacity 0.3s, transform 0.3s; }}
+      #mobile-menu.open .container > a {{ opacity: 1; transform: translateY(0); }}
+      #mobile-menu.open .container > a:nth-child(1) {{ transition-delay: 0.1s; }}
+      #mobile-menu.open .container > a:nth-child(2) {{ transition-delay: 0.18s; }}
+      #mobile-menu.open .container > a:nth-child(3) {{ transition-delay: 0.26s; }}
+      #mobile-menu.open .container > a:nth-child(4) {{ transition-delay: 0.34s; }}
+      @keyframes menuFadeIn {{ from {{ opacity: 0; transform: translateY(-32px) scale(0.96); }} to {{ opacity: 1; transform: translateY(0) scale(1); }} }}
+      #mobile-menu-button {{ position: relative; width: 30px; height: 24px; border: none; background: transparent; cursor: pointer; padding: 0; }}
+      .hamburger-line {{ position: absolute; right: 0; width: 100%; height: 3px; background-color: currentColor; border-radius: 2px; transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, top 0.3s ease-in-out; }}
+      .hamburger-line-1 {{ top: 0; }}
+      .hamburger-line-2 {{ top: 50%; transform: translateY(-50%); }}
+      .hamburger-line-3 {{ top: 100%; transform: translateY(-100%); }}
+      #mobile-menu-button.is-active .hamburger-line-1 {{ top: 50%; transform: translateY(-50%) rotate(45deg); }}
+      #mobile-menu-button.is-active .hamburger-line-2 {{ opacity: 0; }}
+      #mobile-menu-button.is-active .hamburger-line-3 {{ top: 50%; transform: translateY(-50%) rotate(-45deg); }}
     </style>
     <script>
-        function checkImageRatio(img) {{
-            if (img.naturalHeight / img.naturalWidth <= 0.75) {{  // If image is landscape or square
-                img.closest('.mb-6').classList.add('col-span-2');
-            }}
+      function checkImageRatio(img) {{
+        if (img.naturalHeight / img.naturalWidth <= 0.75) {{
+          img.closest('.mb-6').classList.add('col-span-2');
         }}
+      }}
     </script>
 </head>
-<body class="min-h-screen bg-gray-900 text-gray-200 font-tajawal">
-    <nav class="fixed top-0 w-full backdrop-blur-lg z-40">
+<body class="min-h-screen bg-gray-900 text-gray-200 overflow-x-hidden font-tajawal">
+    <!-- Accessibility: Add skip link for screen readers -->
+    <a href="#main-content" class="sr-only focus:not-sr-only">تخطى إلى المحتوى الرئيسي</a>
+    <header role="banner">
+      <nav class="fixed top-0 w-full backdrop-blur-lg z-40" role="navigation" aria-label="القائمة الرئيسية">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="/ar" class="text-2xl font-bold bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent">ف.</a>
-            <div class="flex gap-6">
-                <a href="/ar/#projects" class="hover:text-blue-500 transition-colors text-lg">المشاريع</a>
-                <a href="/ar/#skills" class="hover:text-blue-500 transition-colors text-lg">المهارات</a>
-                <a href="/ar/contact.html" class="hover:text-blue-500 transition-colors text-lg">تواصل معي</a>
-                <a href="{project['projectPage'][3:]}" class="hover:text-blue-500 transition-colors text-lg">EN</a>
-
-            </div>
+          <a href="/ar/" class="nav-logo" aria-label="الذهاب للصفحة الرئيسية">
+            <span class="text-2xl font-bold bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text">ف.</span>
+          </a>
+          <button id="mobile-menu-button" class="md:hidden text-gray-200 focus:outline-none" aria-label="فتح/إغلاق القائمة" aria-expanded="false">
+            <span class="hamburger-line hamburger-line-1"></span>
+            <span class="hamburger-line hamburger-line-2"></span>
+            <span class="hamburger-line hamburger-line-3"></span>
+          </button>
+          <div class="hidden md:flex gap-6">
+            <a href="/ar/#projects" class="hover:text-blue-500 transition-colors text-lg nav-link">المشاريع</a>
+            <a href="/ar/#skills" class="hover:text-blue-500 transition-colors text-lg nav-link">المهارات</a>
+            <a href="/ar/contact.html" class="hover:text-blue-500 transition-colors text-lg nav-link">تواصل معي</a>
+            <a id="en-link" href="/" class="hover:text-blue-500 transition-colors text-lg nav-link">EN</a>
+          </div>
         </div>
-    </nav>
-
-    <main class="container mx-auto px-6 pt-24 pb-12">
+        <div id="mobile-menu" class="hidden bg-gray-800/95 backdrop-blur-lg w-full py-4 md:hidden">
+          <div class="container mx-auto px-6 flex flex-col gap-4 items-center">
+            <a href="/ar/#projects" class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2">المشاريع</a>
+            <a href="/ar/#skills" class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2">المهارات</a>
+            <a href="/ar/contact.html" class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2">تواصل معي</a>
+            <a id="en-link-mobile" href="/" class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2">EN</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content" class="container mx-auto px-6 pt-24 pb-12">
         <div class="max-w-4xl mx-auto">
             <header class="mb-12">
                 <h1 class="text-4xl font-bold mb-2 bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text text-transparent pb-2">
@@ -545,6 +680,61 @@ def generate_project_page_arabic(project):
             <p>© 2025 Faisal. جميع الحقوق محفوظة.</p>
         </div>
     </footer>
+    <script>
+      // --- Begin: Navbar Mobile Menu Script from index.html ---
+      function setupNavbar() {{
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const nav = document.querySelector("nav");
+        const navInnerDiv = nav.querySelector(".container");
+        // Add scrolled effect
+        window.addEventListener("scroll", () => {{
+          nav.classList.toggle("scrolled", window.scrollY > 50);
+        }});
+        // EN link fix
+        function setEnLinks() {{
+          const enLink = document.getElementById("en-link");
+          const enLinkMobile = document.getElementById("en-link-mobile");
+          let path = window.location.pathname;
+          if (path.startsWith("/ar/")) {{
+            let enPath = path.replace(/^\/ar\//, "/");
+            if (enPath === "/index.html" || enPath === "/") enPath = "/index.html";
+            enLink.setAttribute("href", enPath);
+            enLinkMobile.setAttribute("href", enPath);
+          }}
+        }}
+        setEnLinks();
+        // ...existing code for mobile menu...
+        if (mobileMenuButton && mobileMenu) {{
+          mobileMenuButton.addEventListener("click", () => {{
+            const isOpen = mobileMenu.classList.toggle("open");
+            mobileMenuButton.classList.toggle("is-active", isOpen);
+            nav.classList.toggle("mobile-menu-open", isOpen);
+            mobileMenuButton.setAttribute("aria-expanded", isOpen);
+            if (isOpen) {{
+              mobileMenu.classList.remove("hidden");
+              if (navInnerDiv) navInnerDiv.classList.remove("backdrop-blur-lg");
+           }} else {{
+              setTimeout(() => mobileMenu.classList.add("hidden"), 350);
+              if (navInnerDiv) navInnerDiv.classList.add("backdrop-blur-lg");
+            }}
+          }});
+          const mobileLinks = mobileMenu.querySelectorAll("a");
+          mobileLinks.forEach((link) => {{
+            link.addEventListener("click", () => {{
+              mobileMenu.classList.remove("open");
+              mobileMenuButton.classList.remove("is-active");
+              nav.classList.remove("mobile-menu-open");
+              mobileMenuButton.setAttribute("aria-expanded", "false");
+              setTimeout(() => mobileMenu.classList.add("hidden"), 350);
+              if (navInnerDiv) navInnerDiv.classList.add("backdrop-blur-lg");
+            }});
+          }});
+        }}
+      }}
+      document.addEventListener("DOMContentLoaded", setupNavbar);
+      // --- End: Navbar Mobile Menu Script from index.html ---
+    </script>
 </body>
 </html>
 '''
