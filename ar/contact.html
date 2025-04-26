@@ -83,143 +83,414 @@
         background-color: #2563eb;
         transform: scale(1.05);
       }
+
+      /* Enhanced Navigation Styles from English pages */
+      nav {
+        transition: all 0.3s ease;
+      }
+      nav.scrolled {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+      }
+      nav.mobile-menu-open {
+        box-shadow: none !important;
+        border-bottom: none !important;
+      }
+      nav .nav-link {
+        position: relative;
+        padding: 0.5rem 0;
+        transition: all 0.3s ease;
+      }
+      nav .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        right: 0; /* Changed from left to right for RTL */
+        background: linear-gradient(
+          to left,
+          #3b82f6,
+          #06b6d4
+        ); /* Changed direction for RTL */
+        transition: width 0.3s ease;
+        transform-origin: right; /* Changed from left to right for RTL */
+      }
+      nav .nav-link:hover::after,
+      nav .nav-link.active::after {
+        width: 100%;
+      }
+      nav .nav-link:hover {
+        transform: translateY(-2px);
+      }
+      .nav-logo {
+        position: relative;
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav-logo > span {
+        transition: transform 0.3s ease;
+      }
+      .nav-logo:hover > span {
+        transform: scale(1.1);
+      }
+
+      /* Mobile menu animation and transparency */
+      #mobile-menu {
+        background: rgba(31, 41, 55, 0);
+        backdrop-filter: blur(16px) saturate(120%);
+        border-bottom: 1px solid rgba(59, 130, 246, 0.08);
+        opacity: 0;
+        transform: translateY(-32px) scale(0.96);
+        pointer-events: none;
+        transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+          filter 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        filter: blur(8px);
+        box-shadow: 0 4px 8px -4px rgba(0, 0, 0, 0.1);
+        border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+      }
+      #mobile-menu.open {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+        filter: blur(0);
+        animation: menuFadeIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      @media (min-width: 768px) {
+        #mobile-menu {
+          display: none !important;
+        }
+      }
+      #mobile-menu .container > a {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.3s, transform 0.3s;
+      }
+      #mobile-menu.open .container > a {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      #mobile-menu.open .container > a:nth-child(1) {
+        transition-delay: 0.1s;
+      }
+      #mobile-menu.open .container > a:nth-child(2) {
+        transition-delay: 0.18s;
+      }
+      #mobile-menu.open .container > a:nth-child(3) {
+        transition-delay: 0.26s;
+      }
+      #mobile-menu.open .container > a:nth-child(4) {
+        transition-delay: 0.34s;
+      }
+      @keyframes menuFadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-32px) scale(0.96);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      /* Hamburger Button Animation */
+      #mobile-menu-button {
+        position: relative;
+        width: 30px;
+        height: 24px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        padding: 0;
+      }
+      .hamburger-line {
+        position: absolute;
+        right: 0; /* Changed from left to right for RTL */
+        width: 100%;
+        height: 3px;
+        background-color: currentColor;
+        border-radius: 2px;
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out,
+          top 0.3s ease-in-out;
+      }
+      .hamburger-line-1 {
+        top: 0;
+      }
+      .hamburger-line-2 {
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      .hamburger-line-3 {
+        top: 100%;
+        transform: translateY(-100%);
+      }
+      #mobile-menu-button.is-active .hamburger-line-1 {
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+      }
+      #mobile-menu-button.is-active .hamburger-line-2 {
+        opacity: 0;
+      }
+      #mobile-menu-button.is-active .hamburger-line-3 {
+        top: 50%;
+        transform: translateY(-50%) rotate(-45deg);
+      }
     </style>
   </head>
-  <body class="min-h-screen bg-gray-900 text-gray-200 overflow-x-hidden">
-    <nav class="fixed top-0 w-full backdrop-blur-lg z-40">
-      <div
-        class="container mx-auto px-6 py-4 flex justify-between items-center"
+  <body
+    class="min-h-screen bg-gray-900 text-gray-200 overflow-x-hidden font-tajawal"
+  >
+    <!-- Accessibility: Add skip link for screen readers -->
+    <a href="#main-content" class="sr-only focus:not-sr-only"
+      >تخطى إلى المحتوى الرئيسي</a
+    >
+    <header role="banner">
+      <nav
+        class="fixed top-0 w-full backdrop-blur-lg z-40"
+        role="navigation"
+        aria-label="القائمة الرئيسية"
       >
-        <span
-          class="text-2xl font-bold bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text"
-          >ف.</span
+        <div
+          class="container mx-auto px-6 py-4 flex justify-between items-center"
         >
-        <div class="flex gap-6">
-          <a
-            href="/ar/#projects"
-            class="hover:text-blue-500 transition-colors text-lg"
-            >المشاريع</a
+          <a href="/ar/" class="nav-logo" aria-label="الذهاب للصفحة الرئيسية">
+            <span
+              class="text-2xl font-bold bg-gradient-to-r to-blue-500 from-cyan-600 bg-clip-text"
+              >ف.</span
+            >
+          </a>
+          <!-- Mobile menu button -->
+          <button
+            id="mobile-menu-button"
+            class="md:hidden text-gray-200 focus:outline-none"
+            aria-label="فتح/إغلاق القائمة"
+            aria-expanded="false"
           >
-          <a
-            href="/ar/#skills"
-            class="hover:text-blue-500 transition-colors text-lg"
-            >المهارات</a
-          >
-          <a
-            href="/ar/contact.html"
-            class="hover:text-blue-500 transition-colors text-lg"
-            >تواصل معي</a
-          >
-          <a
-            href="/contact.html"
-            class="hover:text-blue-500 transition-colors text-lg"
-            >EN</a
-          >
+            <span class="hamburger-line hamburger-line-1"></span>
+            <span class="hamburger-line hamburger-line-2"></span>
+            <span class="hamburger-line hamburger-line-3"></span>
+          </button>
+          <!-- Desktop navigation -->
+          <div class="hidden md:flex gap-6">
+            <a
+              href="/ar/#projects"
+              class="hover:text-blue-500 transition-colors text-lg nav-link"
+              >المشاريع</a
+            >
+            <a
+              href="/ar/#skills"
+              class="hover:text-blue-500 transition-colors text-lg nav-link"
+              >المهارات</a
+            >
+            <a
+              href="/ar/contact.html"
+              class="hover:text-blue-500 transition-colors text-lg nav-link active"
+              >تواصل معي</a
+            >
+            <a
+              href="/contact.html"
+              class="hover:text-blue-500 transition-colors text-lg nav-link"
+              >EN</a
+            >
+          </div>
         </div>
-      </div>
-    </nav>
+
+        <!-- Mobile navigation dropdown -->
+        <div
+          id="mobile-menu"
+          class="hidden bg-gray-800/95 backdrop-blur-lg w-full py-4 md:hidden"
+        >
+          <div class="container mx-auto px-6 flex flex-col gap-4 items-center">
+            <a
+              href="/ar/#projects"
+              class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2"
+              >المشاريع</a
+            >
+            <a
+              href="/ar/#skills"
+              class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2"
+              >المهارات</a
+            >
+            <a
+              href="/ar/contact.html"
+              class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2 active"
+              >تواصل معي</a
+            >
+            <a
+              href="/contact.html"
+              class="hover:text-blue-500 transition-colors text-lg w-full text-center py-2"
+              >EN</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
 
     <!-- Contact Form Section -->
-    <section
-      class="min-h-screen flex items-center relative overflow-hidden pt-20"
-    >
-      <div class="container mx-auto px-6">
-        <h1
-          class="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-right pb-2"
-        >
-          تواصل معي
-        </h1>
-
-        <div class="max-w-2xl mx-auto">
-          <form
-            action="https://formspree.io/f/meoqgndl"
-            method="POST"
-            class="space-y-6"
+    <main id="main-content" role="main">
+      <!-- Added main wrapper -->
+      <section
+        class="min-h-screen flex items-center relative overflow-hidden pt-20"
+      >
+        <div class="container mx-auto px-6">
+          <h1
+            class="text-4xl font-bold mb-12 bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-right pb-2"
           >
-            <div>
-              <label class="block text-sm font-medium mb-2 text-right"
-                >الاسم</label
-              >
-              <input
-                type="text"
-                name="name"
-                required
-                class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all backdrop-blur-sm"
-              />
-            </div>
+            تواصل معي
+          </h1>
 
-            <div>
-              <label class="block text-sm font-medium mb-2 text-right"
-                >البريد الإلكتروني أو رقم الهاتف</label
-              >
-              <input
-                type="text"
-                name="contact"
-                required
-                pattern="^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|(\+?[0-9\s-]{10,})$"
-                placeholder="أدخل البريد الإلكتروني أو رقم الهاتف"
-                class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all backdrop-blur-sm"
-              />
-            </div>
-
-            <div>
-              <label class="block text-sm font-medium mb-2 text-right"
-                >الرسالة</label
-              >
-              <textarea
-                name="message"
-                rows="6"
-                required
-                class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all backdrop-blur-sm"
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+          <div class="max-w-2xl mx-auto">
+            <form
+              action="https://formspree.io/f/meoqgndl"
+              method="POST"
+              class="space-y-6"
             >
-              إرسال الرسالة
-            </button>
-          </form>
+              <div>
+                <label class="block text-sm font-medium mb-2 text-right"
+                  >الاسم</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all backdrop-blur-sm"
+                />
+              </div>
 
-          <!-- Alternative Contact Methods -->
-          <div class="mt-12 flex flex-wrap gap-6 justify-center">
-            <a
-              href="mailto:FaisalSaweed@gmail.com"
-              class="flex items-center gap-3 px-6 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 hover:border-blue-500/40 transition-all backdrop-blur-sm"
-            >
-              <i class="fas fa-envelope text-blue-500"></i>
-              <span>FaisalSaweed@gmail.com</span>
-            </a>
+              <div>
+                <label class="block text-sm font-medium mb-2 text-right"
+                  >البريد الإلكتروني أو رقم الهاتف</label
+                >
+                <input
+                  type="text"
+                  name="contact"
+                  required
+                  pattern="^([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})|(\+?[0-9\s-]{10,})$"
+                  placeholder="أدخل البريد الإلكتروني أو رقم الهاتف"
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all backdrop-blur-sm"
+                />
+              </div>
 
-            <a
-              href="https://www.linkedin.com/in/faisalalsaweed/"
-              class="flex items-center gap-3 px-6 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 hover:border-blue-500/40 transition-all backdrop-blur-sm"
-            >
-              <i class="fab fa-linkedin text-blue-500"></i>
-              <span>لينكد إن</span>
-            </a>
+              <div>
+                <label class="block text-sm font-medium mb-2 text-right"
+                  >الرسالة</label
+                >
+                <textarea
+                  name="message"
+                  rows="6"
+                  required
+                  class="w-full px-4 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 focus:border-blue-500/50 focus:outline-none focus:ring-2 focus:ring-blue-500/20 transition-all backdrop-blur-sm"
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                class="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-300 transform hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+              >
+                إرسال الرسالة
+              </button>
+            </form>
+
+            <!-- Alternative Contact Methods -->
+            <div class="mt-12 flex flex-wrap gap-6 justify-center">
+              <a
+                href="mailto:FaisalSaweed@gmail.com"
+                class="flex items-center gap-3 px-6 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 hover:border-blue-500/40 transition-all backdrop-blur-sm"
+              >
+                <i class="fas fa-envelope text-blue-500"></i>
+                <span>FaisalSaweed@gmail.com</span>
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/faisalalsaweed/"
+                class="flex items-center gap-3 px-6 py-3 rounded-lg bg-gray-800/50 border border-blue-500/20 hover:border-blue-500/40 transition-all backdrop-blur-sm"
+              >
+                <i class="fab fa-linkedin text-blue-500"></i>
+                <span>لينكد إن</span>
+              </a>
+            </div>
+            <!-- add space -->
+            <div class="mt-12 flex flex-wrap gap-6 justify-center"></div>
           </div>
-          <!-- add space -->
-          <div class="mt-12 flex flex-wrap gap-6 justify-center"></div>
         </div>
-      </div>
 
-      <!-- Background Effects -->
-      <div class="absolute inset-0 -z-10">
-        <div
-          class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-600/20 blur-3xl"
-        ></div>
-        <div
-          class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-cyan-500/20 blur-3xl"
-        ></div>
-      </div>
-    </section>
+        <!-- Background Effects -->
+        <div class="absolute inset-0 -z-10">
+          <div
+            class="absolute top-1/4 left-1/4 w-64 h-64 rounded-full bg-blue-600/20 blur-3xl"
+          ></div>
+          <div
+            class="absolute bottom-1/4 right-1/4 w-64 h-64 rounded-full bg-cyan-500/20 blur-3xl"
+          ></div>
+        </div>
+      </section>
+    </main>
 
     <footer class="py-12 border-t border-blue-900">
       <div class="container mx-auto px-6 text-center text-gray-400">
         <p>© 2025 فيصل. جميع الحقوق محفوظة.</p>
       </div>
     </footer>
+
+    <script defer>
+      function setupNavbar() {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const nav = document.querySelector("nav");
+        const navInnerDiv = nav.querySelector(".container");
+        const navLogo = document.querySelector(".nav-logo");
+        const navLinks = document.querySelectorAll("nav .nav-link"); // Select all nav links
+
+        if (mobileMenuButton && mobileMenu) {
+          mobileMenuButton.addEventListener("click", () => {
+            const isOpen = mobileMenu.classList.toggle("open");
+            mobileMenuButton.classList.toggle("is-active", isOpen);
+            nav.classList.toggle("mobile-menu-open", isOpen);
+            mobileMenuButton.setAttribute("aria-expanded", isOpen);
+            if (isOpen) {
+              mobileMenu.classList.remove("hidden");
+              if (navInnerDiv) navInnerDiv.classList.remove("backdrop-blur-lg");
+            } else {
+              setTimeout(() => mobileMenu.classList.add("hidden"), 350);
+              if (navInnerDiv) navInnerDiv.classList.add("backdrop-blur-lg");
+            }
+          });
+          const mobileLinks = mobileMenu.querySelectorAll("a");
+          mobileLinks.forEach((link) => {
+            link.addEventListener("click", () => {
+              mobileMenu.classList.remove("open");
+              mobileMenuButton.classList.remove("is-active");
+              nav.classList.remove("mobile-menu-open");
+              mobileMenuButton.setAttribute("aria-expanded", "false");
+              setTimeout(() => mobileMenu.classList.add("hidden"), 350);
+              if (navInnerDiv) navInnerDiv.classList.add("backdrop-blur-lg");
+            });
+          });
+        }
+
+        // Set the 'Contact' link as active explicitly on the contact page
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === "/ar/contact.html") {
+            link.classList.add("active");
+          } else {
+            link.classList.remove("active"); // Ensure others are not active
+          }
+        });
+
+        // Added scroll listener for 'scrolled' class
+        window.addEventListener("scroll", () => {
+          nav.classList.toggle("scrolled", window.scrollY > 50);
+        });
+
+        // Removed logo hover animation listener (as it wasn't in the English contact.html)
+      }
+
+      document.addEventListener("DOMContentLoaded", setupNavbar);
+
+      // Removed redundant mobile menu toggle code
+    </script>
   </body>
 </html>
