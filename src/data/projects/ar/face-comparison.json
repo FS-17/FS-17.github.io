@@ -1,0 +1,106 @@
+{
+    "showOnHome": false,
+    "title": "نظام مقارنة الوجوه والتعرف عليها",
+    "content": [
+        {
+            "type": "text",
+            "value": "وحدة ذكاء اصطناعي قائمة على Python مصممة لإجراء مقارنة الوجوه والتعرف عليها. يستخدم النظام مصنفات Cascade Classifiers للكشف عن الوجوه داخل الصور، ويقوم بقصها، ثم يستخدم FaceNet لحساب تضمينات الصورة (embeddings). من خلال مقارنة هذه التضمينات وتطبيق عتبة تشابه، يحدد النظام ما إذا كان الوجهان ينتميان إلى نفس الشخص. وهو يدعم مقارنة وجه واحد بقاعدة بيانات تحتوي على العديد من الوجوه لتحديد الأفراد."
+        }
+    ],
+    "shortDescription": "أداة ذكاء اصطناعي تستخدم FaceNet وCascade Classifiers لمقارنة الوجوه وتحديد الهوية.",
+    "metaDescription": "اكتشف مشروع مقارنة الوجوه هذا القائم على Python والذي يستخدم FaceNet وOpenCV. يقوم بالكشف عن الوجوه وقصها ومقارنتها للتحقق من الهوية بدقة عالية.",
+    "keywords": [
+        "التعرف على الوجه",
+        "FaceNet",
+        "الرؤية الحاسوبية",
+        "Python",
+        "OpenCV",
+        "التحقق من الهوية بالذكاء الاصطناعي"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2024-03-12",
+    "categories": [
+        "AI",
+        "Computer Vision",
+        "Machine Learning"
+    ],
+    "tags": [
+        "Python",
+        "FaceNet",
+        "OpenCV",
+        "TensorFlow",
+        "Numpy"
+    ],
+    "objectives": [
+        "تطوير نظام للكشف الدقيق عن الوجوه في الصور.",
+        "تطبيق منطق لمقارنة وجه واحد بقاعدة بيانات تحتوي على العديد من الوجوه.",
+        "حساب درجات التشابه للتحقق من الهوية.",
+        "إنشاء واجهة سطر أوامر لسهولة الاستخدام."
+    ],
+    "functionality": [
+        {
+            "featureName": "اكتشاف الوجه",
+            "description": "يستخدم Cascade Classifiers لتحديد موقع الوجوه وقصها من صور الإدخال."
+        },
+        {
+            "featureName": "حساب التضمين",
+            "description": "يولد تضمينات متجهة فريدة لكل وجه باستخدام FaceNet."
+        },
+        {
+            "featureName": "التحقق من الهوية",
+            "description": "يقارن التضمينات لتحديد ما إذا كانت الوجوه متطابقة بناءً على عتبة الثقة."
+        },
+        {
+            "featureName": "إدارة قاعدة البيانات",
+            "description": "تتضمن نصوص برمجية لتحميل وتنظيم الصور في قاعدة بيانات للتعرف."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [],
+        "backend": [
+            "Python"
+        ],
+        "database": [
+            "نظام الملفات المحلي (قاعدة بيانات الصور)"
+        ],
+        "libraries": [
+            "FaceNet",
+            "OpenCV",
+            "Numpy"
+        ],
+        "frameworks": [
+            "TensorFlow (via FaceNet)"
+        ],
+        "tools": [
+            "Git"
+        ],
+        "hosting": ""
+    },
+    "design": {
+        "aesthetic": "واجهة سطر الأوامر (CLI)",
+        "colorPalette": [],
+        "typography": [
+            "Monospace"
+        ],
+        "responsiveness": "لا ينطبق",
+        "accessibility": ""
+    },
+    "media": [],
+    "outcomes": [
+        "إنشاء أداة وظيفية لمقارنة الوجوه من 1 إلى العديد.",
+        "تم تطبيق تضمينات FaceNet بنجاح للتعرف الدقيق.",
+        "توفير هيكل نصي معياري لتحميل ومعالجة الصور."
+    ],
+    "challenges": [
+        {
+            "challenge": "ضمان الكشف الدقيق عبر ظروف الإضاءة والزوايا المختلفة.",
+            "solution": "تم استخدام نماذج قوية مدربة مسبقًا (FaceNet) وخطوات معالجة مسبقة مثل القص للتركيز على ملامح الوجه."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/face-comparison.html",
+    "linkToProject": "",
+    "repository": "https://github.com/FS-17/Face-comparison",
+    "notes": ""
+}

@@ -1,0 +1,545 @@
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import VideoTrio from "@/components/VideoTrio";
+import { getProjects, getProjectBySlug } from "@/lib/projects";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import ReactMarkdown from "react-markdown";
+
+export async function generateStaticParams() {
+  const projects = getProjects("ar");
+  return projects.map((project) => ({
+    slug: project.slug,
+  }));
+}
+
+export async function generateMetadata({ params }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug, "ar");
+  if (!project) return {};
+  return {
+    title: project.metaTitle || `${project.title} - تفاصيل المشروع`,
+    description: project.metaDescription,
+  };
+}
+
+function convertBoldText(text) {
+  if (!text) return "";
+  const parts = text.split("*");
+  return parts.map((part, index) =>
+    index % 2 === 1 ? (
+      <strong key={index} className="font-bold text-blue-400">
+        {part}
+      </strong>
+    ) : (
+      part
+    )
+  );
+}
+
+function sizeToColSpan(size) {
+  if (!size) return "col-span-1 md:col-span-12";
+  if (size == 3) return "col-span-1 md:col-span-3";
+  if (size == 4) return "col-span-1 md:col-span-4";
+  if (size == 6) return "col-span-1 md:col-span-6";
+  if (size == 8) return "col-span-1 md:col-span-8";
+  if (size == 9) return "col-span-1 md:col-span-9";
+  return "col-span-1 md:col-span-12";
+}
+
+export default async function ProjectDetail({ params }) {
+  const { slug } = await params;
+  const project = getProjectBySlug(slug, "ar");
+
+  if (!project) {
+    notFound();
+  }
+
+  return (
+    <div className="min-h-screen font-tajawal bg-grid-white" dir="rtl">
+      <Navbar lang="ar" />
+
+      <main className="pt-32 pb-20 container mx-auto px-6 relative">
+        {/* Radial Gradient Overlay */}
+        <div className="absolute inset-0 bg-gray-900 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none -z-10"></div>
+
+        {/* Header */}
+        <div className="mb-12">
+          <Link
+            href="/ar/projects"
+            className="text-blue-400 hover:text-blue-300 mb-6 inline-flex items-center transition-colors"
+          >
+            <i className="fas fa-arrow-right ml-2"></i> العودة للمشاريع
+          </Link>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-l from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+            {project.title}
+          </h1>
+
+          <div className="flex flex-wrap gap-6 text-gray-400 mb-8">
+            {project.client && (
+              <span className="flex items-center gap-2">
+                <i className="fas fa-user text-blue-500"></i> {project.client}
+              </span>
+            )}
+            {project.event && (
+              <span className="flex items-center gap-2">
+                <i className="fas fa-calendar-check text-blue-500"></i>{" "}
+                {project.event}
+              </span>
+            )}
+            {project.date && (
+              <span className="flex items-center gap-2">
+                <i className="fas fa-calendar text-blue-500"></i> {project.date}
+              </span>
+            )}
+          </div>
+
+          <div className="flex flex-wrap gap-2 mb-8">
+            {project.categories &&
+              project.categories.map((cat, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 text-sm rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300"
+                >
+                  {cat}
+                </span>
+              ))}
+            {project.tags &&
+              project.tags.map((tag, index) => (
+                <span
+                  key={index}
+                  className="px-3 py-1 text-sm rounded-full bg-white/5 border border-white/10 text-gray-300"
+                >
+                  {tag}
+                </span>
+              ))}
+          </div>
+        </div>
+
+        {/* Media Grid */}
+        {project.media && project.media.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+            {project.media
+              .filter((item) => item.type !== "logo" && item.type !== "preview")
+              .map((item, index) => (
+                <div
+                  key={index}
+                  className={`rounded-3xl overflow-hidden shadow-lg glass ${
+                    item.type === "video" ||
+                    item.type === "embedded" ||
+                    item.type === "audio"
+                      ? "col-span-1 md:col-span-2"
+                      : ""
+                  }`}
+                >
+                  {item.type === "video" ? (
+                    <div className="relative pt-[56.25%]">
+                      <video
+                        controls
+                        className="absolute inset-0 w-full h-full object-contain bg-black"
+                      >
+                        <source src={item.url} type="video/mp4" />
+                        متصفحك لا يدعم تشغيل الفيديو.
+                      </video>
+                    </div>
+                  ) : item.type === "audio" ? (
+                    <div className="p-6 flex flex-col items-center justify-center bg-gray-800/50 h-full min-h-[150px]">
+                      <div className="w-full mb-4 text-center">
+                        <i className="fas fa-music text-3xl text-blue-400 mb-2"></i>
+                      </div>
+                      <audio controls className="w-full">
+                        <source src={item.url} />
+                        متصفحك لا يدعم عنصر الصوت.
+                      </audio>
+                    </div>
+                  ) : item.type === "embedded" ? (
+                    <div
+                      className="w-full"
+                      dangerouslySetInnerHTML={{ __html: item.url }}
+                    />
+                  ) : (
+                    <img
+                      src={item.url}
+                      alt={item.alt || item.caption || project.title}
+                      className="w-full max-h-[800px] object-contain mx-auto"
+                    />
+                  )}
+                  {item.caption && (
+                    <p className="p-4 text-gray-400 text-center text-sm border-t border-white/5">
+                      {item.caption}
+                    </p>
+                  )}
+                </div>
+              ))}
+          </div>
+        )}
+
+        {/* Description */}
+        <div className="mb-16">
+          <h2 className="text-2xl font-bold mb-6 text-blue-400 border-b border-blue-500/20 pb-2 inline-block">
+            نظرة عامة
+          </h2>
+          <div className="text-gray-300 leading-relaxed text-lg grid grid-cols-1 md:grid-cols-12 gap-6 items-center">
+            {Array.isArray(project.content || project.description) ? (
+              (project.content || project.description).map((item, index) => {
+                const colSpanClass = sizeToColSpan(item.grid);
+
+                if (item.type === "text") {
+                  return (
+                    <div
+                      key={index}
+                      className={`prose prose-invert max-w-none text-right ${colSpanClass}`}
+                    >
+                      {item.value.split("\n").map((line, lineIdx) => (
+                        <p key={lineIdx} className="m-0">
+                          {convertBoldText(line)}
+                        </p>
+                      ))}
+                    </div>
+                  );
+                } else if (item.type === "md") {
+                  return (
+                    <div
+                      key={index}
+                      className={`prose prose-invert max-w-none text-right p-6 bg-gray-800/50 rounded-xl border border-white/5 shadow-inner ${colSpanClass}`}
+                    >
+                      <ReactMarkdown>{item.value}</ReactMarkdown>
+                    </div>
+                  );
+                } else if (item.type === "impact-cards") {
+                  const cards = item.items || [];
+                  const highlights = item.highlights || [];
+                  return (
+                    <div
+                      key={index}
+                      className={`glass-card rounded-2xl p-6 md:p-8 relative overflow-hidden ${colSpanClass}`}
+                    >
+                      {/* Background gradient accent */}
+                      <div className="absolute inset-0 bg-gradient-to-bl from-blue-500/10 via-transparent to-cyan-500/10 pointer-events-none" />
+
+                      <div className="relative flex flex-col gap-6">
+                        {/* Header */}
+                        <div className="flex flex-wrap items-center gap-3">
+                          <div className="h-px flex-1 bg-gradient-to-l from-blue-500/30 to-transparent" />
+                          <div className="px-4 py-1.5 text-xs font-bold rounded-full bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500/30 text-blue-300 tracking-[0.15em]">
+                            <i className="fas fa-chart-line ml-2"></i>
+                            {item.title || "النتائج"}
+                          </div>
+                          <div className="h-px flex-1 bg-gradient-to-r from-blue-500/30 to-transparent" />
+                        </div>
+
+                        {/* Stats Cards */}
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                          {cards.map((card, i) => (
+                            <div
+                              key={i}
+                              className="group rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 px-4 py-5 text-center transition-all duration-300 hover:border-blue-500/40 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-1"
+                            >
+                              <div className="text-3xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                                {card.value}
+                              </div>
+                              <div className="text-sm text-gray-400 mt-2 font-medium">
+                                {card.label}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+
+                        {/* Highlights */}
+                        {highlights.length > 0 && (
+                          <div className="grid md:grid-cols-2 gap-3">
+                            {highlights.map((h, idx) => (
+                              <div
+                                key={idx}
+                                className="rounded-lg border border-cyan-500/20 bg-cyan-500/5 px-4 py-3 text-sm text-gray-300 flex items-start gap-3 text-right transition-all duration-300 hover:border-cyan-500/40 hover:bg-cyan-500/10"
+                              >
+                                <span className="mt-1 inline-block h-2 w-2 rounded-full bg-gradient-to-r from-blue-400 to-cyan-400 shadow-sm shadow-cyan-400/50"></span>
+                                <span>{h}</span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Result */}
+                        {item.result && (
+                          <div className="rounded-xl border border-purple-500/20 bg-gradient-to-r from-purple-500/10 to-blue-500/10 px-5 py-4 text-gray-200 text-sm flex items-start gap-3 text-right">
+                            <i className="fas fa-trophy text-purple-400 mt-0.5"></i>
+                            <span className="leading-relaxed">
+                              {item.result}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                } else if (item.type === "embedded") {
+                  return (
+                    <div
+                      key={index}
+                      className={`rounded-xl overflow-hidden bg-gray-900/40 border border-white/5 shadow-lg ${colSpanClass}`}
+                      dangerouslySetInnerHTML={{
+                        __html: item.url || item.value,
+                      }}
+                    />
+                  );
+                } else if (item.type === "image") {
+                  const widthPercent =
+                    typeof item.size === "number"
+                      ? Math.min(Math.max(item.size, 0), 100)
+                      : 100;
+                  return (
+                    <div key={index} className={colSpanClass}>
+                      <img
+                        src={item.value}
+                        alt={item.caption || `Project detail ${index}`}
+                        className="rounded-xl shadow-lg mx-auto"
+                        style={{ width: `${widthPercent}%`, maxWidth: "100%" }}
+                      />
+                      {item.caption && (
+                        <p className="text-center text-sm text-gray-400 mt-2">
+                          {item.caption}
+                        </p>
+                      )}
+                    </div>
+                  );
+                } else if (item.type === "mobile") {
+                  return (
+                    <div key={index} className={colSpanClass}>
+                      <div className="bg-gray-900/60 border border-white/5 rounded-2xl shadow-2xl p-4 md:p-6 flex flex-col md:flex-row gap-6 items-center">
+                        <div className="relative w-full md:w-80 lg:w-96">
+                          <div
+                            className="absolute -inset-[2px] rounded-[26px] bg-gradient-to-b from-white/20 via-white/5 to-transparent opacity-60 pointer-events-none"
+                            aria-hidden="true"
+                          ></div>
+                          <div className="relative rounded-[24px] overflow-hidden shadow-xl border border-white/10 bg-gradient-to-b from-gray-900/60 via-gray-900/20 to-gray-800/10 backdrop-blur flex justify-center">
+                            <video
+                              controls
+                              className="w-full h-auto max-h-[900px] object-contain bg-black rounded-[22px]"
+                            >
+                              <source src={item.value} type="video/mp4" />
+                              متصفحك لا يدعم تشغيل الفيديو.
+                            </video>
+                          </div>
+                          <div className="absolute top-3 right-3 px-3 py-1 text-xs font-semibold rounded-full bg-white/10 text-white/80 backdrop-blur">
+                            معاينة الجوال
+                          </div>
+                        </div>
+
+                        <div className="w-full text-sm text-gray-300 space-y-3 md:text-right text-center">
+                          <p className="text-gray-200 font-semibold">
+                            هكذا يظهر على الهاتف
+                          </p>
+                          {item.caption && (
+                            <p className="leading-relaxed text-gray-300">
+                              {item.caption}
+                            </p>
+                          )}
+                          <p className="text-xs text-gray-500 tracking-[0.12em]">
+                            اضغط للتشغيل / الإيقاف
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                } else if (item.type === "video") {
+                  return (
+                    <div key={index} className={colSpanClass}>
+                      <div className="bg-gray-900/60 border border-white/5 rounded-2xl shadow-2xl p-4 md:p-6 flex flex-col md:flex-row gap-6 items-center">
+                        <div className="w-full md:w-1/2">
+                          <div className="rounded-xl overflow-hidden shadow-lg bg-black border border-white/10">
+                            <video
+                              controls
+                              className="w-full h-auto max-h-[600px] mx-auto"
+                            >
+                              <source src={item.value} type="video/mp4" />
+                              متصفحك لا يدعم تشغيل الفيديو.
+                            </video>
+                          </div>
+                        </div>
+                        {(item.caption || item.text) && (
+                          <div className="w-full md:w-1/2 text-sm text-gray-300 space-y-3 md:text-right text-center">
+                            {item.text && (
+                              <p className="text-gray-200 font-semibold text-lg">
+                                {item.text}
+                              </p>
+                            )}
+                            {item.caption && (
+                              <p className="leading-relaxed text-gray-300">
+                                {item.caption}
+                              </p>
+                            )}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                  );
+                } else if (item.type === "video-trio") {
+                  return <VideoTrio key={index} item={item} />;
+                } else if (item.type === "feature-list") {
+                  return (
+                    <div key={index} className={colSpanClass}>
+                      {item.title && (
+                        <h3 className="text-2xl font-bold mb-6 text-blue-400 border-b border-blue-500/20 pb-2 inline-block">
+                          {item.title}
+                        </h3>
+                      )}
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        {item.items.map((feature, fIdx) => (
+                          <div
+                            key={fIdx}
+                            className="glass-card p-6 rounded-xl border border-white/5 hover:border-blue-500/30 transition-colors group"
+                          >
+                            <div className="flex items-start gap-4">
+                              {feature.icon && (
+                                <div className="p-3 rounded-lg bg-blue-500/10 text-blue-400 group-hover:bg-blue-500/20 group-hover:scale-110 transition-all">
+                                  <i className={`${feature.icon} text-xl`}></i>
+                                </div>
+                              )}
+                              <div>
+                                <h4 className="text-lg font-bold text-gray-200 mb-2 group-hover:text-blue-300 transition-colors">
+                                  {feature.title}
+                                </h4>
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                  {convertBoldText(feature.description)}
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                } else if (item.type === "audio") {
+                  return (
+                    <div
+                      key={index}
+                      className={`p-4 bg-gray-800/50 rounded-xl ${colSpanClass}`}
+                    >
+                      <div className="flex flex-col gap-2">
+                        {item.caption && (
+                          <p className="text-sm text-gray-300 mb-2">
+                            {item.caption}
+                          </p>
+                        )}
+                        <audio controls className="w-full">
+                          <source src={item.value} />
+                          متصفحك لا يدعم عنصر الصوت.
+                        </audio>
+                      </div>
+                    </div>
+                  );
+                }
+                return null;
+              })
+            ) : (
+              <div className="col-span-1 md:col-span-2">
+                {convertBoldText(project.description)}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Objectives */}
+        {project.objectives && project.objectives.length > 0 && (
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-6 text-blue-400 border-b border-blue-500/20 pb-2 inline-block">
+              الأهداف
+            </h2>
+            <ul className="list-disc list-inside space-y-3 text-gray-300">
+              {project.objectives.map((obj, index) => (
+                <li key={index} className="leading-relaxed">
+                  {obj}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Functionality */}
+        {project.functionality && project.functionality.length > 0 && (
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-6 text-blue-400 border-b border-blue-500/20 pb-2 inline-block">
+              المميزات الرئيسية
+            </h2>
+            <div className="space-y-6">
+              {project.functionality.map((func, index) => (
+                <div key={index} className="pr-4 border-r-2 border-blue-500/30">
+                  <h4 className="text-lg font-semibold text-blue-400 mb-2">
+                    {func.featureName}
+                  </h4>
+                  <p className="text-gray-300 leading-relaxed">
+                    {convertBoldText(func.description)}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Challenges */}
+        {project.challenges && project.challenges.length > 0 && (
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold mb-6 text-blue-400 border-b border-blue-500/20 pb-2 inline-block">
+              التحديات والحلول
+            </h2>
+            <div className="space-y-6">
+              {project.challenges.map((challenge, index) => (
+                <div key={index} className="glass rounded-xl p-6">
+                  {typeof challenge === "string" ? (
+                    <div className="mb-4">
+                      <span className="font-semibold text-red-400 block mb-1">
+                        التحدي:
+                      </span>
+                      <p className="text-gray-300">{challenge}</p>
+                    </div>
+                  ) : (
+                    <>
+                      <div className="mb-4">
+                        <span className="font-semibold text-red-400 block mb-1">
+                          التحدي:
+                        </span>
+                        <p className="text-gray-300">{challenge.challenge}</p>
+                      </div>
+                      <div>
+                        <span className="font-semibold text-green-400 block mb-1">
+                          الحل:
+                        </span>
+                        <p className="text-gray-300">{challenge.solution}</p>
+                      </div>
+                    </>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Links */}
+        <div className="flex flex-wrap gap-4 pt-8 border-t border-white/10">
+          {project.linkToProject && (
+            <a
+              href={project.linkToProject}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full bg-white text-gray-900 font-bold hover:scale-105 transition-transform flex items-center gap-2"
+            >
+              <i className="fas fa-external-link-alt ml-2"></i> معاينة حية
+            </a>
+          )}
+          {project.repository && (
+            <a
+              href={project.repository}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-3 rounded-full glass hover:bg-white/10 text-white font-semibold transition-all flex items-center gap-2"
+            >
+              <i className="fab fa-github ml-2"></i> الكود المصدري
+            </a>
+          )}
+        </div>
+      </main>
+
+      <Footer lang="ar" />
+    </div>
+  );
+}

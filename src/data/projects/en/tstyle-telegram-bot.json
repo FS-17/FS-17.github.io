@@ -1,0 +1,146 @@
+{
+    "showOnHome": false,
+    "title": "tstyle: Telegram Bot for Twitter-Style Media Creation",
+    "content": [
+        {
+            "type": "text",
+            "value": "TStyle is a Telegram bot that enables users to effortlessly create engaging, Twitter-style media directly within Telegram. By sending the bot an image or video along with tweet text, users receive a processed media file with the text overlaid in a recognizable Twitter post format. This bot is designed for ease of use and efficiency, offering both free access and premium subscription tiers for enhanced features and unlimited usage."
+        },
+        {
+            "type": "image",
+            "value": "/assets/tstyle/bot.jpg"
+        },
+        {
+            "type": "text",
+            "value": "TStyle's user-friendly interface allows for quick media generation. Built using Python, it integrates with the Telegram Bot API, leverages FFMpeg for media processing, and utilizes AWS Lambda for scalable video rendering. A key feature is its automated subscription system, managed through a payment gateway and webhook, ensuring seamless access to premium features. *TStyle has over 500,000 unique users and boasts 40,000 monthly active users*, showcasing its popularity and effectiveness."
+        }
+    ],
+    "shortDescription": "Telegram bot for creating Twitter-style media with tweet overlays, with over 500,000 unique users and 40,000 monthly active users.",
+    "metaDescription": "Explore TStyle, a popular Telegram bot with over 500,000 unique users and 40,000 monthly active users. Discover how TStyle simplifies Twitter-style content creation with features like image and video tweet overlays, subscription plans, and its Python-based development with AWS Lambda for scalability.",
+    "keywords": [
+        "Telegram bot",
+        "Twitter style bot",
+        "image and video creation",
+        "tweet overlay",
+        "Python bot development",
+        "AWS Lambda",
+        "subscription bot",
+        "pyrogram",
+        "social media content creation",
+        "payment gateway integration",
+        "webhook integration"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2022-02-01",
+    "categories": [
+        "Bot Development",
+        "Social Media Tools",
+        "Content Creation"
+    ],
+    "tags": [
+        "Python",
+        "Telegram Bot API",
+        "FFMpeg",
+        "Pillow",
+        "Pyrogram",
+        "AWS Lambda",
+        "WebHook",
+        "Payment Gateway"
+    ],
+    "objectives": [
+        "Provide a user-friendly Telegram bot for creating Twitter-style media.",
+        "Enable users to easily overlay tweet text onto images and videos.",
+        "Offer both free and premium features to cater to a wide user base.",
+        "Implement a subscription model for monetization and feature access.",
+        "Ensure scalability and reliability using AWS Lambda for resource-intensive tasks.",
+        "Automate subscription management through payment gateway and webhook integration."
+    ],
+    "functionality": [
+        {
+            "featureName": "Media Upload and Processing",
+            "description": "Users can upload images or videos to the bot."
+        },
+        {
+            "featureName": "Tweet Text Overlay",
+            "description": "Allows users to input tweet text that is then overlaid onto the uploaded media in a Twitter-style format."
+        },
+        {
+            "featureName": "Customizable Templates",
+            "description": "(Premium Feature) Offers customizable templates for different Twitter post styles and layouts."
+        },
+        {
+            "featureName": "Subscription Management",
+            "description": "(Premium Feature) Implements a subscription system for accessing premium features and removing usage limits. Automated subscription handling via payment gateway and webhook."
+        },
+        {
+            "featureName": "Payment Integration",
+            "description": "(Premium Feature) Integrates with a payment gateway to process subscription payments, supporting methods like Visa, Mastercard, and PayPal."
+        },
+        {
+            "featureName": "Automated Subscription Renewal",
+            "description": "(Premium Feature) Automatically renews user subscriptions based on payment status and subscription terms."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "Telegram Bot Interface (Implicit)"
+        ],
+        "backend": [
+            "Python"
+        ],
+        "database": [
+            "SQLite (for user data and subscriptions)"
+        ],
+        "libraries": [
+            "FFMpeg-kit",
+            "Pillow (PIL)",
+            "Pyrogram",
+            "asyncio"
+        ],
+        "frameworks": [],
+        "tools": [
+            "Git",
+            "Docker (for deployment)",
+            "AWS CLI"
+        ],
+        "hosting": [
+            "AWS Lambda (for video processing)",
+            "AWS EC2 (for bot deployment)"
+        ]
+    },
+    "design": {
+        "aesthetic": "Telegram bot interface, focusing on simplicity and ease of use. Text-based interactions with clear instructions.",
+        "colorPalette": [],
+        "typography": [],
+        "responsiveness": "N/A (Telegram bot interface)",
+        "accessibility": "N/A (Telegram bot interface)"
+    },
+    "media": [],
+    "outcomes": [
+        "Developed a functional Telegram bot capable of creating Twitter-style images and videos.",
+        "Implemented a subscription model for premium feature access and monetization.",
+        "Automated subscription management using a payment gateway and webhooks.",
+        "Achieved scalable video processing using AWS Lambda."
+    ],
+    "challenges": [
+        {
+            "challenge": "Handling server load for video processing, especially with a growing user base.",
+            "solution": "Leveraged AWS Lambda for offloading resource-intensive video rendering tasks, ensuring bot responsiveness and scalability."
+        },
+        {
+            "challenge": "Implementing a robust and automated subscription and payment system.",
+            "solution": "Integrated a payment gateway with webhook support to automate subscription creation, renewal, and management, providing a seamless user experience."
+        },
+        {
+            "challenge": "Ensuring ease of use and intuitive interaction within the Telegram bot environment.",
+            "solution": "Focused on a clear, text-based interface with straightforward commands and instructions, guiding users through the media creation process."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/tstyle-telegram-bot.html",
+    "linkToProject": "",
+    "repository": "",
+    "notes": "",
+    "hidden": true
+}

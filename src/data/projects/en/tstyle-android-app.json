@@ -1,0 +1,151 @@
+{
+    "showOnHome": false,
+    "title": "TStyle: Twitter Style Post Maker App (Android)",
+    "content": [
+        {
+            "type": "text",
+            "value": "TStyle is a *mobile application for Android* platforms that empowers users to create visually appealing images and videos in the style of Twitter posts. Designed for content creators and social media enthusiasts, TStyle simplifies the process of overlaying tweet-style text onto media, enabling users to produce engaging content quickly and efficiently."
+        },
+        {
+            "type": "image",
+            "value": "/assets/tstyle/prev1.webp"
+        },
+        {
+            "type": "text",
+            "value": "Screenshot of the TStyle App Interface showing the editing options."
+        },
+        {
+            "type": "image",
+            "value": "/assets/tstyle/prev2.webp"
+        },
+        {
+            "type": "text",
+            "value": "Screenshot of the TStyle App displaying the final output after editing. *Key features include offline functionality, customizable templates, and direct sharing options*. Developed using Flutter, TStyle aims to provide *a seamless, user-friendly experience* for generating Twitter-style content on mobile devices without requiring complex design skills or tools."
+        }
+    ],
+    "shortDescription": "Android app for creating Twitter-style images and videos offline.",
+    "metaDescription": "Explore TStyle, an Android app for creating Twitter-style posts offline. Learn about its features, Flutter development, and user-friendly design.",
+    "keywords": [
+        "Android app",
+        "Twitter style post maker",
+        "offline image editor",
+        "offline video editor",
+        "Flutter app development",
+        "mobile content creation",
+        "social media post creator"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2025-08-28",
+    "categories": [
+        "Mobile App Development",
+        "Android Apps",
+        "Content Creation",
+        "Photo & Video Editing"
+    ],
+    "tags": [
+        "Flutter",
+        "Dart",
+        "Android",
+        "Image Editing",
+        "Video Editing",
+        "Offline Functionality",
+        "Mobile Design"
+    ],
+    "objectives": [
+        "Develop a user-friendly Android application for creating Twitter-style posts.",
+        "Enable offline image and video editing for on-the-go content creation.",
+        "Provide customizable templates for various Twitter post formats.",
+        "Offer seamless sharing options to social media platforms.",
+        "Ensure a smooth and efficient user experience on Android devices."
+    ],
+    "functionality": [
+        {
+            "featureName": "local Image and Video Editing",
+            "description": "Allows users to create Twitter-style posts offline by editing images and videos on their devices."
+        },
+        {
+            "featureName": "Tweet Text Overlay",
+            "description": "Enables users to input and overlay tweet text onto selected images or videos."
+        },
+        {
+            "featureName": "Font and Style Customization",
+            "description": "Provides options to customize fonts, colors, and styles of the tweet text overlay."
+        },
+        {
+            "featureName": "Direct Sharing",
+            "description": "Facilitates easy sharing of created posts directly to Twitter and other social media platforms."
+        },
+        {
+            "featureName": "User-Friendly Interface",
+            "description": "Features an intuitive and easy-to-navigate interface, optimized for mobile use."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "Flutter"
+        ],
+        "backend": [],
+        "database": [
+            "Local device storage (for offline functionality)",
+            "Firebase (for analytics and user insights)"
+        ],
+        "libraries": [
+            "Flutter SDK",
+            "Image Picker",
+            "Path Provider",
+            "Share Plus"
+        ],
+        "frameworks": [
+            "Dart (programming language)"
+        ],
+        "tools": [
+            "Android Studio / VS Code",
+            "Git"
+        ],
+        "hosting": [
+            "Google Play Store"
+        ]
+    },
+    "design": {
+        "aesthetic": "Modern, clean, and user-friendly mobile app design, focusing on ease of navigation and content creation.",
+        "colorPalette": [],
+        "typography": [],
+        "responsiveness": "Fully responsive design for various Android devices and screen sizes.",
+        "accessibility": "Adherence to accessibility guidelines for mobile applications (inferred)"
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "/assets/tstyle/logo.webp",
+            "alt": "TStyle App Logo",
+            "caption": "TStyle App Icon from Google Play Store"
+        }
+    ],
+    "outcomes": [
+        "Developed and launched a functional Android application for Twitter-style post creation.",
+        "Implemented offline capabilities for image and video editing.",
+        "Created a user-friendly interface for mobile content creation.",
+        "Successfully deployed the application on the Google Play Store."
+    ],
+    "challenges": [
+        {
+            "challenge": "Ensuring consistent performance and user experience across a wide range of Android devices.",
+            "solution": "Focused on optimizing the Flutter application for performance and responsiveness on various Android versions and hardware configurations."
+        },
+        {
+            "challenge": "Implementing robust offline functionality for image and video editing.",
+            "solution": "Utilized local device storage effectively and designed the app architecture to support offline operations seamlessly."
+        },
+        {
+            "challenge": "Designing an intuitive and user-friendly mobile interface for complex image and text manipulation.",
+            "solution": "Emphasized simplicity and ease of use in UI/UX design, conducting user testing to refine the interface and workflow."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/tstyle-android-app.html",
+    "linkToProject": "https://play.google.com/store/apps/details?id=me.tstyle.tstyle",
+    "repository": "",
+    "notes": "TStyle Android App is available for download on the Google Play Store.",
+    "hidden": true
+}

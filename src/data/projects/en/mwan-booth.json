@@ -1,0 +1,102 @@
+{
+    "showOnHome": true,
+    "title": "MWAN Multi-App Booth Application",
+    "content": [
+        {
+            "type": "text",
+            "value": "The *MWAN Multi-App Booth* is a unified interactive experience designed for large touchscreens, serving as the digital centerpiece for the *National Center for Waste Management's* exhibitions."
+        },
+        {
+            "type": "text",
+            "value": "It seamlessly integrates three distinct applications: an *informational hub* for public awareness, a *simulation platform* for the E-Manifest system, and an *interactive investment map* for stakeholders."
+        },
+        {
+            "type": "video",
+            "value": "/assets/mwan/3dmap.mp4",
+            "caption": "Interactive 3D Map Visualization",
+            "text": "The *3D Interactive Map* allows users to explore investment opportunities across Saudi Arabia, visualizing data in an engaging and informative way."
+        },
+        {
+            "type": "video",
+            "value": "/assets/mwan/interactive_analysis.mp4",
+            "caption": "Interactive Analysis & Simulation",
+            "text": "The *simulation platform* guides users through the complete E-Manifest workflow, demonstrating how waste management tracking works from generation to final disposal"
+        },
+        {
+            "type": "text",
+            "value": "Built with performance and accessibility in mind, the application features full *RTL support*, smooth animations, and a high-fidelity *interactive map of Saudi Arabia*."
+        }
+    ],
+    "shortDescription": "Interactive touch-screen kiosk application for MWAN featuring 3 sub-apps for data visualization and user journeys.",
+    "metaDescription": "Explore the MWAN interactive booth application, featuring React, Vite, and Tailwind CSS for a seamless touch-screen experience at the National Center for Waste Management event.",
+    "keywords": [
+        "React",
+        "E-Government",
+        "Tailwind CSS",
+        "Interactive Kiosk",
+        "Data Visualization",
+        "Mapping",
+        "3D Map",
+        "Frontend Development",
+        "Three.js"
+    ],
+    "client": "National Center for Waste Management (MWAN)",
+    "event": "Cityscape Global",
+    "date": "2025-11-17",
+    "categories": [
+        "Interactive Experience",
+        "Web Application",
+        "Kiosk"
+    ],
+    "tags": [
+        "React",
+        "Vite",
+        "Tailwind CSS",
+        "D3.js",
+        "Three.js"
+    ],
+    "objectives": [
+        "Create an engaging touch-screen experience",
+        "Showcase MWAN's role and achievements",
+        "Visualize investment opportunities on a 3D map",
+        "Simulate e-manifest user journeys"
+    ],
+    "functionality": [
+        {
+            "featureName": "3D Interactive Map",
+            "description": "A high-fidelity interactive map of Saudi Arabia visualizing investment opportunities and waste management data."
+        },
+        {
+            "featureName": "User Journey Simulation",
+            "description": "An interactive walkthrough of the E-Manifest system, guiding users through the waste tracking process."
+        },
+        {
+            "featureName": "PDF Viewer",
+            "description": "Integrated viewer for displaying official documents and regulations directly within the kiosk interface."
+        },
+        {
+            "featureName": "RTL Layout Support",
+            "description": "Full Right-to-Left support ensuring correct text rendering and layout for Arabic content."
+        }
+    ],
+    "technicalDetails": {
+        "framework": "React + Vite",
+        "styling": "Tailwind CSS",
+        "libraries": [
+            "d3-geo",
+            "react-simple-maps",
+            "three",
+            "react-globe.gl"
+        ]
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "./logo/mw.png",
+            "alt": "MWAN Interactive Hub Logo",
+            "caption": "MWAN Interactive Hub Logo"
+        }
+    ],
+    "projectPage": "/projects/mwan-booth.html",
+    "notes": "Designed for large touchscreens with RTL support."
+}

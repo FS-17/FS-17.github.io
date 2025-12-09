@@ -1,0 +1,135 @@
+{
+    "showOnHome": false,
+    "title": "NEXT IPO: Mobile App for Tracking Initial Public Offerings",
+    "content": [
+        {
+            "type": "text",
+            "value": "NEXT IPO is a Flutter application designed to *track and display information about upcoming Initial Public Offerings* (IPOs). The app provides a user-friendly interface to view IPO details, customize settings, and stay updated on the latest offerings."
+        },
+        {
+            "type": "image",
+            "value": "/assets/ipos/screen.png"
+        },
+        {
+            "type": "text",
+            "value": "Screenshot of the NEXT IPO app showcasing the main screen and listing interface."
+        }
+    ],
+    "shortDescription": "A Flutter app to track and display information about upcoming IPOs with customizable settings and real-time data.",
+    "metaDescription": "Explore NEXT IPO, a Flutter mobile app for tracking upcoming IPOs. Features customizable settings, real-time data from the Saudi Exchange, and a user-friendly interface.",
+    "keywords": [
+        "IPO tracker app",
+        "Flutter app development",
+        "Saudi Exchange IPOs",
+        "mobile finance app",
+        "real-time IPO data"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2025-08-31",
+    "categories": [
+        "Mobile App Development",
+        "Finance"
+    ],
+    "tags": [
+        "Flutter",
+        "Dart",
+        "Web Scraping",
+        "IPO",
+        "State Management",
+        "Responsive Design",
+        "Multi-language Support"
+    ],
+    "objectives": [
+        "Provide a user-friendly interface to view upcoming IPO details.",
+        "Allow users to customize their view by selecting markets and date ranges.",
+        "Support multiple languages (English and Arabic).",
+        "Fetch real-time IPO data from the Saudi Exchange website.",
+        "Implement a responsive design for optimal viewing on various devices."
+    ],
+    "functionality": [
+        {
+            "featureName": "Dynamic IPO List",
+            "description": "View upcoming IPOs in an expandable card format."
+        },
+        {
+            "featureName": "Theme Support",
+            "description": "Choose between dark and light themes for comfortable viewing."
+        },
+        {
+            "featureName": "Customizable Settings",
+            "description": "Select specific markets (All, Main Market, Nomu - Parallel Market, Sukuk) and set custom date ranges for IPO listings."
+        },
+        {
+            "featureName": "Multi-language Support",
+            "description": "Available in English and Arabic. (coming soon)"
+        },
+        {
+            "featureName": "Responsive Design",
+            "description": "Utilizes a staggered grid layout for optimal viewing on various device sizes."
+        },
+        {
+            "featureName": "Real-time Data",
+            "description": "Fetches the latest IPO information and manages cookies for up-to-date listings."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "Flutter"
+        ],
+        "backend": [],
+        "database": [],
+        "libraries": [],
+        "frameworks": [
+            "Dart"
+        ],
+        "tools": [
+            "Git"
+        ],
+        "hosting": ""
+    },
+    "design": {
+        "aesthetic": "Dark mode mobile app with a modern and minimalist design, using a bright yellow accent to highlight important information.",
+        "colorPalette": [
+            "#0d1620",
+            "#172536",
+            "#1e2735",
+            "#ffd500",
+            "#EAEAEB",
+            "#FFFFFF"
+        ],
+        "typography": [
+            "Roboto"
+        ],
+        "responsiveness": "Designed for mobile devices, with a clear layout optimized for touch interaction.",
+        "accessibility": "The high contrast between the dark background and light text/icons suggests good readability."
+    },
+    "media": [
+        {
+            "type": "video",
+            "url": "/assets/ipos/NEXTIPOsVideo.mp4",
+            "alt": "Video demonstration of the NEXT IPO app's features and functionality",
+            "caption": "Video Demonstration"
+        }
+    ],
+    "outcomes": [
+        "Developed a functional Flutter application that displays real-time IPO information.",
+        "Implemented user-customizable settings for market selection and date ranges.",
+        "Provided a responsive design that adapts to different screen sizes."
+    ],
+    "challenges": [
+        {
+            "challenge": "Web scraping IPO data from the Saudi Exchange website.",
+            "solution": "Utilized web scraping techniques, managed cookies, and sent HTTP requests to retrieve up-to-date information."
+        },
+        {
+            "challenge": "Parsing and formatting retrieved IPO data for display.",
+            "solution": "Handled various data fields such as company name, IPO ID, issue price, and offering dates."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/next-ipo.html",
+    "linkToProject": "",
+    "repository": "https://github.com/FS-17/NEXT_IPOs",
+    "notes": "This project is for educational purposes only. It is not intended for commercial use or as financial advice."
+}

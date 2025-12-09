@@ -1,0 +1,148 @@
+{
+    "showOnHome": false,
+    "title": "SPL Mini Games: World Post Day 2025 Interactive Experience",
+    "content": [
+        {
+            "type": "text",
+            "value": "A suite of interactive mini-games and experiences designed to celebrate *World Post Day 2025*. This project highlights the diverse services of SPL (Saudi Post Logistics) through engaging challenges."
+        },
+        {
+            "type": "text",
+            "value": "The application is built as a *Progressive Web App (PWA)*, ensuring accessibility across devices and offline capabilities. It features multiple distinct modules, each focusing on a different aspect of logistics and service."
+        },
+        {
+            "type": "image",
+            "value": "/assets/spl3/world-quiz.png",
+            "caption": "The 'Delivered Beyond Limits' module: A global service quiz challenging users' knowledge of international postal networks.",
+            "size": 50
+        },
+        {
+            "type": "text",
+            "value": "One of the key modules is the *Global Service Quiz*, where users test their knowledge about countries within the global postal service network. This module emphasizes SPL's extensive reach and international partnerships."
+        },
+        {
+            "type": "image",
+            "value": "/assets/spl3/blood-dashboard.png",
+            "caption": "The 'Delivered with Care' module: A sensitive shipment control panel for monitoring blood bags.",
+            "size": 50
+        },
+        {
+            "type": "text",
+            "value": "Another critical component is the *Sensitive Shipments Control Panel*. This simulation demonstrates the precision and care required in medical logistics. Users monitor *temperature ranges* and *delivery times* for blood bags, ensuring they stay within safe limits."
+        },
+        {
+            "type": "text",
+            "value": "The project also includes modules for *Packaging* and *Collage* creation, offering a varied experience that combines education with entertainment. The entire application supports *bilingual content (Arabic and English)* to reach a wider audience."
+        }
+    ],
+    "shortDescription": "A collection of interactive mini-games for World Post Day 2025, featuring logistics challenges and educational quizzes.",
+    "metaDescription": "Explore SPL Mini Games: An interactive PWA celebrating World Post Day 2025 with challenges on global logistics, sensitive shipments, and more.",
+    "keywords": [
+        "SPL",
+        "Saudi Post",
+        "World Post Day",
+        "Mini Games",
+        "PWA",
+        "Logistics",
+        "Gamification",
+        "Education"
+    ],
+    "client": "SPL (Saudi Post Logistics)",
+    "event": "World Post Day 2025",
+    "date": "2025-10-09",
+    "categories": [
+        "Game Development",
+        "Web Development",
+        "Interactive Experience",
+        "PWA"
+    ],
+    "tags": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "PWA",
+        "Localization",
+        "Responsive Design"
+    ],
+    "objectives": [
+        "Celebrate World Post Day 2025 with an engaging digital experience.",
+        "Educate users on the complexity and care involved in logistics.",
+        "Highlight SPL's global reach and specialized services.",
+        "Provide a portable, offline-ready application for events."
+    ],
+    "functionality": [
+        {
+            "featureName": "Multi-Game Hub",
+            "description": "Centralized interface to access Blood, World, Collage, and Packaging games."
+        },
+        {
+            "featureName": "Bilingual Support",
+            "description": "Full support for Arabic (RTL) and English (LTR) across all modules."
+        },
+        {
+            "featureName": "Simulation Logic",
+            "description": "Real-time monitoring simulation for sensitive shipments (temperature, time)."
+        },
+        {
+            "featureName": "Offline Capability",
+            "description": "Fully functional offline mode using Service Workers and PWA standards."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "HTML5",
+            "CSS3",
+            "JavaScript (Vanilla)"
+        ],
+        "backend": [
+            "Node.js (Local Server)",
+            "Python (Local Server)",
+            "Go (Standalone Server)"
+        ],
+        "database": [],
+        "libraries": [
+            "FontAwesome"
+        ],
+        "frameworks": [],
+        "tools": [
+            "Miniserve",
+            "Git"
+        ],
+        "hosting": [
+            "Self-hosted",
+            "Portable PWA"
+        ]
+    },
+    "design": {
+        "aesthetic": "Modern Corporate, Dark/Light Mode",
+        "colorPalette": [
+            "#112233",
+            "#00C0F3"
+        ],
+        "typography": [
+            "Noto Sans Arabic",
+            "System Fonts"
+        ],
+        "responsiveness": "Mobile-first, adaptive layout",
+        "accessibility": "Bilingual support, high contrast options"
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "/logo/spl.png",
+            "alt": "SPL Logo",
+            "caption": "SPL Logo"
+        }
+    ],
+    "outcomes": [
+        "Delivered a robust, portable interactive experience for event use.",
+        "Successfully gamified complex logistics concepts for general audiences.",
+        "Ensured seamless operation across various devices without installation."
+    ],
+    "challenges": [],
+    "clientFeedback": [],
+    "projectPage": "/projects/spl-games.html",
+    "linkToProject": "#",
+    "repository": "",
+    "notes": "Designed to be run from a flash drive or local server without complex installation."
+}

@@ -1,0 +1,188 @@
+{
+    "showOnHome": true,
+    "title": "DroneHunter Systems: Real-time Drone Detection and Tracking",
+    "content": [
+        {
+            "type": "text",
+            "value": "Built a *cutting-edge airspace security solution* that detects and tracks unauthorized drones in real-time. Using *YOLOv5 and TensorFlow*, I created an intelligent system that monitors airspace 24/7, automatically identifies drone threats, and provides security teams with actionable intelligence to protect critical infrastructure.",
+            "grid": 12
+        },
+        {
+            "type": "image",
+            "value": "/assets/drones/home.png",
+            "caption": "Hero section showcasing the DroneHunter Systems brand and mission",
+            "grid": 6,
+            "size": 90
+        },
+        {
+            "type": "text",
+            "value": "The hero section sets the tone with a *bold, futuristic design* featuring the DroneHunter brand identity. Dark backgrounds contrast with vibrant orange accents, immediately communicating the serious nature of airspace security while maintaining visual appeal. The layout introduces visitors to the system's core mission: protecting critical infrastructure from unauthorized aerial threats.\n\n",
+            "grid": 6
+        },
+        {
+            "type": "text",
+            "value": "The system processes live video feeds through a *YOLOv5 object detection model*, identifying drones with high accuracy even in challenging conditions. Once detected, the tracking algorithm locks onto the target and predicts its trajectory.",
+            "grid": 6
+        },
+        {
+            "type": "gif",
+            "value": "https://github.com/FS-17/droneshunter.systems/blob/main/Explanation.gif?raw=true",
+            "caption": "Interactive website demonstration: how the detection system works",
+            "grid": 6,
+            "size": 100
+        },
+        {
+            "type": "text",
+            "value": "The web interface demonstrates the *complete detection workflow*—from video input to AI processing to threat visualization. Users can explore how the system analyzes frames, identifies objects, and tracks movement patterns in real-time.",
+            "grid": 12
+        },
+        {
+            "type": "tech-showcase",
+            "title": "System Architecture",
+            "subtitle": "Powered by advanced AI and real-time processing",
+            "specs": [
+                {
+                    "icon": "fas fa-tachometer-alt",
+                    "label": "Processing Speed",
+                    "value": "30 FPS",
+                    "description": "Real-time video analysis with zero lag",
+                    "percentage": 95
+                },
+                {
+                    "icon": "fas fa-bullseye",
+                    "label": "Detection Accuracy",
+                    "value": "95%+",
+                    "description": "Precision drone identification",
+                    "percentage": 98
+                },
+                {
+                    "icon": "fas fa-stopwatch",
+                    "label": "Response Time",
+                    "value": "<1s",
+                    "description": "Instant threat detection and alerts",
+                    "percentage": 92
+                }
+            ],
+            "capabilities": [
+                {
+                    "name": "Object Detection (YOLOv5)",
+                    "level": 95
+                },
+                {
+                    "name": "Multi-Target Tracking",
+                    "level": 88
+                },
+                {
+                    "name": "Trajectory Prediction",
+                    "level": 85
+                },
+                {
+                    "name": "Real-time Alerts",
+                    "level": 100
+                }
+            ],
+            "note": "Built with TensorFlow and YOLOv5, the system leverages state-of-the-art deep learning models optimized for edge deployment and real-time inference.",
+            "grid": 12
+        }
+    ],
+    "shortDescription": "A system for real-time drone detection, tracking, and neutralization using advanced sensors and machine learning.",
+    "metaDescription": "Learn about DroneHunter Systems, a project utilizing Python, YOLOv5, and TensorFlow for real-time detection and tracking of unauthorized drones, enhancing airspace security.",
+    "keywords": [
+        "drone detection system",
+        "real-time drone tracking",
+        "Python security project",
+        "YOLOv5 drone detection",
+        "machine learning for drone security"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2022-05-22",
+    "categories": [
+        "Drone Detection",
+        "Security",
+        "Machine Learning",
+        "Web Development"
+    ],
+    "tags": [
+        "Python",
+        "YOLOv5",
+        "TensorFlow",
+        "Bootstrap",
+        "Real-time Tracking",
+        "Object Detection"
+    ],
+    "objectives": [
+        "Develop a system for real-time detection of unauthorized drones.",
+        "Implement automated tracking of detected drones.",
+        "Create a user-friendly interface for airspace monitoring.",
+        "Utilize machine learning for accurate drone identification."
+    ],
+    "functionality": [
+        {
+            "featureName": "Real-time Detection",
+            "description": "Utilizing advanced sensors and detection algorithms, DroneHunter Systems can identify drones in real-time."
+        },
+        {
+            "featureName": "Automated Tracking",
+            "description": "Once a drone is detected, our system automatically tracks its movement across the airspace."
+        },
+        {
+            "featureName": "User-friendly Interface",
+            "description": "The system provides an intuitive interface for users to monitor the airspace."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "Bootstrap"
+        ],
+        "backend": [
+            "Python"
+        ],
+        "database": [],
+        "libraries": [
+            "TensorFlow"
+        ],
+        "frameworks": [
+            "YOLOv5"
+        ],
+        "tools": [],
+        "hosting": [
+            "GitHub Pages"
+        ]
+    },
+    "design": {
+        "aesthetic": "Dark mode interface with a vibrant orange accent, designed for user engagement and clarity.",
+        "colorPalette": [
+            "#0f0e16",
+            "#a7a9be",
+            "#ff6f00",
+            "#eF5F00"
+        ],
+        "typography": [
+            "helvetica",
+            "arial",
+            "sans-serif"
+        ],
+        "responsiveness": "The design adapts to different screen sizes, particularly with a different layout for screens smaller than 768px wide.",
+        "accessibility": "Some considerations made, such as distinct color contrasts and using semantic HTML elements where possible."
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "/assets/drones/logo.png",
+            "alt": "DroneHunter Systems Logo",
+            "caption": "DroneHunter Systems Logo"
+        }
+    ],
+    "outcomes": [
+        "Successfully developed a system capable of real-time drone detection and tracking.",
+        "Implemented a user-friendly interface for airspace monitoring.",
+        "Utilized YOLOv5 and TensorFlow for drone detection and model conversion."
+    ],
+    "challenges": [],
+    "clientFeedback": [],
+    "projectPage": "/projects/dronehunter-systems.html",
+    "linkToProject": "https://fs-17.github.io/droneshunter.systems/",
+    "repository": "https://github.com/FS-17/droneshunter.systems",
+    "notes": ""
+}

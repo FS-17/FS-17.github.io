@@ -1,0 +1,149 @@
+{
+    "showOnHome": true,
+    "title": "Speech Data Builder: TTS & STT Dataset Creation Tool",
+    "content": [
+        {
+            "type": "text",
+            "value": "Speech Data Builder is a powerful, open-source web application designed to streamline the creation of professional speech datasets for Text-to-Speech (TTS) and Speech-to-Text (STT) model training. It runs entirely in the browser with no server-side processing, ensuring data privacy."
+        },
+        {
+            "type": "image",
+            "value": "https://raw.githubusercontent.com/FS-17/SpeechDataBuilder/main/assets/screenshot-light.jpg"
+        },
+        {
+            "type": "text",
+            "value": "Main Interface (Light Mode) showing the waveform and transcription tools."
+        },
+        {
+            "type": "image",
+            "value": "https://raw.githubusercontent.com/FS-17/SpeechDataBuilder/main/assets/screenshot-dark.jpg"
+        },
+        {
+            "type": "text",
+            "value": "Main Interface (Dark Mode). The tool features AI-powered transcription (integrating Google Gemini and OpenAI), precise audio visualization using WaveSurfer.js, and automatic text normalization. Users can export datasets in popular formats like LJSpeech, CSV, and JSON."
+        }
+    ],
+    "shortDescription": "A browser-based tool for creating high-quality TTS/STT datasets with AI transcription and audio visualization.",
+    "metaDescription": "Create professional speech datasets for TTS and STT models with Speech Data Builder. Features AI transcription, WaveSurfer visualization, and LJSpeech export. Free and open-source.",
+    "keywords": [
+        "speech dataset creator",
+        "TTS training data",
+        "STT dataset",
+        "audio annotation tool",
+        "AI transcription",
+        "LJSpeech format",
+        "WaveSurfer.js"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2025-09-20",
+    "categories": [
+        "Web Development",
+        "AI Tools",
+        "Open Source"
+    ],
+    "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "WaveSurfer.js",
+        "IndexedDB"
+    ],
+    "objectives": [
+        "Create a privacy-focused, client-side tool for speech dataset creation.",
+        "Integrate AI services (Google Gemini, OpenAI) to speed up transcription.",
+        "Provide precise audio visualization and region selection.",
+        "Support industry-standard export formats like LJSpeech."
+    ],
+    "functionality": [
+        {
+            "featureName": "AI-Powered Transcription",
+            "description": "Automatically transcribe audio using Google Gemini or OpenAI Whisper models."
+        },
+        {
+            "featureName": "Audio Visualization",
+            "description": "Visualizes audio waveforms with region selection for accurate timestamping."
+        },
+        {
+            "featureName": "Text Normalization",
+            "description": "Automatically normalizes text (numbers to words, special characters) for TTS training."
+        },
+        {
+            "featureName": "Multiple Export Formats",
+            "description": "Exports data to LJSpeech, CSV, JSON, and TXT formats."
+        },
+        {
+            "featureName": "Offline Support (PWA)",
+            "description": "Installable as a Progressive Web App (PWA) that works offline."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap 5"
+        ],
+        "backend": [],
+        "database": [
+            "IndexedDB (Client-side)"
+        ],
+        "libraries": [
+            "WaveSurfer.js",
+            "JSZip",
+            "Font Awesome"
+        ],
+        "frameworks": [],
+        "tools": [
+            "Git"
+        ],
+        "hosting": [
+            "GitHub Pages"
+        ]
+    },
+    "design": {
+        "aesthetic": "Clean and functional interface with both Light and Dark modes to reduce eye strain during long annotation sessions.",
+        "colorPalette": [
+            "#ffffff",
+            "#212529",
+            "#0d6efd",
+            "#198754"
+        ],
+        "typography": [
+            "System UI",
+            "Segoe UI",
+            "Roboto"
+        ],
+        "responsiveness": "Fully responsive design, installable as a PWA on various devices.",
+        "accessibility": "Includes keyboard shortcuts for playback and annotation to improve workflow efficiency."
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "https://raw.githubusercontent.com/FS-17/SpeechDataBuilder/main/assets/logo.png",
+            "alt": "Speech Data Builder Logo",
+            "caption": "Speech Data Builder Logo"
+        }
+    ],
+    "outcomes": [
+        "Developed a robust tool that simplifies the complex process of creating speech datasets.",
+        "Enabled users to generate training data for TTS/STT models without needing a backend server.",
+        "Successfully integrated modern AI APIs for automated transcription."
+    ],
+    "challenges": [
+        {
+            "challenge": "Handling large audio files and datasets purely in the browser.",
+            "solution": "Utilized IndexedDB for efficient client-side storage and JSZip for generating large export files without crashing the browser."
+        },
+        {
+            "challenge": "Visualizing audio data accurately for precise splitting.",
+            "solution": "Implemented WaveSurfer.js to render detailed waveforms and allow precise region manipulation."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/speech-data-builder.html",
+    "linkToProject": "https://fs-17.github.io/SpeechDataBuilder/",
+    "repository": "https://github.com/FS-17/SpeechDataBuilder",
+    "notes": ""
+}

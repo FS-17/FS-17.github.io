@@ -1,0 +1,149 @@
+{
+    "showOnHome": true,
+    "title": "منشئ بيانات الكلام: أداة إنشاء مجموعات بيانات TTS و STT",
+    "content": [
+        {
+            "type": "text",
+            "value": "منشئ بيانات الكلام هو تطبيق ويب قوي ومفتوح المصدر مصمم لتبسيط إنشاء مجموعات بيانات كلام احترافية لتدريب نماذج تحويل النص إلى كلام (TTS) والكلام إلى نص (STT). يعمل بالكامل في المتصفح دون معالجة من جانب الخادم، مما يضمن خصوصية البيانات."
+        },
+        {
+            "type": "image",
+            "value": "https://raw.githubusercontent.com/FS-17/SpeechDataBuilder/main/assets/screenshot-light.jpg"
+        },
+        {
+            "type": "text",
+            "value": "الواجهة الرئيسية (الوضع الفاتح) تُظهر أدوات شكل الموجة والنسخ."
+        },
+        {
+            "type": "image",
+            "value": "https://raw.githubusercontent.com/FS-17/SpeechDataBuilder/main/assets/screenshot-dark.jpg"
+        },
+        {
+            "type": "text",
+            "value": "الواجهة الرئيسية (الوضع الداكن). تتميز الأداة بالنسخ المدعوم بالذكاء الاصطناعي (دمج Google Gemini و OpenAI)، والتصور الدقيق للصوت باستخدام WaveSurfer.js، والتطبيع التلقائي للنص. يمكن للمستخدمين تصدير مجموعات البيانات بتنسيقات شائعة مثل LJSpeech و CSV و JSON."
+        }
+    ],
+    "shortDescription": "أداة قائمة على المتصفح لإنشاء مجموعات بيانات TTS/STT عالية الجودة مع النسخ بالذكاء الاصطناعي وتصور الصوت.",
+    "metaDescription": "أنشئ مجموعات بيانات كلام احترافية لنماذج TTS و STT باستخدام منشئ بيانات الكلام. يتميز بالنسخ بالذكاء الاصطناعي، وتصور WaveSurfer، وتصدير LJSpeech. مجاني ومفتوح المصدر.",
+    "keywords": [
+        "منشئ مجموعات بيانات الكلام",
+        "بيانات تدريب TTS",
+        "مجموعة بيانات STT",
+        "أداة التعليق الصوتي",
+        "النسخ بالذكاء الاصطناعي",
+        "تنسيق LJSpeech",
+        "WaveSurfer.js"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2025-09-20",
+    "categories": [
+        "تطوير الويب",
+        "أدوات الذكاء الاصطناعي",
+        "مفتوح المصدر"
+    ],
+    "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "WaveSurfer.js",
+        "IndexedDB"
+    ],
+    "objectives": [
+        "إنشاء أداة تركز على الخصوصية وتعمل من جانب العميل لإنشاء مجموعات بيانات الكلام.",
+        "دمج خدمات الذكاء الاصطناعي (Google Gemini, OpenAI) لتسريع عملية النسخ.",
+        "توفير تصور دقيق للصوت واختيار المنطقة.",
+        "دعم تنسيقات التصدير القياسية في الصناعة مثل LJSpeech."
+    ],
+    "functionality": [
+        {
+            "featureName": "النسخ المدعوم بالذكاء الاصطناعي",
+            "description": "نسخ الصوت تلقائيًا باستخدام نماذج Google Gemini أو OpenAI Whisper."
+        },
+        {
+            "featureName": "تصور الصوت",
+            "description": "تصور أشكال الموجات الصوتية مع اختيار المنطقة لتحديد الطوابع الزمنية بدقة."
+        },
+        {
+            "featureName": "تطبيع النص",
+            "description": "تطبيع النص تلقائيًا (الأرقام إلى كلمات، الأحرف الخاصة) لتدريب TTS."
+        },
+        {
+            "featureName": "تنسيقات تصدير متعددة",
+            "description": "تصدير البيانات إلى تنسيقات LJSpeech و CSV و JSON و TXT."
+        },
+        {
+            "featureName": "دعم وضع عدم الاتصال (PWA)",
+            "description": "قابل للتثبيت كتطبيق ويب تقدمي (PWA) يعمل دون اتصال بالإنترنت."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap 5"
+        ],
+        "backend": [],
+        "database": [
+            "IndexedDB (Client-side)"
+        ],
+        "libraries": [
+            "WaveSurfer.js",
+            "JSZip",
+            "Font Awesome"
+        ],
+        "frameworks": [],
+        "tools": [
+            "Git"
+        ],
+        "hosting": [
+            "GitHub Pages"
+        ]
+    },
+    "design": {
+        "aesthetic": "واجهة نظيفة وعملية مع وضعين فاتح وداكن لتقليل إجهاد العين أثناء جلسات التعليق الطويلة.",
+        "colorPalette": [
+            "#ffffff",
+            "#212529",
+            "#0d6efd",
+            "#198754"
+        ],
+        "typography": [
+            "System UI",
+            "Segoe UI",
+            "Roboto"
+        ],
+        "responsiveness": "تصميم متجاوب بالكامل، قابل للتثبيت كتطبيق PWA على أجهزة مختلفة.",
+        "accessibility": "يتضمن اختصارات لوحة المفاتيح للتشغيل والتعليق لتحسين كفاءة سير العمل."
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "https://raw.githubusercontent.com/FS-17/SpeechDataBuilder/main/assets/logo.png",
+            "alt": "شعار منشئ بيانات الكلام",
+            "caption": "شعار منشئ بيانات الكلام"
+        }
+    ],
+    "outcomes": [
+        "تطوير أداة قوية تبسط العملية المعقدة لإنشاء مجموعات بيانات الكلام.",
+        "تمكين المستخدمين من إنشاء بيانات تدريب لنماذج TTS/STT دون الحاجة إلى خادم خلفي.",
+        "دمج واجهات برمجة تطبيقات الذكاء الاصطناعي الحديثة بنجاح للنسخ التلقائي."
+    ],
+    "challenges": [
+        {
+            "challenge": "التعامل مع ملفات الصوت ومجموعات البيانات الكبيرة بالكامل في المتصفح.",
+            "solution": "تم استخدام IndexedDB للتخزين الفعال من جانب العميل و JSZip لإنشاء ملفات تصدير كبيرة دون تعطيل المتصفح."
+        },
+        {
+            "challenge": "تصور البيانات الصوتية بدقة للتقسيم الدقيق.",
+            "solution": "تم تطبيق WaveSurfer.js لعرض أشكال موجية مفصلة والسماح بالتحكم الدقيق في المنطقة."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/speech-data-builder.html",
+    "linkToProject": "https://fs-17.github.io/SpeechDataBuilder/",
+    "repository": "https://github.com/FS-17/SpeechDataBuilder",
+    "notes": ""
+}

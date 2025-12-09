@@ -1,0 +1,158 @@
+{
+    "showOnHome": false,
+    "title": "The Bean Spot: Premium Coffee Shop Website",
+    "content": [
+        {
+            "type": "text",
+            "value": "The Bean Spot is a meticulously designed website for a fictional premium coffee shop, showcasing artisanal coffee, expertly roasted beans, and a cozy café ambiance. This website serves as a digital storefront and portfolio piece, highlighting a commitment to quality and a passion for coffee culture. It features an engaging homepage with parallax scrolling, a detailed menu page, an informative about us section, and a contact & location page. Developed using HTML, CSS, and JavaScript, with Tailwind CSS for styling, the website is fully responsive and SEO-optimized to attract and engage coffee enthusiasts."
+        }
+    ],
+    "shortDescription": "A website for a premium coffee shop, showcasing menu, story, and contact information with a focus on visual appeal and SEO.",
+    "metaDescription": "Explore The Bean Spot online: Discover our menu, learn about our coffee journey, find our location, and contact us. A premium coffee experience, now online.",
+    "keywords": [
+        "coffee shop website",
+        "artisan coffee",
+        "specialty coffee menu",
+        "cafe website design",
+        "responsive web design",
+        "coffee roasters",
+        "online menu",
+        "contact page",
+        "about us page"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2025-02-20",
+    "categories": [
+        "Web Development",
+        "Website Design",
+        "Portfolio",
+        "Business Website"
+    ],
+    "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind CSS",
+        "Responsive Design",
+        "SEO",
+        "Web Design"
+    ],
+    "objectives": [
+        "Create a visually appealing and informative website for a fictional premium coffee shop.",
+        "Showcase the coffee shop's menu, story, values, and contact information.",
+        "Design a user-friendly and responsive website experience.",
+        "Implement SEO best practices to enhance online visibility.",
+        "Develop a portfolio piece demonstrating web development and design skills."
+    ],
+    "functionality": [
+        {
+            "featureName": "Homepage with Parallax Scrolling",
+            "description": "Engaging intro section with parallax background for a dynamic user experience."
+        },
+        {
+            "featureName": "Detailed Menu Page",
+            "description": "Comprehensive menu showcasing coffee selections with descriptions and prices."
+        },
+        {
+            "featureName": "About Us Section",
+            "description": "Dedicated page telling the story of The Bean Spot, highlighting values and journey."
+        },
+        {
+            "featureName": "Contact & Location Page",
+            "description": "Includes a contact form, contact information, cafe hours, and an embedded Google Map."
+        },
+        {
+            "featureName": "Responsive Design",
+            "description": "Website is fully responsive and adapts to different screen sizes and devices."
+        },
+        {
+            "featureName": "SEO Optimization",
+            "description": "Implementation of SEO meta tags, structured data (JSON-LD), and semantic HTML for improved search engine ranking."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Tailwind CSS"
+        ],
+        "backend": [],
+        "database": [],
+        "libraries": [
+            "Tailwind CSS (for styling)",
+            "Font Awesome (for icons)",
+            "AOS (Animate On Scroll) library"
+        ],
+        "frameworks": [],
+        "tools": [
+            "Git"
+        ],
+        "hosting": [
+            "GitHub Pages"
+        ]
+    },
+    "design": {
+        "aesthetic": "Warm, inviting, and sophisticated design aesthetic reflecting a premium coffee shop ambiance. Features clean typography, a rich color palette of browns and creams, and high-quality imagery.",
+        "colorPalette": [
+            "#4e342e",
+            "#f5f5dc",
+            "#d2691e",
+            "#f8f8ff",
+            "#333"
+        ],
+        "typography": [
+            "Playfair Display (serif) for headings",
+            "Poppins (sans-serif) for body text",
+            "Cairo (Arabic font)"
+        ],
+        "responsiveness": "Fully responsive layout, ensuring optimal viewing experience across desktops, tablets, and mobile devices.",
+        "accessibility": "Consideration for accessibility with clear text, semantic HTML, and keyboard navigation (inferred)."
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "https://raw.githubusercontent.com/FS-17/TheBeanSpot/refs/heads/main/assets/logo.png",
+            "alt": "TheBeanSpot Logo",
+            "caption": "TheBeanSpot Logo"
+        },
+        {
+            "type": "video",
+            "url": "https://github.com/FS-17/TheBeanSpot/raw/refs/heads/main/assets/floating.mp4",
+            "alt": "Floating Coffee Beans Video",
+            "caption": "Video demonstrating floating coffee beans on the page"
+        },
+        {
+            "type": "video",
+            "url": "https://github.com/FS-17/TheBeanSpot/raw/refs/heads/main/assets/scroll.mp4",
+            "alt": "Apple Scroll Effect Video",
+            "caption": "Video showcasing the Apple-like scroll effect on the website"
+        }
+    ],
+    "outcomes": [
+        "Developed a visually appealing and functional website for The Bean Spot.",
+        "Showcased menu, story, contact, and location effectively.",
+        "Implemented responsive design for cross-device compatibility.",
+        "Applied SEO practices for enhanced online presence."
+    ],
+    "challenges": [
+        {
+            "challenge": "Creating a visually engaging and immersive user experience.",
+            "solution": "Utilized parallax scrolling, high-quality imagery, and subtle animations to enhance user engagement and visual appeal."
+        },
+        {
+            "challenge": "Ensuring website responsiveness across various devices and screen sizes.",
+            "solution": "Employed Tailwind CSS's responsive utilities and tested the website on multiple devices to guarantee a seamless experience."
+        },
+        {
+            "challenge": "Optimizing website for search engines.",
+            "solution": "Implemented SEO meta tags, semantic HTML, and JSON-LD structured data to improve search engine visibility and ranking."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/the-bean-spot.html",
+    "linkToProject": "https://fs-17.github.io/TheBeanSpot/index.html",
+    "repository": "",
+    "notes": "A portfolio project showcasing web development and design skills. The website is hosted on GitHub Pages and demonstrates proficiency in HTML, CSS, JavaScript, and Tailwind CSS."
+}

@@ -1,0 +1,124 @@
+{
+    "showOnHome": false,
+    "title": "Interactive Quiz for SPL's Internal Event",
+    "content": [
+        {
+            "type": "text",
+            "value": "Developed an interactive quiz experience for a Saudi Post Logistics (SPL) internal event. The quiz was centered around a physical \"vault\" with *200 locked boxes*, each associated with a unique barcode that triggered a question when scanned."
+        }
+    ],
+    "shortDescription": "An interactive quiz for an SPL event, featuring barcode scanning and a physical vault with prizes.",
+    "metaDescription": "Discover how an interactive quiz with barcode scanning was developed for Saudi Post Logistics (SPL)'s internal event to engage employees and enhance the experience.",
+    "keywords": [
+        "interactive quiz",
+        "SPL",
+        "Saudi Post Logistics",
+        "internal event",
+        "barcode scanning",
+        "web development freelancer"
+    ],
+    "client": "Saudi Post Logistics (SPL)",
+    "event": "Internal Event",
+    "date": "2025-10-07",
+    "categories": [
+        "Web Development",
+        "Interactive Experience"
+    ],
+    "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "JSON",
+        "GitHub"
+    ],
+    "objectives": [
+        "Create an engaging and interactive experience for SPL employees.",
+        "Incorporate gamification elements using a physical vault and barcodes.",
+        "Collect user responses and feedback.",
+        "Deliver the project within a tight deadline."
+    ],
+    "functionality": [
+        {
+            "featureName": "Barcode Scanning",
+            "description": "Users could scan a barcode on each box to trigger a unique question."
+        },
+        {
+            "featureName": "Question and Answer Logic",
+            "description": "The system displayed the question and provided multiple-choice options."
+        },
+        {
+            "featureName": "Answer Validation",
+            "description": "The user's selected answer was validated in real-time."
+        },
+        {
+            "featureName": "Feedback Mechanism",
+            "description": "If correct, the user received a congratulatory message and the three-digit code to unlock the corresponding box. If incorrect, the user received a \"try again\" message (later modified to one attempt per question)."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [],
+        "backend": [],
+        "database": [],
+        "libraries": [],
+        "frameworks": [],
+        "tools": [
+            "Git",
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "hosting": ""
+    },
+    "design": {
+        "aesthetic": "Clean, intuitive, and engaging, featuring SPL's branding.",
+        "colorPalette": [
+            "#1a2a3a",
+            "#0d1620",
+            "#00ccff",
+            "#ff1493"
+        ],
+        "typography": [
+            "SPLFont",
+            "Cairo",
+            "Arial"
+        ],
+        "responsiveness": "The application is responsive and functions seamlessly across various devices.",
+        "accessibility": ""
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "./logo/spl.png",
+            "alt": "SPL Logo",
+            "caption": "SPL Logo"
+        },
+        {
+            "type": "embedded",
+            "url": "<iframe src=\"https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7249827332100657153?compact=1\" height=\"499\" width=\"90%\" frameborder=\"0\" allowfullscreen=\"\" title=\"Embedded post\"></iframe>",
+            "alt": "Embedded LinkedIn Post showcasing the SPL interactive quiz",
+            "caption": ""
+        }
+    ],
+    "outcomes": [
+        "Successfully engaged SPL employees at the internal event.",
+        "Provided a fun and interactive experience.",
+        "Demonstrated the ability to deliver a project under tight time constraints."
+    ],
+    "challenges": [
+        {
+            "challenge": "Rapid Development Timeline: The project required completion within a tight deadline to align with the scheduled SPL event.",
+            "solution": "Agile Development Methodology: I utilized efficient development practices, including rapid prototyping and iterative development, along with close communication with the client to ensure timely delivery and meet project requirements."
+        }
+    ],
+    "clientFeedback": [
+        {
+            "feedback": "The interactive quiz was a hit at our event! Employees loved the gamification elements and the engaging questions. Thank you for delivering such a fun experience within our tight deadline.",
+            "author": "SPL Event Coordinator"
+        }
+    ],
+    "projectPage": "/projects/spl-interactive-quiz.html",
+    "linkToProject": "",
+    "repository": "",
+    "notes": "",
+    "hidden": true
+}

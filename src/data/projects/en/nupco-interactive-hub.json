@@ -1,0 +1,181 @@
+{
+    "showOnHome": true,
+    "title": "NUPCO Interactive Hub",
+    "content": [
+        {
+            "type": "text",
+            "value": "The *NUPCO Interactive Hub* is a comprehensive platform designed to host multiple interactive cybersecurity awareness applications for NUPCO events. It unifies 5 different web-based experiences into a single, easy-to-manage server."
+        },
+        {
+            "type": "text",
+            "value": "The hub includes real-time multiplayer games like *Fact or Trick*, interactive educational tools like the *Phishing Awareness* challenge and *Prize Wheel*, and a *Control Room* for managing live presentations."
+        },
+        {
+            "type": "text",
+            "value": "Built with *Node.js* and *Express*, the server manages routing for all applications and handles real-time communication using *Socket.IO*. This architecture allows for seamless interaction between mobile controllers and main display screens during events."
+        },
+        {
+            "type": "feature-list",
+            "title": "Key Components",
+            "items": [
+                {
+                    "title": "Control Room",
+                    "description": "A remote control system for managing video presentations and sound effects via mobile devices.",
+                    "icon": "fas fa-sliders-h"
+                },
+                {
+                    "title": "Fact or Trick",
+                    "description": "A competitive 2-player quiz game where participants use their phones as controllers.",
+                    "icon": "fas fa-gamepad"
+                },
+                {
+                    "title": "Phishing Awareness",
+                    "description": "An interactive simulation to teach employees how to spot phishing emails.",
+                    "icon": "fas fa-user-shield"
+                },
+                {
+                    "title": "Prize Wheel",
+                    "description": "A gamified way to test cybersecurity knowledge with random questions.",
+                    "icon": "fas fa-dharmachakra"
+                }
+            ]
+        },
+        {
+            "type": "text",
+            "value": "The *Prize Wheel* is a fun, interactive way to test knowledge. Participants spin the wheel to select a category and then answer a multiple-choice question. The video below demonstrates one round of gameplay."
+        },
+        {
+            "type": "video",
+            "value": "/assets/nupco/wheel.mp4",
+            "text": "Prize Wheel Experience",
+            "caption": "Interactive spin-the-wheel game for cybersecurity trivia."
+        },
+        {
+            "type": "text",
+            "value": "In the *Phishing Awareness* challenge, users are presented with various email scenarios and must decide if they are legitimate or phishing attempts. This simulation helps train employees to spot common red flags. The following video shows two rounds of this activity."
+        },
+        {
+            "type": "video",
+            "value": "/assets/nupco/phishing.mp4",
+            "text": "Phishing Detection Simulation",
+            "caption": "Training users to identify suspicious emails in a safe environment."
+        },
+        {
+            "type": "text",
+            "value": "*Fact or Trick* is a competitive multiplayer game. The system uses *Socket.IO* to sync the main screen with players' mobile devices in real-time. Below are recordings of the mobile controller interface, showing how players interact with the game."
+        },
+        {
+            "type": "video-trio",
+            "title": "Fact or Trick - Live Gameplay",
+            "description": "The *Main Screen* displays questions, timer, and live leaderboard to the audience, while players interact using their mobile devices as controllers.",
+            "mainVideo": {
+                "value": "/assets/nupco/Q/main.mp4",
+                "caption": "Main Screen: Live leaderboard & questions"
+            },
+            "leftVideo": {
+                "value": "/assets/nupco/Q/player1.mp4",
+                "caption": "Player 1 Controller"
+            },
+            "rightVideo": {
+                "value": "/assets/nupco/Q/player2.mp4",
+                "caption": "Player 2 Controller"
+            }
+        }
+    ],
+    "shortDescription": "A unified platform hosting 5 interactive cybersecurity games and tools for NUPCO awareness events.",
+    "metaDescription": "NUPCO Interactive Hub: A Node.js server hosting cybersecurity awareness games like Fact or Trick, Phishing Hunt, and a Control Room for events.",
+    "keywords": [
+        "NUPCO",
+        "Interactive Hub",
+        "Event Technology",
+        "Socket.IO",
+        "Express.js",
+        "Real-time Applications",
+        "WebSockets",
+        "Gamification",
+        "Event Technology",
+        "NUPCO"
+    ],
+    "client": "NUPCO",
+    "event": "Cybersecurity Awareness Events",
+    "date": "2025-11-17",
+    "categories": [
+        "Web Development",
+        "Event Technology",
+        "Interactive Experience"
+    ],
+    "tags": [
+        "Node.js",
+        "Express",
+        "Socket.IO",
+        "Gamification",
+        "Real-time",
+        "JavaScript"
+    ],
+    "objectives": [
+        "Unify multiple standalone projects into a *single manageable server*.",
+        "Resolve port conflicts by serving all apps on a *single port*.",
+        "Provide a *centralized admin panel* for managing activities.",
+        "Ensure secure and easy access for participants via *QR codes and direct links*."
+    ],
+    "functionality": [
+        {
+            "featureName": "Unified Routing",
+            "description": "Serves 5 different applications (Control Room, Fact or Trick, First Day, Phishing, Wheel) from a single Express server."
+        },
+        {
+            "featureName": "Real-time Interactivity",
+            "description": "Uses Socket.IO with namespaces to handle real-time communication for the Control Room and Fact or Trick game independently."
+        },
+        {
+            "featureName": "Admin Panel",
+            "description": "A secure dashboard for launching and managing the different activities."
+        },
+        {
+            "featureName": "Static & Dynamic Content",
+            "description": "Serves both static informational pages and dynamic interactive games."
+        }
+    ],
+    "challenges": [
+        {
+            "challenge": "Merging multiple independent projects with potential port and dependency conflicts.",
+            "solution": "Consolidated all projects into a single *Express.js* server and unified dependencies to resolve conflicts."
+        },
+        {
+            "challenge": "Managing distinct Socket.IO namespaces for different applications on the same server.",
+            "solution": "Implemented dedicated *Socket.IO* namespaces for each application to ensure isolated real-time communication channels."
+        }
+    ],
+    "results": [
+        "Successfully deployed a stable, *unified hub* accessible via a single port.",
+        "Simplified deployment and management for *event organizers*.",
+        "Enhanced security by obscuring the *admin panel URL*."
+    ],
+    "design": {
+        "aesthetic": "Corporate & Interactive",
+        "colorPalette": [
+            "NUPCO Blue",
+            "White",
+            "Grey"
+        ],
+        "typography": "Modern Sans-Serif",
+        "accessibility": "Responsive design for various devices."
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "./logo/np.png",
+            "alt": "NUPCO Interactive Hub Logo",
+            "caption": "NUPCO Interactive Hub Logo"
+        }
+    ],
+    "outcomes": [
+        "Streamlined event operations with a single control point.",
+        "Improved user experience for event participants."
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/nupco-interactive-hub.html",
+    "linkToProject": "",
+    "repository": "",
+    "notes": "This project consolidates several independent tools into a cohesive ecosystem for event management."
+}

@@ -1,0 +1,168 @@
+{
+    "showOnHome": true,
+    "title": "Focus Consultancy Website",
+    "content": [
+        {
+            "type": "text",
+            "value": "A comprehensive corporate website for *Focus Consultancy*, designed to showcase their expertise in business strategy, digital transformation, and leadership development. The application is built with a modern tech stack including *React, Vite, and TypeScript*, featuring a fully responsive design, *bilingual support (English and Arabic)*, and *interactive 3D elements*."
+        },
+        {
+            "type": "image",
+            "value": "/assets/focus/hero.webp",
+            "size": 85,
+            "caption": "The landing page features a modern, clean design that immediately establishes professional credibility."
+        },
+        {
+            "type": "text",
+            "value": "One of the key features is the *seamless bilingual support*. Users can switch between English and Arabic, with the layout automatically adjusting for *Right-to-Left (RTL)* languages."
+        },
+        {
+            "type": "image",
+            "value": "/assets/focus/en.gif",
+            "grid": 6,
+            "size": 90,
+            "caption": "English interface demonstrating smooth animations and navigation."
+        },
+        {
+            "type": "image",
+            "value": "/assets/focus/ar.gif",
+            "grid": 6,
+            "size": 90,
+            "caption": "Arabic interface with full RTL layout support."
+        },
+        {
+            "type": "text",
+            "value": "The website includes a *dedicated contact section* with an integrated form and location map to facilitate easy client communication."
+        },
+        {
+            "type": "image",
+            "value": "/assets/focus/contact.webp",
+            "size": 75,
+            "caption": "Clean and accessible contact section."
+        },
+        {
+            "type": "text",
+            "value": "*Performance* was a top priority during development. The site is optimized for *fast loading times* and excellent *Core Web Vitals* scores."
+        },
+        {
+            "type": "image",
+            "value": "/assets/focus/speed.webp",
+            "size": 75,
+            "caption": "Achieving perfect 100 scores on Google PageSpeed Insights for Performance, Accessibility, Best Practices, and SEO."
+        }
+    ],
+    "shortDescription": "Modern, bilingual corporate website for Focus Consultancy built with React, Vite, and 3D elements.",
+    "metaDescription": "Official website for Focus Consultancy. Expert consulting in business strategy, digital transformation, and leadership development.",
+    "keywords": [
+        "React",
+        "Vite",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Bilingual",
+        "Corporate Website",
+        "Consulting",
+        "Digital Transformation",
+        "3D Visualization",
+        "Google Model Viewer"
+    ],
+    "client": "Focus Consultancy",
+    "event": null,
+    "date": "2025-12-06",
+    "categories": [
+        "Web Development",
+        "Frontend"
+    ],
+    "tags": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "i18next",
+        "Vite",
+        "Google Model Viewer"
+    ],
+    "objectives": [
+        "Establish a professional digital presence for Focus Consultancy.",
+        "Provide a bilingual experience to cater to a wider audience.",
+        "Showcase the company's vision, mission, and strategic programs.",
+        "Facilitate client communication through an integrated contact form.",
+        "Enhance user engagement with interactive 3D visuals."
+    ],
+    "functionality": [
+        {
+            "featureName": "Bilingual Support",
+            "description": "Seamless switching between English and Arabic with RTL support."
+        },
+        {
+            "featureName": "Responsive Design",
+            "description": "Optimized layout for all devices, ensuring accessibility and usability."
+        },
+        {
+            "featureName": "Interactive UI",
+            "description": "Utilizes Shadcn UI components for a polished and modern look."
+        },
+        {
+            "featureName": "Dynamic Content Loading",
+            "description": "Lazy loading of sections for improved performance."
+        },
+        {
+            "featureName": "3D Visualization",
+            "description": "Interactive 3D elements using Google Model Viewer for enhanced visual engagement."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "React",
+            "Vite",
+            "TypeScript"
+        ],
+        "backend": [],
+        "database": [],
+        "libraries": [
+            "i18next",
+            "Lucide React",
+            "React Router DOM",
+            "React Hook Form",
+            "Google Model Viewer"
+        ],
+        "frameworks": [
+            "Tailwind CSS"
+        ],
+        "tools": [
+            "Shadcn UI",
+            "ESLint"
+        ],
+        "hosting": ""
+    },
+    "design": {
+        "aesthetic": "Professional Corporate",
+        "colorPalette": [
+            "Charcoal",
+            "Orange",
+            "Blue",
+            "Grey"
+        ],
+        "typography": "Modern Sans-Serif",
+        "accessibility": "High contrast and responsive sizing."
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "/assets/focus/logo.png",
+            "alt": "Focus Consultancy Logo",
+            "caption": "Logo"
+        }
+    ],
+    "outcomes": [
+        "Delivered a professional website that aligns with the client's brand identity.",
+        "Improved the client's visibility and accessibility to potential customers.",
+        "Increased user engagement through 3D visual elements."
+    ],
+    "challenges": [],
+    "clientFeedback": [],
+    "projectPage": "/projects/focus-consultancy.html",
+    "linkToProject": "https://focusconsultancy.org/",
+    "repository": "",
+    "notes": ""
+}

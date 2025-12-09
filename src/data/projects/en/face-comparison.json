@@ -1,0 +1,106 @@
+{
+    "showOnHome": false,
+    "title": "Face Comparison & Recognition System",
+    "content": [
+        {
+            "type": "text",
+            "value": "A Python-based AI module designed to perform face comparison and recognition. The system utilizes Cascade Classifiers to detect faces within images, crops them, and then employs FaceNet to calculate image embeddings. By comparing these embeddings and applying a similarity threshold, the system determines if two faces belong to the same person. It supports comparing a single face against a database of many faces to identify individuals."
+        }
+    ],
+    "shortDescription": "AI tool using FaceNet and Cascade Classifiers to compare faces and determine identity.",
+    "metaDescription": "Discover this Python-based Face Comparison project utilizing FaceNet and OpenCV. Detects, crops, and compares faces to verify identity with high accuracy.",
+    "keywords": [
+        "face recognition",
+        "FaceNet",
+        "computer vision",
+        "Python",
+        "OpenCV",
+        "AI identity verification"
+    ],
+    "client": null,
+    "event": null,
+    "date": "2024-03-12",
+    "categories": [
+        "AI",
+        "Computer Vision",
+        "Machine Learning"
+    ],
+    "tags": [
+        "Python",
+        "FaceNet",
+        "OpenCV",
+        "TensorFlow",
+        "Numpy"
+    ],
+    "objectives": [
+        "Develop a system to accurately detect faces in images.",
+        "Implement logic to compare one face against a database of many.",
+        "Calculate similarity scores to verify identity.",
+        "Create a command-line interface for easy usage."
+    ],
+    "functionality": [
+        {
+            "featureName": "Face Detection",
+            "description": "Uses Cascade Classifiers to locate and crop faces from input images."
+        },
+        {
+            "featureName": "Embedding Calculation",
+            "description": "Generates unique vector embeddings for each face using FaceNet."
+        },
+        {
+            "featureName": "Identity Verification",
+            "description": "Compares embeddings to determine if faces match based on a confidence threshold."
+        },
+        {
+            "featureName": "Database Management",
+            "description": "Scripts included to load and organize images into a recognition database."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [],
+        "backend": [
+            "Python"
+        ],
+        "database": [
+            "Local File System (Image Database)"
+        ],
+        "libraries": [
+            "FaceNet",
+            "OpenCV",
+            "Numpy"
+        ],
+        "frameworks": [
+            "TensorFlow (via FaceNet)"
+        ],
+        "tools": [
+            "Git"
+        ],
+        "hosting": ""
+    },
+    "design": {
+        "aesthetic": "Command Line Interface (CLI)",
+        "colorPalette": [],
+        "typography": [
+            "Monospace"
+        ],
+        "responsiveness": "N/A",
+        "accessibility": ""
+    },
+    "media": [],
+    "outcomes": [
+        "Created a functional tool for 1-to-many face comparison.",
+        "Successfully implemented FaceNet embeddings for accurate recognition.",
+        "Provided a modular script structure for loading and processing images."
+    ],
+    "challenges": [
+        {
+            "challenge": "Ensuring accurate detection across different lighting and angles.",
+            "solution": "Utilized robust pre-trained models (FaceNet) and preprocessing steps like cropping to focus on facial features."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/face-comparison.html",
+    "linkToProject": "",
+    "repository": "https://github.com/FS-17/Face-comparison",
+    "notes": ""
+}

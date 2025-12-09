@@ -1,0 +1,128 @@
+{
+    "showOnHome": true,
+    "title": "MEWA Corporate Culture Gamification Platform",
+    "content": [
+        {
+            "type": "text",
+            "value": "A comprehensive gamification platform developed for the *Ministry of Environment, Water & Agriculture (MEWA)* to engage employees with corporate culture values through interactive games and quizzes."
+        },
+        {
+            "type": "text",
+            "value": "The platform features three main activities: a *Flower Game* where users grow plants by answering care-related questions, a *Personality Quiz* to discover their workplace persona, and a *Commitment Quiz* to test their alignment with ministry values."
+        },
+        {
+            "type": "image",
+            "value": "/assets/mewa/flower-selection.png",
+            "caption": "The Flower Game selection screen where users choose a native plant to grow.",
+            "size": 30,
+            "grid": 6
+        },
+        {
+            "type": "text",
+            "value": "In the *Flower Game*, users select a native plant and grow it by answering questions related to the ministry's culture. This interactive approach helps employees learn about environmental values in a fun and engaging way.",
+            "grid": 6
+        },
+        {
+            "type": "image",
+            "value": "/assets/mewa/personality-result.png",
+            "caption": "Personality Quiz result showing the 'Falah' (Farmer) persona with character traits.",
+            "size": 30,
+            "grid": 6
+        },
+        {
+            "type": "text",
+            "value": "The *Personality Quiz* engages employees by identifying their professional persona based on their choices. Each result, such as the 'Falah', comes with a unique set of traits that reflect their contribution to the organization.",
+            "grid": 6
+        },
+        {
+            "type": "text",
+            "value": "Built with *Next.js* and *Socket.IO*, the platform includes a *Live Display* that visualizes real-time participation, creating a collective digital garden representing the employees' engagement."
+        }
+    ],
+    "shortDescription": "Corporate culture gamification platform for MEWA featuring interactive games, quizzes, and real-time event visualization.",
+    "metaDescription": "MEWA Gamification Platform: An interactive Next.js application for employee engagement using games, quizzes, and real-time socket.io displays.",
+    "keywords": [
+        "Gamification",
+        "Corporate Culture",
+        "Next.js",
+        "Socket.IO",
+        "Real-time",
+        "Arabic UI",
+        "RTL",
+        "MEWA",
+        "Interactive Experience"
+    ],
+    "client": "Ministry of Environment, Water & Agriculture (MEWA)",
+    "event": "Corporate Culture Launch",
+    "date": "2025-11-20",
+    "categories": [
+        "Web Development",
+        "Gamification",
+        "Interactive Experience"
+    ],
+    "tags": [
+        "Next.js",
+        "React",
+        "Tailwind CSS",
+        "Socket.IO",
+        "SQLite",
+        "Node.js"
+    ],
+    "objectives": [
+        "Engage employees with *MEWA's corporate culture values*.",
+        "Educate staff on environmental and agricultural concepts through *gamified learning*.",
+        "Foster a sense of community through *real-time collective visualization*.",
+        "Provide a seamless, *mobile-friendly experience* for event attendees."
+    ],
+    "functionality": [
+        {
+            "featureName": "Flower Game",
+            "description": "A nurturing game where users grow a digital plant by answering culture-related questions."
+        },
+        {
+            "featureName": "Personality Quiz",
+            "description": "An interactive quiz that determines the user's professional personality type based on their choices."
+        },
+        {
+            "featureName": "Commitment Quiz",
+            "description": "A scored assessment of the user's alignment with corporate values."
+        },
+        {
+            "featureName": "Live Display",
+            "description": "A real-time dashboard showing collective progress and participation stats using Socket.IO."
+        },
+        {
+            "featureName": "User Registration",
+            "description": "QR code-based registration system with phone number verification."
+        }
+    ],
+    "challenges": [
+        {
+            "challenge": "Implementing real-time synchronization for the live display using Socket.IO.",
+            "solution": "Optimized *Socket.IO* event handling to ensure low-latency updates for the live dashboard."
+        },
+        {
+            "challenge": "Ensuring a smooth and responsive UI with complex animations and Arabic RTL layout.",
+            "solution": "Utilized *Tailwind CSS* for responsive design and carefully managed React state to ensure smooth animations in RTL layout."
+        },
+        {
+            "challenge": "Managing state across multiple games and persistent user progress.",
+            "solution": "Used a centralized state management approach and *SQLite* to track and persist user progress across different games."
+        }
+    ],
+    "results": [
+        "Successfully *engaged employees* in the corporate culture launch event.",
+        "Provided *real-time visualization* of participation, enhancing the event atmosphere.",
+        "Collected *valuable data* on employee engagement and values alignment."
+    ],
+    "media": [
+        {
+            "type": "logo",
+            "url": "./logo/me.png",
+            "alt": "MEWA Interactive Hub Logo",
+            "caption": "MEWA Interactive Hub Logo"
+        }
+    ],
+    "projectPage": "/projects/mewa-gamification.html",
+    "notes": "This project demonstrates the integration of gamification strategies with modern web technologies to achieve corporate communication goals."
+}

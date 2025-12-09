@@ -1,0 +1,149 @@
+{
+    "showOnHome": true,
+    "title": "Interactive Booth for PBS Hackathon at BIBAN Forum",
+    "content": [
+        {
+            "type": "text",
+            "value": "Created an interactive booth experience for the PBS Hackathon at the BIBAN forum. The installation featured a touch screen display designed to engage visitors and gather their innovative ideas related to specific sectors."
+        },
+        {
+            "type": "image",
+            "value": "/assets/pbs/pre_pbs.png"
+        },
+        {
+            "type": "text",
+            "value": "The interface provided a clear and modern preview to attract visitors."
+        },
+        {
+            "type": "image",
+            "value": "/assets/pbs/main_en.png"
+        },
+        {
+            "type": "text",
+            "value": "The main screen allowed users to select from sectors like Traffic, Real Estate, and Tourism."
+        },
+        {
+            "type": "image",
+            "value": "/assets/pbs/main_ar.png"
+        },
+        {
+            "type": "text",
+            "value": "A fully localized Arabic interface was also implemented to ensure accessibility for all attendees."
+        },
+        {
+            "type": "image",
+            "value": "/assets/pbs/data.png"
+        },
+        {
+            "type": "text",
+            "value": "Participants could enter their data and ideas through a user-friendly form."
+        }
+    ],
+    "shortDescription": "An interactive touch screen booth for a hackathon, collecting user ideas and contact information.",
+    "metaDescription": "Learn about the interactive touch screen booth developed for the PBS Hackathon at BIBAN Forum, designed to gather innovative ideas in traffic, real estate, and tourism.",
+    "keywords": [
+        "interactive booth",
+        "PBS Hackathon",
+        "BIBAN Forum",
+        "touch screen application",
+        "web development freelancer"
+    ],
+    "client": "PBS ",
+    "event": "BIBAN Forum (Hackathon)",
+    "date": "2025-11-5",
+    "categories": [
+        "Web Development",
+        "Interactive Experience",
+        "Touch Screen Application"
+    ],
+    "tags": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Firebase",
+        "Responsive Design"
+    ],
+    "objectives": [
+        "Engage visitors at the BIBAN forum.",
+        "Gather innovative ideas related to traffic, real estate, and tourism.",
+        "Collect user contact information.",
+        "Create a user-friendly and visually appealing touch screen experience."
+    ],
+    "functionality": [
+        {
+            "featureName": "Main Screen",
+            "description": "Displays the title \"PBS Hackathon\" and three interactive boxes representing different sectors (Traffic, Real Estate, Tourism)."
+        },
+        {
+            "featureName": "Question Screen",
+            "description": "Presents a sector-specific question to the user and allows them to input their answer in a text area."
+        },
+        {
+            "featureName": "User Info Screen",
+            "description": "Collects user's name, email, organization, and mobile number through a form."
+        },
+        {
+            "featureName": "Data Submission",
+            "description": "Stores user input (sector, answer, and contact details) in a Firebase Realtime Database."
+        }
+    ],
+    "technicalDetails": {
+        "frontend": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ],
+        "backend": [
+            "Firebase Realtime Database"
+        ],
+        "database": [],
+        "libraries": [],
+        "frameworks": [],
+        "tools": [
+            "Git",
+            "Excel"
+        ],
+        "hosting": ""
+    },
+    "design": {
+        "aesthetic": "Modern and visually engaging, with a gradient background, subtle animations, and a user-friendly interface.",
+        "colorPalette": [
+            "#000033",
+            "#000066",
+            "#0033cc",
+            "#0066ff"
+        ],
+        "typography": [
+            "Segoe UI",
+            "Tahoma",
+            "Verdana",
+            "sans-serif"
+        ],
+        "responsiveness": "The application was designed to be responsive and adapt to different screen sizes.",
+        "accessibility": "The design followed accessibility best practices, with clear text, sufficient color contrast, and keyboard navigation support."
+    },
+    "media": [
+        {
+            "type": "logo",
+            "url": "/logo/pbs.png",
+            "alt": "PBS Logo",
+            "caption": "PBS Logo"
+        }
+    ],
+    "outcomes": [
+        "Successfully engaged visitors at the BIBAN forum.",
+        "Gathered valuable ideas and contact information.",
+        "Demonstrated the ability to create an interactive and user-friendly touch screen experience for a public event."
+    ],
+    "challenges": [
+        {
+            "challenge": "Ensuring data persistence in a potentially offline environment.",
+            "solution": "Used localStorage as a fallback to store data locally if the Firebase connection failed."
+        }
+    ],
+    "clientFeedback": [],
+    "projectPage": "/projects/pbs-interactive-booth.html",
+    "linkToProject": "",
+    "repository": "",
+    "notes": ""
+}
