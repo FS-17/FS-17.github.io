@@ -222,7 +222,7 @@ export default function Home() {
         <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-gradient-to-r from-purple-600/15 to-blue-500/10 blur-[100px] bg-hero-anim2 pointer-events-none"></div>
         <div className="absolute bottom-1/3 left-1/4 w-[300px] h-[300px] rounded-full bg-gradient-to-r from-pink-600/10 to-purple-500/5 blur-[80px] bg-hero-anim1 pointer-events-none"></div>
         {/* Decorative line */}
-        <div className="absolute top-0 left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-blue-500/20 to-transparent pointer-events-none"></div>
+        {/* <div className="absolute top-0 left-1/2 w-px h-32 bg-gradient-to-b from-transparent via-blue-500/20 to-transparent pointer-events-none"></div> */}
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
             <span className="inline-block px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-4">
