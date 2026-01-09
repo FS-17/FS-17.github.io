@@ -1,8 +1,34 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer({ lang = "en" }) {
   const isAr = lang === "ar";
   const year = new Date().getFullYear();
+  const pathname = usePathname();
+
+  // Handle hash link navigation to prevent white screen on static export
+  const handleHashClick = (e, href) => {
+    if (href.includes("#")) {
+      const [path, hash] = href.split("#");
+      const targetPath = path || (isAr ? "/ar" : "/");
+      const normalizedTarget = targetPath.replace(/\/$/, "") || "/";
+      const normalizedCurrent = pathname.replace(/\/$/, "") || "/";
+
+      if (normalizedTarget === normalizedCurrent) {
+        e.preventDefault();
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // Different page - store hash for scroll after navigation
+        if (hash) {
+          sessionStorage.setItem("scrollToHash", hash);
+        }
+      }
+    }
+  };
 
   const socialLinks = [
     {
@@ -103,6 +129,7 @@ export default function Footer({ lang = "en" }) {
                 <Link
                   key={link.label}
                   href={link.href}
+                  onClick={(e) => handleHashClick(e, link.href)}
                   className="text-gray-400 hover:text-white transition-colors duration-300 hover:translate-x-1 inline-flex items-center gap-2 group w-fit"
                 >
                   <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50 group-hover:bg-blue-500 transition-colors" />

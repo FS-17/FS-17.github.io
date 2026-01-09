@@ -1,0 +1,62 @@
+# Faisal Alsaweed - Software Developer Portfolio
+
+> A professional portfolio showcasing software development projects, web applications, mobile apps, and AI solutions.
+
+## About
+
+Faisal Alsaweed is a Software Developer and Full Stack Engineer based in Saudi Arabia. Specializing in:
+
+- **Web Development**: React, Next.js, TypeScript, JavaScript, Tailwind CSS
+- **Mobile Development**: Flutter, Dart, React Native
+- **Backend Development**: Node.js, Python, Flask, Express
+- **AI/ML Solutions**: TensorFlow, YOLOv5, Machine Learning, Computer Vision
+- **Cloud & Infrastructure**: AWS, GCP, Azure, Docker, MongoDB, MySQL
+
+## Services
+
+- Custom Web Application Development
+- Mobile App Development (iOS & Android)
+- AI & Machine Learning Solutions
+- Interactive Booth & Kiosk Applications
+- Corporate Gamification Platforms
+- E-commerce Solutions
+- API Development & Integration
+
+## Featured Projects
+
+### DroneHunter Systems
+Real-time drone detection, tracking, and neutralization system using advanced sensors and machine learning (YOLOv5, TensorFlow).
+
+### Focus Consultancy Website
+Modern, bilingual corporate website with React, TypeScript, and 3D elements. Features RTL support for Arabic.
+
+### MEWA Gamification Platform
+Corporate culture gamification platform featuring interactive games, quizzes, and real-time event visualization.
+
+### NUPCO Interactive Hub
+Unified platform hosting 5 interactive cybersecurity games for awareness events.
+
+### SPL Values Challenge
+Dynamic web-based experience with seven interactive challenges for employee engagement.
+
+### Speech Data Builder
+Browser-based tool for creating TTS/STT datasets with AI transcription.
+
+## Contact
+
+- **Email**: FaisalSaweed@gmail.com
+- **LinkedIn**: linkedin.com/in/faisalalsaweed
+- **GitHub**: github.com/FS-17
+- **Location**: Saudi Arabia
+
+## Languages
+
+- English
+- العربية (Arabic)
+
+## Links
+
+- Homepage: https://fs-17.github.io
+- Arabic Version: https://fs-17.github.io/ar
+- Projects: https://fs-17.github.io/projects
+- Contact: https://fs-17.github.io/contact

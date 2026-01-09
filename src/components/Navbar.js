@@ -8,7 +8,8 @@ export default function Navbar({ lang = "en" }) {
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
   const isAr = lang === "ar";
-  const isHome = pathname === (isAr ? "/ar" : "/");
+  const isHome =
+    pathname === (isAr ? "/ar" : "/") || pathname === (isAr ? "/ar/" : "/");
 
   const switchLangUrl = () => {
     if (isAr) {
@@ -33,6 +34,48 @@ export default function Navbar({ lang = "en" }) {
     if (isHome) return hash;
     return (isAr ? "/ar" : "/") + hash;
   };
+
+  // Handle hash link navigation to prevent white screen on static export
+  const handleHashClick = (e, href) => {
+    // Only handle hash links that point to home page sections
+    if (href.includes("#")) {
+      const [path, hash] = href.split("#");
+      const targetPath = path || (isAr ? "/ar" : "/");
+      const normalizedTarget = targetPath.replace(/\/$/, "") || "/";
+      const normalizedCurrent = pathname.replace(/\/$/, "") || "/";
+
+      if (normalizedTarget === normalizedCurrent) {
+        // Same page, just scroll to element
+        e.preventDefault();
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      } else {
+        // Different page - let Next.js handle navigation normally
+        // The hash will be handled after page load
+        // Store the hash in sessionStorage to scroll after navigation
+        if (hash) {
+          sessionStorage.setItem("scrollToHash", hash);
+        }
+      }
+    }
+  };
+
+  // Handle scroll to hash after navigation
+  useEffect(() => {
+    const hash = sessionStorage.getItem("scrollToHash");
+    if (hash) {
+      sessionStorage.removeItem("scrollToHash");
+      // Wait for page to be fully rendered
+      setTimeout(() => {
+        const element = document.getElementById(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [pathname]);
 
   return (
     <nav
@@ -80,6 +123,7 @@ export default function Navbar({ lang = "en" }) {
             <Link
               key={link.label}
               href={link.href}
+              onClick={(e) => handleHashClick(e, link.href)}
               className="relative px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-all duration-300 rounded-lg hover:bg-white/5 group"
             >
               {link.label}
@@ -157,7 +201,10 @@ export default function Navbar({ lang = "en" }) {
               <Link
                 key={link.label}
                 href={link.href}
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => {
+                  handleHashClick(e, link.href);
+                  setIsOpen(false);
+                }}
                 className={`w-full max-w-sm flex items-center gap-4 px-6 py-5 rounded-2xl text-xl font-semibold text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform ${
                   isOpen
                     ? "translate-y-0 opacity-100"

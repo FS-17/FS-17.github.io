@@ -1,10 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VideoTrio from "@/components/VideoTrio";
+import { ProjectJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { getProjects, getProjectBySlug } from "@/lib/projects";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+
+const BASE_URL = "https://fs-17.github.io";
 
 export async function generateStaticParams() {
   const projects = getProjects("ar");
@@ -17,9 +20,52 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug, "ar");
   if (!project) return {};
+
+  const title = project.metaTitle || `${project.title} | تفاصيل المشروع`;
+  const description =
+    project.metaDescription ||
+    `استكشف ${project.title} - مشروع من تنفيذ فيصل السويد يتضمن ${
+      project.categories?.join("، ") || "حلول مبتكرة"
+    }.`;
+  const thumbnail = project.thumbnail || "/main.png";
+
   return {
-    title: project.metaTitle || `${project.title} - تفاصيل المشروع`,
-    description: project.metaDescription,
+    title,
+    description,
+    keywords: [
+      project.title,
+      ...(project.categories || []),
+      "فيصل السويد",
+      "معرض المشاريع",
+      project.client || "",
+    ].filter(Boolean),
+    alternates: {
+      canonical: `${BASE_URL}/ar/projects/${slug}`,
+      languages: {
+        en: `${BASE_URL}/projects/${slug}`,
+        ar: `${BASE_URL}/ar/projects/${slug}`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/ar/projects/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: thumbnail,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [thumbnail],
+    },
   };
 }
 
@@ -55,14 +101,23 @@ export default async function ProjectDetail({ params }) {
     notFound();
   }
 
+  const breadcrumbItems = [
+    { name: "الرئيسية", url: "/ar" },
+    { name: "المشاريع", url: "/ar/projects" },
+    { name: project.title, url: `/ar/projects/${slug}` },
+  ];
+
   return (
-    <div className="min-h-screen font-tajawal bg-grid-white" dir="rtl">
+    <div className="min-h-screen font-tajawal bg-grid-white relative" dir="rtl">
+      {/* JSON-LD Structured Data */}
+      <ProjectJsonLd project={project} lang="ar" />
+      <BreadcrumbJsonLd items={breadcrumbItems} lang="ar" />
+
+      {/* Radial Gradient Overlay */}
+      <div className="absolute inset-0 bg-gray-900 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none -z-10"></div>
       <Navbar lang="ar" />
 
       <main className="pt-32 pb-20 container mx-auto px-6 relative">
-        {/* Radial Gradient Overlay */}
-        <div className="absolute inset-0 bg-gray-900 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none -z-10"></div>
-
         {/* Header */}
         <div className="mb-12">
           <Link

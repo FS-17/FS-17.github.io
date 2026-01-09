@@ -1,10 +1,13 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import VideoTrio from "@/components/VideoTrio";
+import { ProjectJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
 import { getProjects, getProjectBySlug } from "@/lib/projects";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
+
+const BASE_URL = "https://fs-17.github.io";
 
 export async function generateStaticParams() {
   const projects = getProjects("en");
@@ -17,9 +20,52 @@ export async function generateMetadata({ params }) {
   const { slug } = await params;
   const project = getProjectBySlug(slug, "en");
   if (!project) return {};
+
+  const title = project.metaTitle || `${project.title} | Project Details`;
+  const description =
+    project.metaDescription ||
+    `Explore ${project.title} - A project by Faisal Alsaweed featuring ${
+      project.categories?.join(", ") || "innovative solutions"
+    }.`;
+  const thumbnail = project.thumbnail || "/main.png";
+
   return {
-    title: project.metaTitle || `${project.title} - Project Details`,
-    description: project.metaDescription,
+    title,
+    description,
+    keywords: [
+      project.title,
+      ...(project.categories || []),
+      "Faisal Alsaweed",
+      "Portfolio Project",
+      project.client || "",
+    ].filter(Boolean),
+    alternates: {
+      canonical: `${BASE_URL}/projects/${slug}`,
+      languages: {
+        en: `${BASE_URL}/projects/${slug}`,
+        ar: `${BASE_URL}/ar/projects/${slug}`,
+      },
+    },
+    openGraph: {
+      title,
+      description,
+      url: `${BASE_URL}/projects/${slug}`,
+      type: "article",
+      images: [
+        {
+          url: thumbnail,
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [thumbnail],
+    },
   };
 }
 
@@ -55,14 +101,23 @@ export default async function ProjectDetail({ params }) {
     notFound();
   }
 
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Projects", url: "/projects" },
+    { name: project.title, url: `/projects/${slug}` },
+  ];
+
   return (
-    <div className="min-h-screen font-sans bg-grid-white">
+    <div className="min-h-screen font-sans bg-grid-white relative">
+      {/* JSON-LD Structured Data */}
+      <ProjectJsonLd project={project} lang="en" />
+      <BreadcrumbJsonLd items={breadcrumbItems} lang="en" />
+
+      {/* Radial Gradient Overlay */}
+      <div className="absolute inset-0 bg-gray-900 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none -z-10"></div>
       <Navbar lang="en" />
 
       <main className="pt-32 pb-20 container mx-auto px-6 relative">
-        {/* Radial Gradient Overlay */}
-        <div className="absolute inset-0 bg-gray-900 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] pointer-events-none -z-10"></div>
-
         {/* Header */}
         <div className="mb-12">
           <Link

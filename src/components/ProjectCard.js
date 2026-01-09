@@ -69,11 +69,11 @@ export default function ProjectCard({ project, lang = "en" }) {
         </div>
       </div>
 
-      <div className="flex gap-3 mt-auto pt-6 border-t border-white/5 relative z-20">
+      <div className="flex gap-3 mt-auto pt-6 border-t border-white/5 relative z-20 pointer-events-none">
         {project.links?.repo && (
           <a
             href={project.links.repo}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-500/30 text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-blue-500/30 text-gray-300 hover:text-white transition-all duration-300 text-sm font-medium pointer-events-auto"
             onClick={(e) => e.stopPropagation()}
             target="_blank"
             rel="noopener noreferrer"
@@ -87,7 +87,7 @@ export default function ProjectCard({ project, lang = "en" }) {
         {project.links?.demo && (
           <a
             href={project.links.demo}
-            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 hover:from-blue-500/20 hover:to-cyan-500/20 border border-blue-500/20 hover:border-blue-500/40 text-blue-400 hover:text-blue-300 transition-all duration-300 text-sm font-medium"
+            className="flex items-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 hover:from-blue-500/20 hover:to-cyan-500/20 border border-blue-500/20 hover:border-blue-500/40 text-blue-400 hover:text-blue-300 transition-all duration-300 text-sm font-medium pointer-events-auto"
             onClick={(e) => e.stopPropagation()}
             target="_blank"
             rel="noopener noreferrer"

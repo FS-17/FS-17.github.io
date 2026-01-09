@@ -1,15 +1,62 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ContactPageJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+
+const BASE_URL = "https://fs-17.github.io";
 
 export const metadata = {
-  title: "Contact - Faisal",
+  title: "Contact Me",
   description:
-    "Get in touch with Faisal Alsaweed - Software Developer. Let's discuss your next project.",
+    "Get in touch with Faisal Alsaweed - Expert Software Developer. Let's discuss your web development, mobile app, or AI project. Available for freelance work and collaborations.",
+  keywords: [
+    "Contact Faisal Alsaweed",
+    "Hire Software Developer",
+    "Freelance Developer",
+    "Web Development Services",
+    "Mobile App Development",
+    "AI Solutions",
+    "Saudi Arabia Developer",
+  ],
+  alternates: {
+    canonical: `${BASE_URL}/contact`,
+    languages: {
+      en: `${BASE_URL}/contact`,
+      ar: `${BASE_URL}/ar/contact`,
+    },
+  },
+  openGraph: {
+    title: "Contact Faisal Alsaweed | Software Developer",
+    description:
+      "Get in touch to discuss your next web, mobile, or AI project. Available for freelance work and collaborations.",
+    url: `${BASE_URL}/contact`,
+    images: [
+      {
+        url: "/main.png",
+        width: 1200,
+        height: 630,
+        alt: "Contact Faisal Alsaweed",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Faisal Alsaweed | Software Developer",
+    description:
+      "Get in touch to discuss your next web, mobile, or AI project.",
+    images: ["/main.png"],
+  },
 };
 
 export default function Contact() {
+  const breadcrumbItems = [
+    { name: "Home", url: "/" },
+    { name: "Contact", url: "/contact" },
+  ];
+
   return (
     <div className="min-h-screen overflow-x-hidden noise-overlay">
+      <ContactPageJsonLd lang="en" />
+      <BreadcrumbJsonLd items={breadcrumbItems} lang="en" />
       <Navbar lang="en" />
 
       {/* Contact Form Section */}

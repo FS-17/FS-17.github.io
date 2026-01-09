@@ -1,17 +1,65 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { ContactPageJsonLd, BreadcrumbJsonLd } from "@/components/JsonLd";
+
+const BASE_URL = "https://fs-17.github.io";
 
 export const metadata = {
-  title: "تواصل معي - فيصل",
-  description: "تواصل مع فيصل السويد - مطور برمجيات. دعنا نناقش مشروعك القادم.",
+  title: "تواصل معي",
+  description:
+    "تواصل مع فيصل السويد - مطور برمجيات متخصص. دعنا نناقش مشروعك في تطوير الويب أو تطبيقات الجوال أو الذكاء الاصطناعي. متاح للعمل الحر والتعاون.",
+  keywords: [
+    "تواصل مع فيصل السويد",
+    "توظيف مطور برمجيات",
+    "مطور حر",
+    "خدمات تطوير الويب",
+    "تطوير تطبيقات الجوال",
+    "حلول الذكاء الاصطناعي",
+    "مطور سعودي",
+  ],
+  alternates: {
+    canonical: `${BASE_URL}/ar/contact`,
+    languages: {
+      en: `${BASE_URL}/contact`,
+      ar: `${BASE_URL}/ar/contact`,
+    },
+  },
+  openGraph: {
+    title: "تواصل مع فيصل السويد | مطور برمجيات",
+    description:
+      "تواصل معي لمناقشة مشروعك القادم في الويب أو الجوال أو الذكاء الاصطناعي. متاح للعمل الحر والتعاون.",
+    url: `${BASE_URL}/ar/contact`,
+    images: [
+      {
+        url: "/main.png",
+        width: 1200,
+        height: 630,
+        alt: "تواصل مع فيصل السويد",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "تواصل مع فيصل السويد | مطور برمجيات",
+    description:
+      "تواصل معي لمناقشة مشروعك القادم في الويب أو الجوال أو الذكاء الاصطناعي.",
+    images: ["/main.png"],
+  },
 };
 
 export default function Contact() {
+  const breadcrumbItems = [
+    { name: "الرئيسية", url: "/ar" },
+    { name: "تواصل معي", url: "/ar/contact" },
+  ];
+
   return (
     <div
       className="min-h-screen overflow-x-hidden font-tajawal noise-overlay"
       dir="rtl"
     >
+      <ContactPageJsonLd lang="ar" />
+      <BreadcrumbJsonLd items={breadcrumbItems} lang="ar" />
       <Navbar lang="ar" />
 
       {/* Contact Form Section */}
