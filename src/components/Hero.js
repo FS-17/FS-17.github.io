@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
 
 export default function Hero({ lang = "en" }) {
@@ -9,16 +9,19 @@ export default function Hero({ lang = "en" }) {
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(150);
 
-  const roles =
-    lang === "ar"
-      ? ["مطور برمجيات", "مهندس واجهات", "محب للتقنية", "مطور ذكاء اصطناعي"]
-      : [
-          "Software Developer",
-          "Full Stack Engineer",
-          "UI/UX Enthusiast",
-          "Problem Solver",
-          "AI Developer",
-        ];
+  const roles = useMemo(
+    () =>
+      lang === "ar"
+        ? ["مطور برمجيات", "مهندس واجهات", "محب للتقنية", "مطور ذكاء اصطناعي"]
+        : [
+            "Software Developer",
+            "Full Stack Engineer",
+            "UI/UX Enthusiast",
+            "Problem Solver",
+            "AI Developer",
+          ],
+    [lang]
+  );
 
   useEffect(() => {
     const handleTyping = () => {

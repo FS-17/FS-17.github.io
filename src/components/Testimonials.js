@@ -24,24 +24,6 @@ const testimonialData = {
       rating: 5,
       date: "07.06.2025",
     },
-    // {
-    //   id: 3,
-    //   name: "saleh abu dawwas",
-    //   role: "تصميم موقع الكتروني تعريفي لشركة",
-    //   content: "مبدع",
-    //   avatar: "S",
-    //   rating: 5,
-    //   date: "26.04.2025",
-    // },
-    // {
-    //   id: 4,
-    //   name: "عبدالله محمد الغامدي",
-    //   role: "موقع الكتروني",
-    //   content: "افضل مطور مواقع",
-    //   avatar: "ع",
-    //   rating: 5,
-    //   date: "13.02.2025",
-    // },
   ],
   en: [
     {
@@ -64,24 +46,6 @@ const testimonialData = {
       rating: 5,
       date: "07.06.2025",
     },
-    // {
-    //   id: 3,
-    //   name: "Saleh Abu Dawwas",
-    //   role: "Corporate Website Design",
-    //   content: "Creative.",
-    //   avatar: "S",
-    //   rating: 5,
-    //   date: "26.04.2025",
-    // },
-    // {
-    //   id: 4,
-    //   name: "Abdullah Mohammed Alghamdi",
-    //   role: "Website Development",
-    //   content: "Best website developer.",
-    //   avatar: "A",
-    //   rating: 5,
-    //   date: "13.02.2025",
-    // },
   ],
 };
 
@@ -139,7 +103,7 @@ function TestimonialCard({ testimonial, isAr }) {
 
         {/* Content */}
         <p className="text-gray-300 leading-relaxed mb-6 text-base">
-          "{testimonial.content}"
+          &ldquo;{testimonial.content}&rdquo;
         </p>
       </div>
 

@@ -35,6 +35,15 @@ export default function Navbar({ lang = "en" }) {
     return (isAr ? "/ar" : "/") + hash;
   };
 
+  // Handle language switch with full page reload to prevent white screen
+  // This is necessary because switching between /ar and / routes involves
+  // different root layouts with different html lang and dir attributes
+  const handleLangSwitch = (e) => {
+    e.preventDefault();
+    const newUrl = switchLangUrl();
+    window.location.href = newUrl;
+  };
+
   // Handle hash link navigation to prevent white screen on static export
   const handleHashClick = (e, href) => {
     // Only handle hash links that point to home page sections
@@ -133,13 +142,14 @@ export default function Navbar({ lang = "en" }) {
 
           <div className="w-px h-6 bg-white/10 mx-2" />
 
-          <Link
+          <a
             href={switchLangUrl()}
+            onClick={handleLangSwitch}
             className="relative px-4 py-2 text-sm font-bold text-white bg-white/5 hover:bg-white/10 border border-white/10 rounded-xl transition-all duration-300 hover:border-blue-500/30 hover:scale-105 overflow-hidden group"
           >
             <span className="relative z-10">{isAr ? "EN" : "عربي"}</span>
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -192,11 +202,6 @@ export default function Navbar({ lang = "en" }) {
                 label: isAr ? "تواصل معي" : "Contact",
                 icon: "✉️",
               },
-              {
-                href: switchLangUrl(),
-                label: isAr ? "English" : "عربي",
-                icon: "🌐",
-              },
             ].map((link, i) => (
               <Link
                 key={link.label}
@@ -216,6 +221,21 @@ export default function Navbar({ lang = "en" }) {
                 <span>{link.label}</span>
               </Link>
             ))}
+            {/* Language switch link - uses full page reload */}
+            <a
+              href={switchLangUrl()}
+              onClick={(e) => {
+                handleLangSwitch(e);
+                setIsOpen(false);
+              }}
+              className={`w-full max-w-sm flex items-center gap-4 px-6 py-5 rounded-2xl text-xl font-semibold text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 transform ${
+                isOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              }`}
+              style={{ transitionDelay: `${3 * 75 + 100}ms` }}
+            >
+              <span className="text-2xl">🌐</span>
+              <span>{isAr ? "English" : "عربي"}</span>
+            </a>
           </div>
 
           {/* Animated background elements in mobile menu */}

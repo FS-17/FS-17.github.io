@@ -25,9 +25,6 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/4 w-[200px] h-[200px] rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/5 blur-[60px] bg-hero-anim3 pointer-events-none"></div>
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            {/* <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-3 sm:mb-4">
-              Trusted Partners
-            </span> */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent px-2">
               Trusted by
             </h2>
@@ -291,11 +288,12 @@ export default function Home() {
             </span>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
-                Let's Work Together
+                Let&apos;s Work Together
               </span>
             </h2>
             <p className="text-gray-400 text-lg mb-12">
-              Have a project in mind? Let's create something amazing together.
+              Have a project in mind? Let&apos;s create something amazing
+              together.
             </p>
 
             <div className="flex flex-wrap gap-6 justify-center">

@@ -28,9 +28,6 @@ export default function Home() {
         <div className="absolute top-1/2 right-1/4 w-[200px] h-[200px] rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/5 blur-[60px] bg-hero-anim3 pointer-events-none"></div>
         <div className="container mx-auto px-4 sm:px-6 relative z-10">
           <div className="text-center mb-8 sm:mb-12 md:mb-16">
-            {/* <span className="inline-block px-3 py-1 sm:px-4 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-semibold uppercase tracking-wider bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-3 sm:mb-4">
-              شركاء موثوقون
-            </span> */}
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-l from-white to-gray-400 bg-clip-text text-transparent px-2">
               يثقون فينا
             </h2>

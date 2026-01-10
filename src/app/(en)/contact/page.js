@@ -77,7 +77,7 @@ export default function Contact() {
               </span>
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-white via-blue-100 to-white bg-clip-text text-transparent">
-                  Let's Create
+                  Let&apos;s Create
                 </span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent animate-gradient">
@@ -85,8 +85,8 @@ export default function Contact() {
                 </span>
               </h1>
               <p className="text-gray-400 text-lg max-w-xl mx-auto">
-                Have a project in mind? I'd love to hear about it. Send me a
-                message and let's bring your ideas to life.
+                Have a project in mind? I&apos;d love to hear about it. Send me
+                a message and let&apos;s bring your ideas to life.
               </p>
             </div>
 
