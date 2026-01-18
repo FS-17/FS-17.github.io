@@ -110,7 +110,7 @@ export const metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code",
+    google: "Vmw4tRlC_16LzAOBiyGfAUtkf_GQDztEQMN2_1m-3Gk",
   },
   category: "technology",
   classification: "Software Development Portfolio",
@@ -140,6 +140,7 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/main.png" />
         <meta name="theme-color" content="#1e3a8a" />
+        <meta name="google-site-verification" content="Vmw4tRlC_16LzAOBiyGfAUtkf_GQDztEQMN2_1m-3Gk" />
         <meta name="geo.region" content="SA" />
         <meta name="geo.placename" content="Saudi Arabia" />
         <meta name="language" content="English" />
