@@ -79,7 +79,7 @@ function convertBoldText(text) {
       </strong>
     ) : (
       part
-    )
+    ),
   );
 }
 
@@ -190,7 +190,13 @@ export default async function ProjectDetail({ params }) {
                   {item.type === "video" ? (
                     <div className="relative pt-[56.25%]">
                       <video
-                        controls
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        webkit-playsinline="true"
+                        disablePictureInPicture
+                        controlsList="nodownload nofullscreen noremoteplayback"
                         className="absolute inset-0 w-full h-full object-contain bg-black"
                       >
                         <source src={item.url} type="video/mp4" />
@@ -368,7 +374,13 @@ export default async function ProjectDetail({ params }) {
                           ></div>
                           <div className="relative rounded-[24px] overflow-hidden shadow-xl border border-white/10 bg-gradient-to-b from-gray-900/60 via-gray-900/20 to-gray-800/10 backdrop-blur flex justify-center">
                             <video
-                              controls
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              webkit-playsinline="true"
+                              disablePictureInPicture
+                              controlsList="nodownload nofullscreen noremoteplayback"
                               className="w-full h-auto max-h-[900px] object-contain bg-black rounded-[22px]"
                             >
                               <source src={item.value} type="video/mp4" />
@@ -403,7 +415,13 @@ export default async function ProjectDetail({ params }) {
                         <div className="w-full md:w-1/2">
                           <div className="rounded-xl overflow-hidden shadow-lg bg-black border border-white/10">
                             <video
-                              controls
+                              autoPlay
+                              loop
+                              muted
+                              playsInline
+                              webkit-playsinline="true"
+                              disablePictureInPicture
+                              controlsList="nodownload nofullscreen noremoteplayback"
                               className="w-full h-auto max-h-[600px] mx-auto"
                             >
                               <source src={item.value} type="video/mp4" />

@@ -4,50 +4,14 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
+import { getProjectCategories } from "@/lib/projectUtils";
 
 export default function ProjectsClient({ projects }) {
   const [filter, setFilter] = useState("all");
 
-  const getProjectCategory = (project) => {
-    const categories = project.categories || [];
-    const cats = categories.map((c) => c.toLowerCase());
-
-    if (
-      cats.some(
-        (c) =>
-          c.includes("web") ||
-          c.includes("website") ||
-          c.includes("interactive")
-      )
-    )
-      return "web";
-    if (
-      cats.some(
-        (c) =>
-          c.includes("mobile") ||
-          c.includes("app") ||
-          c.includes("android") ||
-          c.includes("flutter")
-      )
-    )
-      return "mobile";
-    if (
-      cats.some(
-        (c) =>
-          c.includes("bot") ||
-          c.includes("backend") ||
-          c.includes("ai") ||
-          c.includes("python")
-      )
-    )
-      return "backend";
-
-    return "other";
-  };
-
   const filteredProjects = projects.filter((project) => {
     if (filter === "all") return true;
-    return getProjectCategory(project) === filter;
+    return getProjectCategories(project).includes(filter);
   });
 
   const filterLabels = {

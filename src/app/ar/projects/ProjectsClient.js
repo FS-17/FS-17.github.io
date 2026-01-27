@@ -4,50 +4,14 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectCard from "@/components/ProjectCard";
+import { getProjectCategories } from "@/lib/projectUtils";
 
 export default function ProjectsClient({ projects }) {
   const [filter, setFilter] = useState("all");
 
-  const getProjectCategory = (project) => {
-    const categories = project.categories || [];
-    const tags = (project.tags || []).map((t) => t.toLowerCase());
-    const cats = categories.map((c) => c.toLowerCase());
-    const allKeywords = [...cats, ...tags].join(" ");
-
-    if (
-      allKeywords.includes("web") ||
-      allKeywords.includes("ويب") ||
-      allKeywords.includes("frontend") ||
-      allKeywords.includes("react")
-    )
-      return "web";
-
-    if (
-      allKeywords.includes("mobile") ||
-      allKeywords.includes("jawal") ||
-      allKeywords.includes("جوال") ||
-      allKeywords.includes("android") ||
-      allKeywords.includes("flutter") ||
-      allKeywords.includes("ios")
-    )
-      return "mobile";
-
-    if (
-      allKeywords.includes("bot") ||
-      allKeywords.includes("بوت") ||
-      allKeywords.includes("backend") ||
-      allKeywords.includes("ai") ||
-      allKeywords.includes("python") ||
-      allKeywords.includes("ذكاء")
-    )
-      return "backend";
-
-    return "other";
-  };
-
   const filteredProjects = projects.filter((project) => {
     if (filter === "all") return true;
-    return getProjectCategory(project) === filter;
+    return getProjectCategories(project).includes(filter);
   });
 
   const filterLabels = {
