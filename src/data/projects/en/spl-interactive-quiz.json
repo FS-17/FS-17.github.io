@@ -88,7 +88,7 @@
     "media": [
         {
             "type": "logo",
-            "url": "./logo/spl.png",
+            "url": "../logo/spl.png",
             "alt": "SPL Logo",
             "caption": "SPL Logo"
         },

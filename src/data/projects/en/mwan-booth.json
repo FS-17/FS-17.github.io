@@ -92,7 +92,7 @@
     "media": [
         {
             "type": "logo",
-            "url": "./logo/mw.png",
+            "url": "../logo/mw.png",
             "alt": "MWAN Interactive Hub Logo",
             "caption": "MWAN Interactive Hub Logo"
         }

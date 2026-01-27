@@ -164,7 +164,7 @@
     "media": [
         {
             "type": "logo",
-            "url": "./logo/np.png",
+            "url": "../logo/np.png",
             "alt": "NUPCO Interactive Hub Logo",
             "caption": "NUPCO Interactive Hub Logo"
         }

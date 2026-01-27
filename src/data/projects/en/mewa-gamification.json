@@ -118,7 +118,7 @@
     "media": [
         {
             "type": "logo",
-            "url": "./logo/me.png",
+            "url": "../logo/me.png",
             "alt": "MEWA Interactive Hub Logo",
             "caption": "MEWA Interactive Hub Logo"
         }
