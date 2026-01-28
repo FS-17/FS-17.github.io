@@ -72,7 +72,7 @@ export const metadata = {
       "مطور برمجيات متخصص في المملكة العربية السعودية في React و Next.js و Python والذكاء الاصطناعي. استكشف معرض أعمالي من تطبيقات الويب والحلول التفاعلية.",
     images: [
       {
-        url: "/main.png",
+        url: `${BASE_URL}/main.png`,
         width: 1200,
         height: 630,
         alt: "فيصل السويد - معرض أعمال مطور برمجيات",
@@ -86,7 +86,7 @@ export const metadata = {
     title: "فيصل السويد | مطور برمجيات ومهندس تطبيقات",
     description:
       "مطور برمجيات متخصص في المملكة العربية السعودية في React و Next.js و Python والذكاء الاصطناعي وتطوير تطبيقات الجوال.",
-    images: ["/main.png"],
+    images: [`${BASE_URL}/main.png`],
     creator: "@faisal_alsaweed",
   },
   robots: {
@@ -107,6 +107,15 @@ export const metadata = {
   },
   category: "technology",
   classification: "Software Development Portfolio",
+  icons: {
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/favicon.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   other: {
     "geo.region": "SA",
     "geo.country": "المملكة العربية السعودية",
@@ -130,10 +139,11 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         />
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/main.png" />
         <meta name="theme-color" content="#1e3a8a" />
-        <meta name="google-site-verification" content="Vmw4tRlC_16LzAOBiyGfAUtkf_GQDztEQMN2_1m-3Gk" />
+        <meta
+          name="google-site-verification"
+          content="Vmw4tRlC_16LzAOBiyGfAUtkf_GQDztEQMN2_1m-3Gk"
+        />
         <meta name="geo.region" content="SA" />
         <meta name="geo.placename" content="المملكة العربية السعودية" />
         <meta name="language" content="Arabic" />
